@@ -1,10 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 cd /home/jspidell/dir/nixos-config
-pushd .
 alejandra . &>/dev/null
 git diff -U0 .
+git add *
 echo "NixOs Rebuilding..."
-sudo nixos-rebuild switch --flake .#nixos &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
-gen=&(nixos-rebuild list-generations | grep current)
+sudo nixos-rebuild switch --flake .#nixos &>nixos-switch.log
+if !(cat nixos-switch.log | grep --color error)
+then
+gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
-popd
+git push;
+fi

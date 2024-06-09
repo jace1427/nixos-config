@@ -1,0 +1,3 @@
+# NIXOS-CONFIG
+
+bruh

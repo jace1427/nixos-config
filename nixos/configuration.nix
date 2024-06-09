@@ -72,6 +72,7 @@
     vim
     wget
     git
+    gh
   ];
 
   services.openssh.enable = true;
