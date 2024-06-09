@@ -77,6 +77,14 @@
   services.openssh.enable = true;
 
   users.defaultUserShell = pkgs.fish;
+  programs.fish = {
+    enable = true;
+    vendor = {
+      completions.enable = true;
+      config.enable = true;
+      functions.enable = true;
+    };
+  };
 
   users.users.jspidell = {
     isNormalUser = true;
@@ -92,6 +100,7 @@
       vscode
       obsidian
       alejandra
+      gamescope
     ];
   };
 
