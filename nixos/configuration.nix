@@ -73,6 +73,8 @@
     wget
     git
     gh
+    rustup
+    gcc
   ];
 
   services.openssh.enable = true;
