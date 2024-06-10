@@ -43,13 +43,13 @@
   services.libinput.mouse.accelProfile = "flat";
 
   hardware.openrazer.enable = true;
-  hardware.opengl.driSupport = true;
-  # For 32 bit applications
-  hardware.opengl.driSupport32Bit = true;
-  hardware.opengl.extraPackages = with pkgs; [
-    rocm-opencl-icd
-    rocm-opencl-runtime
-  ];
+  # hardware.opengl.driSupport = true;
+  # # For 32 bit applications
+  # hardware.opengl.driSupport32Bit = true;
+  # hardware.opengl.extraPackages = with pkgs; [
+  #   rocm-opencl-icd
+  #   rocm-opencl-runtime
+  # ];
 
   services.printing.enable = true;
 
@@ -77,8 +77,8 @@
     wget
     git
     gh
-    rustup
-    gcc
+    fish
+    firefox
   ];
 
   services.openssh.enable = true;
@@ -98,7 +98,6 @@
     extraGroups = ["wheel" "audio" "networkmanager" "openrazer"];
     packages = with pkgs; [
       firefox
-      tree
       lutris
       wine
       wowup-cf

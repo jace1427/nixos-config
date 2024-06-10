@@ -49,7 +49,7 @@
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
 
-  # Enable home-manager and git
+  # Enable packages
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
