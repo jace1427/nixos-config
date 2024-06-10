@@ -35,10 +35,11 @@
   networking.hostName = "nixos";
 
   services.xserver.enable = true;
-  services.xserver.videoDrivers = ["amdgpu"];
+  services.xserver.videoDrivers = ["modesetting"];
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  hardware.openrazer.enable = true;
   hardware.opengl.driSupport = true;
   # For 32 bit applications
   hardware.opengl.driSupport32Bit = true;
@@ -91,7 +92,7 @@
 
   users.users.jspidell = {
     isNormalUser = true;
-    extraGroups = ["wheel" "audio" "networkmanager"];
+    extraGroups = ["wheel" "audio" "networkmanager" "openrazer"];
     packages = with pkgs; [
       firefox
       tree
