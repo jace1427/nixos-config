@@ -84,9 +84,11 @@
 
   services.openssh.enable = true;
 
-  users.defaultUserShell = pkgs.fish;
-
   services.flatpak.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.config.common.default = "gtk";
+
+  users.defaultUserShell = pkgs.fish;
 
   users.users.jspidell = {
     isNormalUser = true;
