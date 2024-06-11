@@ -50,8 +50,6 @@
 
   services.printing.enable = true;
 
-  services.samba.enableWinbindd = true;
-
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -82,6 +80,7 @@
     vscode
     obsidian
     alejandra
+    lutris
   ];
 
   services.openssh.enable = true;
