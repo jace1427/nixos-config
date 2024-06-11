@@ -80,12 +80,13 @@
     vscode
     obsidian
     alejandra
-    lutris
   ];
 
   services.openssh.enable = true;
 
   users.defaultUserShell = pkgs.fish;
+
+  services.flatpak.enable = true;
 
   users.users.jspidell = {
     isNormalUser = true;
