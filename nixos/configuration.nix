@@ -15,7 +15,7 @@
     inputs.nixos-hardware.nixosModules.common-pc-ssd
 
     # You can also split up your configuration and import pieces of it here:
-    # ./jspidell.nix
+    ./jspidell.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -36,20 +36,17 @@
 
   services.xserver.enable = true;
   services.xserver.videoDrivers = ["modesetting"];
+  hardware.opengl.driSupport = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+  ];
+
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+
   services.libinput.enable = true;
   services.libinput.mouse.accelSpeed = null;
   services.libinput.mouse.accelProfile = "flat";
-
-  hardware.openrazer.enable = true;
-  # hardware.opengl.driSupport = true;
-  # # For 32 bit applications
-  # hardware.opengl.driSupport32Bit = true;
-  # hardware.opengl.extraPackages = with pkgs; [
-  #   rocm-opencl-icd
-  #   rocm-opencl-runtime
-  # ];
 
   services.printing.enable = true;
 
@@ -77,36 +74,27 @@
     wget
     git
     gh
-    fish
-    firefox
+    wowup-cf
+    discord
+    spotify
+    vscode
+    obsidian
+    alejandra
   ];
 
   services.openssh.enable = true;
 
   users.defaultUserShell = pkgs.fish;
-  programs.fish = {
-    enable = true;
-    vendor = {
-      completions.enable = true;
-      config.enable = true;
-      functions.enable = true;
-    };
-  };
 
   users.users.jspidell = {
     isNormalUser = true;
-    extraGroups = ["wheel" "audio" "networkmanager" "openrazer"];
+    extraGroups = ["wheel" "audio" "networkmanager"];
     packages = with pkgs; [
-      firefox
-      lutris
-      wine
-      wowup-cf
-      discord
-      spotify
-      vscode
-      obsidian
-      alejandra
-      gamescope
+      (wineWowPackages.full.override {
+        wineRelease = "staging";
+        mingwSupport = true;
+      })
+      winetricks
     ];
   };
 
