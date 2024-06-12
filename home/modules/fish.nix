@@ -14,7 +14,7 @@
       gp = "git push";
 
       # aliases
-      ls = "ls --color=auto -1FCA -I.git";
+      ls = "ls --color=auto -1lFA -I.git";
       vnix = "code ~/dir/nixos-config";
       re = "~/dir/nixos-config/rebuild.sh";
       nfu = "n; sudo nix flake update";
