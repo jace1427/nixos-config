@@ -8,18 +8,24 @@
   programs.fish = {
     enable = true;
     shellAliases = rec {
+      # git
       gs = "git status";
       ga = "git add *";
       gp = "git push";
+
+      # aliases
       ls = "ls --color=auto -1FCA -I.git";
-      cddir = "cd ~/dir/";
-      cdnix = "cd ~/dir/nixos-config";
       vnix = "code ~/dir/nixos-config";
-      t = "cd ~/dir/tools/";
       re = "~/dir/nixos-config/rebuild.sh";
+      nfu = "sudo nix flake update";
+
+      # cd's
       ".." = "cd ..";
       "..." = "cd ../..";
-      nfu = "sudo nix flake update";
+      d = "cd ~/dir/";
+      n = "cd ~/dir/nixos-config";
+      t = "cd ~/dir/tools/";
+      v = "cd ~/dir/vault/";
     };
   };
 }
