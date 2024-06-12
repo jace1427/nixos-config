@@ -83,6 +83,7 @@
     wineWowPackages.stagingFull
     winetricks
     wine
+    kdePackages.qt5compat
   ];
 
   services.openssh.enable = true;
