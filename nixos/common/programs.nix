@@ -1,12 +1,13 @@
+# programs.nix
 {
   config,
   pkgs,
   ...
 }: {
   programs = {
-    firefox = {
-      enable = true;
-    };
+    firefox.enable = true;
+    gamemode.enable = true;
+
     fish = {
       enable = true;
       vendor = {
