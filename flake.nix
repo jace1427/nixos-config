@@ -34,10 +34,17 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.extraSpecialArgs = {inherit inputs outputs user;};
-            home-manager.users.jspidell = import ./home/home.nix;
           }
         ];
+      };
+    };
+
+    homeConfigurations = {
+      "jspidell@nixos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        # > Our main home-manager configuration file <
+        modules = [./home/home.nix];
       };
     };
 
