@@ -18,6 +18,7 @@
       vnix = "code ~/dir/nixos-config";
       re = "~/dir/nixos-config/rebuild.sh";
       nfu = "n; sudo nix flake update";
+      uv = "~/dir/vault/update_vault.sh";
 
       # cd's
       ".." = "cd ..";
@@ -27,9 +28,5 @@
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
     };
-    interactiveShellInit = ''
-      set -g fish_key_bindings fish_default_key_bindings
-      bind \cH backward-kill-word
-    '';
   };
 }
