@@ -19,6 +19,7 @@
       re = "~/dir/nixos-config/rebuild.sh";
       ".." = "cd ..";
       "..." = "cd ../..";
+      nfu = "sudo nix flake update";
     };
   };
 }
