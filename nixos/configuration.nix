@@ -80,6 +80,9 @@
     vscode
     obsidian
     alejandra
+    wineWowPackages.stagingFull
+    winetricks
+    wine
   ];
 
   services.openssh.enable = true;
@@ -93,13 +96,6 @@
   users.users.jspidell = {
     isNormalUser = true;
     extraGroups = ["wheel" "audio" "networkmanager"];
-    packages = with pkgs; [
-      (wineWowPackages.full.override {
-        wineRelease = "staging";
-        mingwSupport = true;
-      })
-      winetricks
-    ];
   };
 
   home-manager = {
