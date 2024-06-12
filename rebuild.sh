@@ -10,5 +10,5 @@ if !((cat nixos-switch.log | grep --color error) && (cat nixos-switch.log | grep
 then
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
-git push;
+git push
 fi

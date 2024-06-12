@@ -27,5 +27,10 @@
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
     };
+    interactiveShellInit = ''
+      set -g fish_key_bindings fish_default_key_bindings
+      bind \cc kill-whole-line repaint
+      bind \cd forward-char
+    '';
   };
 }
