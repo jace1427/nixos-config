@@ -17,7 +17,7 @@
       ls = "ls --color=auto -1FCA -I.git";
       vnix = "code ~/dir/nixos-config";
       re = "~/dir/nixos-config/rebuild.sh";
-      nfu = "sudo nix flake update";
+      nfu = "n; sudo nix flake update";
 
       # cd's
       ".." = "cd ..";

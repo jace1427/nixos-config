@@ -29,7 +29,6 @@
 
   home.packages = with pkgs; [
     vscode
-    # obsidian TODO
     steam
     gamemode
     vkbasalt

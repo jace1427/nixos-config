@@ -18,5 +18,6 @@
     libsForQt5.qt5.qtgraphicaleffects
     rustup
     gcc
+    obsidian # TODO: put back in home.nix
   ];
 }
