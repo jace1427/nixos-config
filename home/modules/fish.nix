@@ -11,7 +11,7 @@
       gs = "git status";
       ga = "git add *";
       gp = "git push";
-      ls = "ls --color=auto -1FA -I.git";
+      ls = "ls --color=auto -1FCA -I.git";
       cddir = "cd ~/dir/";
       cdnix = "cd ~/dir/nixos-config";
       vnix = "code ~/dir/nixos-config";

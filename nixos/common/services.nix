@@ -11,13 +11,13 @@
 
     flatpak = {
       enable = true;
-      packages = [
-        "com.usebottles.bottles"
-      ];
-      update.auto = {
-        enable = true;
-        onCalendar = "daily";
-      };
+      # packages = [
+      #   "com.usebottles.bottles"
+      # ];
+      # update.auto = {
+      #   enable = true;
+      #   onCalendar = "daily";
+      # };
     };
 
     xserver = {
@@ -28,7 +28,7 @@
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      enableHipi = true;
+      enableHidpi = true;
     };
 
     libinput = {

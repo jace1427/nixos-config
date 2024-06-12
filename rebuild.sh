@@ -4,7 +4,7 @@ alejandra . &>/dev/null
 git diff -U0 .
 git add *
 echo "NixOs Rebuilding..."
-sudo nixos-rebuild switch --flake .#nixos &>nixos-switch.log
+sudo nixos-rebuild switch --flake .#nixos --show-trace &>nixos-switch.log
 if !(cat nixos-switch.log | grep --color error)
 then
 gen=$(nixos-rebuild list-generations | grep current)

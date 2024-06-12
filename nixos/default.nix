@@ -8,7 +8,10 @@
   ...
 }: {
   imports = [
-    ./common
+    ./common/environment.nix
+    ./common/hardware.nix
+    ./common/programs.nix
+    ./common/services.nix
 
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -21,8 +24,6 @@
       extraGroups = ["wheel" "audio" "networkmanager"];
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = "nix-command flakes";
 
