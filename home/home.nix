@@ -4,9 +4,13 @@
   lib,
   config,
   pkgs,
+  user,
   ...
 }: {
-  imports = import ./modules;
+  imports = [
+    ./modules/fish.nix
+    ./modules/git.nix
+  ];
 
   nixpkgs = {
     config = {
@@ -23,9 +27,9 @@
   # Enable packages
   programs.home-manager.enable = true;
 
-  home-manager.user.jspidell.home.packages = with pkgs; [
+  home.packages = with pkgs; [
     vscode
-    obsidian
+    # obsidian TODO
     steam
     gamemode
     vkbasalt

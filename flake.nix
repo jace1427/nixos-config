@@ -2,7 +2,7 @@
   description = "jspidell's NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -17,14 +17,27 @@
     nixpkgs,
     home-manager,
     nixos-hardware,
+    nix-flatpak,
     ...
   } @ inputs: let
+    user = "jspidell";
     inherit (self) outputs;
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/default.nix];
+        specialArgs = {inherit inputs outputs user;};
+        modules = [
+          ./nixos/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = {inherit inputs outputs user;};
+            home-manager.users.jspidell = import ./home/home.nix;
+          }
+        ];
       };
     };
 

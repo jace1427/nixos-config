@@ -5,6 +5,7 @@
   lib,
   config,
   pkgs,
+  user,
   ...
 }: {
   imports = [
@@ -15,6 +16,13 @@
 
     inputs.home-manager.nixosModules.home-manager
   ];
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
 
   users = {
     defaultUserShell = pkgs.fish;
@@ -61,14 +69,6 @@
 
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk]; # TODO
   xdg.portal.config.common.default = "gtk"; # TODO
-
-  home-manager = {
-    backupFileExtension = "backup";
-    extraSpecialArgs = {inherit inputs outputs;};
-    users = {
-      jspidell = import ../home/home.nix;
-    };
-  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
