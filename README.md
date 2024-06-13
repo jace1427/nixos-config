@@ -18,5 +18,5 @@
 - `flake.nix`
   The main entry point of the configuration. Imports unstable and others, calls into `nixos/configuration.nix`.
 
-- 'rebuild.sh`
+- `rebuild.sh`
   Rebuild script

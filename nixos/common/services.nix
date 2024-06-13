@@ -20,6 +20,8 @@
       };
     };
 
+    input-remapper.enable = true;
+
     xserver = {
       enable = true;
       videoDrivers = ["modesetting"];
