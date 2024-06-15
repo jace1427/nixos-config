@@ -12,6 +12,7 @@
       gs = "git status";
       ga = "git add *";
       gp = "git push";
+      gd = "git diff";
 
       # aliases
       ls = "ls --color=auto -1lFA -I.git";

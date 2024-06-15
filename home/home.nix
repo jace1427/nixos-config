@@ -37,6 +37,7 @@
     alejandra
     discord
     wowup-cf
+    # input-remapper
   ];
 
   # Nicely reload system units when changing configs
