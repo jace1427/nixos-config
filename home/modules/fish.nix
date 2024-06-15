@@ -28,6 +28,8 @@
       n = "cd ~/dir/nixos-config";
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
+
+      wow = "flatpak run com.usebottles.bottles";
     };
   };
 }
