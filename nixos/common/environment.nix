@@ -21,5 +21,6 @@
     obsidian # TODO: put back in home.nix
     godot_4
     blender
+    dotnet-sdk_8
   ];
 }
