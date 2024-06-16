@@ -19,5 +19,6 @@
     rustup
     gcc
     obsidian # TODO: put back in home.nix
+    godot_4
   ];
 }
