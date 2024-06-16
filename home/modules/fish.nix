@@ -20,6 +20,7 @@
       re = "~/dir/nixos-config/rebuild.sh";
       nfu = "n; sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
+      wow = "flatpak run com.usebottles.bottles";
 
       # cd's
       ".." = "cd ..";
@@ -28,8 +29,6 @@
       n = "cd ~/dir/nixos-config";
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
-
-      wow = "flatpak run com.usebottles.bottles";
     };
   };
 }

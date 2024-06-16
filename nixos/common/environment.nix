@@ -20,5 +20,6 @@
     gcc
     obsidian # TODO: put back in home.nix
     godot_4
+    blender
   ];
 }
