@@ -11,6 +11,7 @@
     ./modules/git.nix
     ./modules/hyprland.nix
     ./modules/neovim.nix
+    ./modules/xdg.nix
   ];
 
   nixpkgs = {
