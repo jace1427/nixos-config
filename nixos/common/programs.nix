@@ -7,7 +7,7 @@
   programs = {
     firefox.enable = true;
     gamemode.enable = true;
-    hyprland.enable = true;
+    # Hyprland.enable = true;
 
     fish = {
       enable = true;
