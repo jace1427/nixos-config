@@ -9,6 +9,8 @@
   imports = [
     ./modules/fish.nix
     ./modules/git.nix
+    ./modules/hyprland.nix
+    ./neovim.nix
   ];
 
   nixpkgs = {

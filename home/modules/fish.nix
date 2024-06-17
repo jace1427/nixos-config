@@ -29,6 +29,7 @@
       n = "cd ~/dir/nixos-config";
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
+      r = "cd ~/dir/repos/";
     };
   };
 }
