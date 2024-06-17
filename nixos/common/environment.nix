@@ -22,5 +22,6 @@
     godot_4
     blender
     dotnet-sdk_8
+    xdg-utils
   ];
 }

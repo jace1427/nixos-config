@@ -24,6 +24,8 @@
     xserver = {
       enable = true;
       videoDrivers = ["modesetting"];
+      xkb.layout = "us";
+      xkb.variant = "";
     };
 
     displayManager.sddm = {
