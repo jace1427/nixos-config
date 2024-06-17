@@ -9,6 +9,8 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
     nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
