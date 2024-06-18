@@ -13,7 +13,7 @@
       "$mod" = "SUPER";
       bind = [
         "$mod, F, exec, firefox"
-        "$mod, K, exec, Konsole"
+        "$mod, F, exec, Konsole"
       ];
     };
   };
