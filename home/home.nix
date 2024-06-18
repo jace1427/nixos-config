@@ -10,7 +10,7 @@
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/hyprland.nix
-    ./modules/neovim.nix
+    ./neovim.nix
   ];
 
   nixpkgs = {
