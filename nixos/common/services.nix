@@ -29,7 +29,7 @@
 
     displayManager.sddm = {
       enable = true;
-      # wayland.enable = true;
+      wayland.enable = true;
       enableHidpi = true;
     };
 
