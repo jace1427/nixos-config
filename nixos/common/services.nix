@@ -26,12 +26,6 @@
       videoDrivers = ["modesetting"];
     };
 
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      enableHidpi = true;
-    };
-
     libinput = {
       enable = true;
       mouse.accelSpeed = null;
