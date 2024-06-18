@@ -70,8 +70,6 @@
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk]; # TODO
   xdg.portal.config.common.default = "gtk"; # TODO
 
-  i18n.defaultLocale = "en_CA.UTF-8";
-
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
