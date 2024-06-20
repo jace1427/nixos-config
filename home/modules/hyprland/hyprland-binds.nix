@@ -4,9 +4,9 @@
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     bind = let
       workspaces = [
-        "0"
         "1"
         "2"
+        "3"
       ];
       directions = rec {
         left = "l";
@@ -22,9 +22,10 @@
       [
         "SUPER, K, exec, kitty"
         "SUPER, Q, killactive,"
-        "SUPER&Escape, Q, exit,"
-        "SUPER, F, exec, $fileManager"
+        "SUPER, D, exec, dolphin"
+        "SUPER, F, exec, firefox"
         "SUPER, R, exec, rofi -show drun -show-icons"
+        "SUPERSHIFT, Q, exit,"
       ]
       ++
       # Change workspace
