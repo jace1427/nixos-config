@@ -129,7 +129,7 @@
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
       device = {
-        name = "razer-razer-viper-ultimate-dongle-1";
+        name = "input-remapper-razer-razer-viper-ultimate-dongle-forwarded";
         sensitivity = -0.5;
       };
 
