@@ -29,6 +29,7 @@
       kitty
       rofi-wayland
       zoom-us
+      firefox
     ];
 
     sessionVariables = {
