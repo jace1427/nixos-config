@@ -35,7 +35,7 @@
       # See https://wiki.hyprland.org/Configuring/Keywords/
 
       # Set programs that you use
-      $terminal = kitty
+      $terminal = konsole
       $fileManager = dolphin
       $menu = wofi --show drun
 
@@ -47,7 +47,8 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
 
-      # exec-once = $terminal
+      exec-once = $terminal
+      exec-once = firefox
       # exec-once = nm-applet &
       # exec-once = waybar & hyprpaper & firefox
 
