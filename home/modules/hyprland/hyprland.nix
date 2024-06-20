@@ -13,7 +13,7 @@
       monitor = [
         "DP-1,preferred,auto-left,auto"
         "DP-2,preferred,auto-right,auto"
-        "DP-3,preferred,auto,auto"
+        "DP-3,preferred,0x0,auto"
       ];
 
       exec-once = [
