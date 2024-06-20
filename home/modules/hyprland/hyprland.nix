@@ -102,7 +102,7 @@
       input = {
         kb_layout = "us";
         follow_mouse = 2;
-        sensitivity = -0.75; # (-1.0, 1.0), 0 means no modification.
+        sensitivity = -0.7; # (-1.0, 1.0), 0 means no modification.
         accel_profile = "flat";
       };
 
