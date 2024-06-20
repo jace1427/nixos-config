@@ -136,9 +136,9 @@
       }
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      master {
-          new_status = master
-      }
+      # master {
+      #     new_status = master
+      # }
 
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc {
@@ -197,6 +197,7 @@
       bind = $mainMod, R, exec, $menu
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
+      bind = $mainMod, S, exec, rofi -show drun -show-icons
 
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l
