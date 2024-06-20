@@ -3,7 +3,7 @@
     ./bash.nix
     ./fish.nix
     ./git.nix
-    ./hyprland.nix
+    ./hyprland/default.nix
     ./waybar.nix
   ];
 }

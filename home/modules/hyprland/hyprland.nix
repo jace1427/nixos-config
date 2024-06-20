@@ -16,9 +16,6 @@
         "DP-3,preferred,auto-left,auto"
       ];
 
-      "$terminal" = "kitty";
-      "$filemanager" = "dolphin";
-
       exec-once = [
         "$terminal"
         "dunst"
@@ -135,44 +132,6 @@
         name = "epic-mouse-v1";
         sensitivity = -0.5;
       };
-
-      # See https://wiki.hyprland.org/Configuring/Keywords/
-      "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
-
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-      bind = [
-        "$mainMod, K, exec, $terminal"
-        "$mainMod, C, killactive,"
-        "$mainMod, ESC, exit,"
-        "$mainMod, F, exec, $fileManager"
-        "$mainMod, S, exec, rofi -show drun -show-icons"
-
-        # Move focus with mainMod + arrow keys
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
-
-        # Switch workspaces with mainMod + [0-9]
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-
-        # Move active window to a workspace with mainMod + SHIFT + [0-9]
-        "$mainMod SHIFT, 1, movetoworkspace, 1"
-        "$mainMod SHIFT, 2, movetoworkspace, 2"
-        "$mainMod SHIFT, 3, movetoworkspace, 3"
-
-        # Scroll through existing workspaces with mainMod + scroll
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
-      ];
-
-      # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = [
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
-      ];
 
       windowrulev2 = "suppressevent maximize, class:.*"; # You'll probably like this.
     };
