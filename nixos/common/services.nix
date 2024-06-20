@@ -6,7 +6,6 @@
 }: {
   services = {
     openssh.enable = true;
-    desktopManager.plasma6.enable = true;
     printing.enable = true;
 
     flatpak = {
@@ -21,6 +20,15 @@
     };
 
     input-remapper.enable = true;
+
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        enableHidpi = true;
+      };
+      defaultSession = "hyprland";
+    };
 
     xserver = {
       enable = true;
