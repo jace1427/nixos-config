@@ -28,6 +28,7 @@
       swww
       kitty
       rofi-wayland
+      zoom-us
     ];
 
     sessionVariables = {
