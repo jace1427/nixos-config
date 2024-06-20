@@ -22,7 +22,7 @@
       [
         "SUPER, K, exec, $terminal"
         "SUPER, Q, killactive,"
-        "SUPER, Escape, exit,"
+        "SUPER&Escape, Q, exit,"
         "SUPER, F, exec, $fileManager"
         "SUPER, R, exec, rofi -show drun -show-icons"
       ]
