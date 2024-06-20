@@ -1,7 +1,6 @@
 # fish.nix
 {
   pkgs,
-  lib,
   config,
   ...
 }: {

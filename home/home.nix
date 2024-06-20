@@ -7,8 +7,9 @@
   ...
 }: {
   imports = [
-    ./modules/fish.nix
     ./modules/git.nix
+    ./modules/bash.nix
+    ./modules/hyprland.nix
   ];
 
   nixpkgs = {
@@ -37,7 +38,6 @@
     alejandra
     discord
     wowup-cf
-    # input-remapper
   ];
 
   # Nicely reload system units when changing configs

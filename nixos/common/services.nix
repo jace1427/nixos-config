@@ -24,13 +24,8 @@
 
     xserver = {
       enable = true;
+      layout = "us";
       videoDrivers = ["modesetting"];
-    };
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      enableHidpi = true;
     };
 
     libinput = {

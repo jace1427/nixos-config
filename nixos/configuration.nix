@@ -23,16 +23,15 @@
     };
   };
 
-  users = {
-    defaultUserShell = pkgs.fish;
+  nix.settings.experimental-features = "nix-command flakes";
 
+  users = {
+    defaultUserShell = pkgs.bash;
     users.jspidell = {
       isNormalUser = true;
       extraGroups = ["wheel" "audio" "networkmanager"];
     };
   };
-
-  nix.settings.experimental-features = "nix-command flakes";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
@@ -49,7 +48,6 @@
     openrazer.enable = true;
 
     opengl = {
-      # TODO
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
@@ -66,8 +64,16 @@
     };
   };
 
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk]; # TODO
-  xdg.portal.config.common.default = "gtk"; # TODO
+  xdg = {
+    autostart.enable = true;
+    portal = {
+      enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal
+        pkgs.xdg-desktop-portal-gtk
+      ];
+    };
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";

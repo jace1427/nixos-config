@@ -8,12 +8,10 @@
     firefox.enable = true;
     gamemode.enable = true;
 
-    fish = {
+    hyprland = {
       enable = true;
-      vendor = {
-        completions.enable = true;
-        config.enable = true;
-        functions.enable = true;
+      xwayland = {
+        enable = true;
       };
     };
   };
