@@ -54,8 +54,6 @@
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
 
-        dim_inactive = true;
-
         # https://wiki.hyprland.org/Configuring/Variables/#blur
         blur = {
           enabled = true;
@@ -104,7 +102,7 @@
       input = {
         kb_layout = "us";
         follow_mouse = 2;
-        sensitivity = -0.8; # (-1.0, 1.0), 0 means no modification.
+        sensitivity = -0.75; # (-1.0, 1.0), 0 means no modification.
         accel_profile = "flat";
       };
 
@@ -115,7 +113,7 @@
 
       windowrulev2 = "suppressevent maximize, class:.*"; # You'll probably like this.
 
-      disable_splash_rendering = true;
+      misc.disable_splash_rendering = true;
     };
   };
 }
