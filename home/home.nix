@@ -7,9 +7,7 @@
   ...
 }: {
   imports = [
-    ./modules/git.nix
-    ./modules/bash.nix
-    ./modules/hyprland.nix
+    ./modules/
   ];
 
   nixpkgs = {
