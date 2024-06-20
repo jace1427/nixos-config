@@ -20,7 +20,7 @@
       };
     in
       [
-        "SUPER, K, exec, $terminal"
+        "SUPER, K, exec, kitty"
         "SUPER, Q, killactive,"
         "SUPER&Escape, Q, exit,"
         "SUPER, F, exec, $fileManager"
