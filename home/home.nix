@@ -36,7 +36,7 @@
     alejandra
     discord
     wowup-cf
-    zoom
+    zoom-us
   ];
 
   # Nicely reload system units when changing configs
