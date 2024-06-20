@@ -37,6 +37,7 @@
     discord
     wowup-cf
     firefox
+    input-remapper
   ];
 
   # Nicely reload system units when changing configs
