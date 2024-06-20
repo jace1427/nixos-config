@@ -35,7 +35,7 @@
       # See https://wiki.hyprland.org/Configuring/Keywords/
 
       # Set programs that you use
-      $terminal = konsole
+      $terminal = kitty
       $fileManager = dolphin
       $menu = wofi --show drun
 
@@ -49,6 +49,7 @@
 
       exec-once = $terminal
       exec-once = firefox
+      exec-once = waybar
       # exec-once = nm-applet &
       # exec-once = waybar & hyprpaper & firefox
 
@@ -135,9 +136,9 @@
       }
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      # master {
-      #     new_status = master
-      # }
+      master {
+          new_status = master
+      }
 
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc {

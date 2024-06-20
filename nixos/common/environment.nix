@@ -12,6 +12,7 @@
       wineWowPackages.staging
       wineWowPackages.waylandFull
       git
+      bash
       gh
       openrazer-daemon
       vim
@@ -23,6 +24,10 @@
       godot_4
       blender
       dotnet-sdk_8
+      libnotify
+      swww
+      kitty
+      rofi-wayland
     ];
 
     sessionVariables = {
