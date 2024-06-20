@@ -10,7 +10,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -23,6 +24,8 @@
     home-manager,
     nixos-hardware,
     nix-flatpak,
+    hyprland,
+    hyprland-plugins,
     ...
   } @ inputs: let
     user = "jspidell";
@@ -49,7 +52,10 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
-        modules = [./home/home.nix];
+        modules = [
+          hyprland.homeManagerModules.default
+          ./home/home.nix
+        ];
       };
     };
 
