@@ -47,7 +47,7 @@
       decoration = {
         rounding = 10;
         active_opacity = 1.0;
-        inactive_opacity = 0.9;
+        # inactive_opacity = 0.9;
 
         drop_shadow = true;
         shadow_range = 4;
@@ -104,7 +104,7 @@
       input = {
         kb_layout = "us";
         follow_mouse = 2;
-        sensitivity = -1; # (-1.0, 1.0), 0 means no modification.
+        sensitivity = -0.8; # (-1.0, 1.0), 0 means no modification.
         accel_profile = "flat";
       };
 
