@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    ./modules/
+    ./modules/default.nix
   ];
 
   nixpkgs = {
