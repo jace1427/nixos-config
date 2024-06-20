@@ -11,9 +11,9 @@
 
     settings = {
       monitor = [
-        "DP-1, 1920x1080@60, 0x0, 1"
-        "DP-2, 1920x1080@60 -1920x0, 1"
-        "DP-3, 1920x1080@60, 1920x0, 1"
+        "DP-1, 1920x1080@165, 0x0, 1"
+        "DP-2, 1920x1080@60 auto-left, 1"
+        "DP-3, 1920x1080@60, auto-right, 1"
       ];
 
       "$terminal" = "kitty";
@@ -39,8 +39,8 @@
         border_size = 2;
 
         # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-        col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        col.inactive_border = "rgba(595959aa)";
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.inactive_border" = "rgba(595959aa)";
 
         # Set to true enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = false;
