@@ -4,6 +4,8 @@ swww init &
 # set wallpaper
 # swww img ~/asdf
 
+# the bar
 waybar &
 
+# dunst ?
 dunst
