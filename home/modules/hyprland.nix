@@ -8,9 +8,11 @@
     enable = true;
 
     settings = {
-      monitor = "DP-3, 1920x1080@60, 0x0, 1";
-      monitor = "DP-1, 1920x1080@60, 1920x0, 1";
-      monitor = "DP-2, 1920x1080@60 -1920x0, 1";
+      monitor = [
+        "DP-3, 1920x1080@60, 0x0, 1"
+        "DP-1, 1920x1080@60, 1920x0, 1"
+        "DP-2, 1920x1080@60 -1920x0, 1"
+      ];
 
       "$terminal" = "kitty";
       "$filemanager" = "dolphin";
@@ -44,7 +46,7 @@
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
 
-        layout = dwindle;
+        layout = "dwindle";
       };
 
       # https://wiki.hyprland.org/Configuring/Variables/#decoration
@@ -95,7 +97,7 @@
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
       master = {
-        new_status = master;
+        new_status = "master";
       };
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc = {
@@ -105,7 +107,7 @@
 
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
-        kb_layout = us;
+        kb_layout = "us";
         # kb_variant =
         # kb_model =
         # kb_options =
@@ -128,7 +130,7 @@
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
       device = {
-        name = epic-mouse-v1;
+        name = "epic-mouse-v1";
         sensitivity = -0.5;
       };
 
