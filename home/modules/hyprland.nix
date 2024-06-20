@@ -11,9 +11,9 @@
 
     settings = {
       monitor = [
-        "DP-1, 1920x1080@165, 0x0, 1"
-        "DP-2, 1920x1080@60 auto-left, 1"
-        "DP-3, 1920x1080@60, auto-right, 1"
+        "DP-1,preferred,auto,auto"
+        "DP-2,preferred,auto-left,auto"
+        "DP-3,preferred,auto-right,auto"
       ];
 
       "$terminal" = "kitty";
