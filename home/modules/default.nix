@@ -4,6 +4,5 @@
     ./fish.nix
     ./git.nix
     ./hyprland/default.nix
-    ./waybar.nix
   ];
 }
