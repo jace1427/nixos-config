@@ -38,7 +38,7 @@
       (map (n: "SUPERSHIFT,${n},movetoworkspacesilent,name:${n}") workspaces)
       ++
       # Swap windows
-      (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},swapwindow,${direction}") directions);
+      (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},movewindow,${direction}") directions);
 
     # Move/resize windows with SUPER + LMB/RMB and dragging
     bindm = [
