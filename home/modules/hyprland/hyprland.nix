@@ -129,7 +129,7 @@
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
       device = {
-        name = "razer-razer-mouse-dock-2";
+        name = "razer-razer-viper-ultimate-dongle";
         sensitivity = -0.5;
       };
 
