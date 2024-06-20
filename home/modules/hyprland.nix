@@ -48,13 +48,7 @@
       # Or execute your favorite apps at launch like this:
 
       exec-once = $terminal
-      exec-once = firefox
-      exec-once = waybar
-      exec-once = dunst
-      exec-once = swww init
-      # exec-once = nm-applet &
-      # exec-once = waybar & hyprpaper & firefox
-
+      exec-once = bash /home/jspidell/dir/nixos-config/home/modules/start.sh
 
       #############################
       ### ENVIRONMENT VARIABLES ###
