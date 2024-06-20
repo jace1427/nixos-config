@@ -50,6 +50,8 @@
       exec-once = $terminal
       exec-once = firefox
       exec-once = waybar
+      exec-once = dunst
+      exec-once = swww init
       # exec-once = nm-applet &
       # exec-once = waybar & hyprpaper & firefox
 
