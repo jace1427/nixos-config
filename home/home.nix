@@ -43,7 +43,7 @@
     btop
   ];
 
-  colorScheme = input.nix-colors.colorSchemes.Dracula;
+  colorScheme = inputs.nix-colors.colorSchemes.Dracula;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
