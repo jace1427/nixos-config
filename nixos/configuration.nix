@@ -23,7 +23,10 @@
     };
   };
 
-  nix.settings.experimental-features = "nix-command flakes";
+  nix = {
+    settings.experimental-features = "nix-command flakes";
+    gc.automatic = true;
+  };
 
   users = {
     defaultUserShell = pkgs.bash;
@@ -35,7 +38,10 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
-    systemd-boot.enable = true;
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 10;
+    };
     efi.canTouchEfiVariables = true;
   };
 
