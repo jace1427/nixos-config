@@ -37,8 +37,6 @@
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs user;};
         modules = [
-          ./nixos/configuration.nix
-
           nix-flatpak.nixosModules.nix-flatpak
           stylix.nixosModules.stylix
 
@@ -48,6 +46,8 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
           }
+
+          ./nixos/configuration.nix
         ];
       };
     };
@@ -59,6 +59,7 @@
         # > Our main home-manager configuration file <
         modules = [
           hyprland.homeManagerModules.default
+          stylix.nixosModules.stylix
           ./home/home.nix
         ];
       };
