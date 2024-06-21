@@ -18,7 +18,7 @@
 
       # aliases
       ls = "ls --color=auto -1lFA -I.git";
-      vnix = "code ~/dir/nixos-config";
+      vnix = "nvim ~/dir/nixos-config";
       re = "~/dir/nixos-config/rebuild.sh";
       nfu = "n; sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
