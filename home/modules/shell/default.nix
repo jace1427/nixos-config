@@ -2,7 +2,7 @@
   imports = [
     ./bash.nix
     ./git.nix
-    ./nvim.nix
+    ./nvim/nvim.nix
     ./kitty.nix
   ];
 }

@@ -12,7 +12,7 @@
       wineWowPackages.waylandFull
       git
       gh
-      foot
+      kitty
       bash
       vim
       libsForQt5.qt5.qtquickcontrols2
