@@ -31,6 +31,8 @@ in {
         "Lets us easily trigger completion from binds
         set wildcharm=<tab>
 
+        set smartcase
+
         "Set fold level to highest in file
         "so everything starts out unfolded at just the right level
         augroup initial_fold
@@ -67,47 +69,8 @@ in {
         "Scroll up and down
         nmap <C-j> <C-e>
         nmap <C-k> <C-y>
-
-        "Buffers
-        nmap <space>b :buffers<CR>
-        nmap <C-l> :bnext<CR>
-        nmap <C-h> :bprev<CR>
-        nmap <C-q> :bdel<CR>
-
-        "Navigate
-        nmap <space>e :e<space>
-        nmap <space>e :e %:h<tab>
-        "CD to current dir
-        nmap <space>c :cd<space>
-        nmap <space>C :cd %:h<tab>
-
-        "Loclist
-        nmap <space>l :lwindow<cr>
-        nmap [l :lprev<cr>
-        nmap ]l :lnext<cr>
-
-        nmap <space>L :lhistory<cr>
-        nmap [L :lolder<cr>
-        nmap ]L :lnewer<cr>
-
-        "Quickfix
-        nmap <space>q :cwindow<cr>
-        nmap [q :cprev<cr>
-        nmap ]q :cnext<cr>
-
-        nmap <space>Q :chistory<cr>
-        nmap [Q :colder<cr>
-        nmap ]Q :cnewer<cr>
-
-        "Make
-        nmap <space>m :make<cr>
-
-        "Close other splits
-        nmap <space>o :only<cr>
-
-        "Sudo save
-        cmap w!! w !sudo tee > /dev/null %
       '';
+
     extraLuaConfig =
       /*
       lua
