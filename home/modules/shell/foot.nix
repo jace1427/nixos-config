@@ -7,7 +7,9 @@
   programs.foot = {
     enable = true;
     settings = {
-      font-size-adjustment = "10px";
+      main = {
+        font-size-adjustment = "10px";
+      };
     };
   };
 }

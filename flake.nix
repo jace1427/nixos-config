@@ -52,19 +52,6 @@
       };
     };
 
-    homeConfigurations = {
-      "jspidell@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          hyprland.homeManagerModules.default
-          stylix.nixosModules.stylix
-          ./home/home.nix
-        ];
-      };
-    };
-
     nixosConfigurations.jspidell = nixpkgs.lib.nixosSystem {
       modules = [
         nixos-hardware.nixosModules.common-cpu-amd

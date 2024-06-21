@@ -85,8 +85,15 @@
 
   stylix = {
     enable = true;
-    image = ../../wallpapers/a_city_with_a_pyramid_over_it.png;
+    image = ../wallpapers/a_city_with_a_pyramid_over_it.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+  };
+
+  home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
+    users = {
+      jspidell = import ../home/home.nix;
+    };
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
