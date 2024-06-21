@@ -24,11 +24,10 @@
 
   # Enable packages
   programs.home-manager.enable = true;
+  programs.gamemode.enable = true;
 
   home.packages = with pkgs; [
-    vscode
     steam
-    gamemode
     vkbasalt
     gamescope
     protonup-qt
@@ -36,7 +35,15 @@
     alejandra
     discord
     wowup-cf
+    obsidian
+    godot_4
+    blender
+    zoom-us
+    lf
+    btop
   ];
+
+  colorScheme = input.nix-colors.colorSchemes.Dracula;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

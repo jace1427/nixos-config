@@ -20,9 +20,9 @@
       };
     in
       [
-        "SUPER, K, exec, kitty"
+        "SUPER, K, exec, foot"
         "SUPER, Q, killactive,"
-        "SUPER, D, exec, dolphin"
+        "SUPER, D, exec, lf"
         "SUPER, F, exec, firefox"
         "SUPER, R, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"

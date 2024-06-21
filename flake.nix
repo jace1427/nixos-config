@@ -16,16 +16,20 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    nix-colors.url = "github:misterio77/nix-colors";
+
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
     self,
     nixpkgs,
-    home-manager,
     nixos-hardware,
+    home-manager,
     nix-flatpak,
+    stylix,
     hyprland,
-    hyprland-plugins,
     ...
   } @ inputs: let
     user = "jspidell";
@@ -36,7 +40,10 @@
         specialArgs = {inherit inputs outputs user;};
         modules = [
           ./nixos/configuration.nix
+
           nix-flatpak.nixosModules.nix-flatpak
+          stylix.nixosModules.stylix
+
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

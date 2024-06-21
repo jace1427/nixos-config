@@ -18,7 +18,7 @@
 
       exec-once = [
         "$terminal"
-        "dunst"
+        "mako"
         "waybar"
         "swwww"
       ];
@@ -29,14 +29,14 @@
       ];
 
       general = {
-        gaps_in = 4;
-        gaps_out = 4;
+        gaps_in = 12;
+        gaps_out = 12;
 
-        border_size = 0;
-        resize_on_border = false;
+        border_size = 5;
+        resize_on_border = true;
 
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        # "col.inactive_border" = "rgba(595959aa)";
 
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
@@ -52,7 +52,7 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        # "col.shadow" = "rgba(1a1a1aee)";
 
         # https://wiki.hyprland.org/Configuring/Variables/#blur
         blur = {
@@ -102,7 +102,7 @@
       input = {
         kb_layout = "us";
         follow_mouse = 2;
-        sensitivity = -0.7; # (-1.0, 1.0), 0 means no modification.
+        sensitivity = -0.6; # (-1.0, 1.0), 0 means no modification.
         accel_profile = "flat";
       };
 

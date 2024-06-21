@@ -20,3 +20,7 @@
 
 - `rebuild.sh`
   Rebuild script
+
+## Wallpapers
+
+[Link](https://github.com/dharmx/walls/tree/main)

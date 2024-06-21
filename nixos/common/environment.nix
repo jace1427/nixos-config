@@ -6,29 +6,24 @@
 }: {
   environment = {
     systemPackages = with pkgs; [
-      wget
       wine
       winetricks
       wineWowPackages.staging
       wineWowPackages.waylandFull
       git
-      bash
       gh
-      openrazer-daemon
+      foot
+      bash
       vim
-      libsForQt5.qt5.qtquickcontrols2
-      libsForQt5.qt5.qtgraphicaleffects
-      rustup
+      # libsForQt5.qt5.qtquickcontrols2
+      # libsForQt5.qt5.qtgraphicaleffects
       gcc
-      obsidian # TODO: put back in home.nix
-      godot_4
-      blender
+      rustup
       dotnet-sdk_8
       libnotify
       swww
-      kitty
+      mako
       rofi-wayland
-      zoom-us
     ];
 
     sessionVariables = {

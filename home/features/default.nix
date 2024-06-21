@@ -1,8 +1,6 @@
 {
   imports = [
-    ./bash.nix
-    ./fish.nix
-    ./git.nix
+    ./shell/default.nix
     ./hyprland/default.nix
   ];
 }
