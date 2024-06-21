@@ -130,20 +130,6 @@ in {
         '';
     }
     {
-      plugin = indent-blankline-nvim;
-      type = "lua";
-      config =
-        /*
-        lua
-        */
-        ''
-          require('ibl').setup{
-            scope = { highlight = {"IndentBlankLine"} },
-            indent = { highlight = {"IndentBlankLine"} },
-          }
-        '';
-    }
-    {
       plugin = nvim-web-devicons;
       type = "lua";
       config =
