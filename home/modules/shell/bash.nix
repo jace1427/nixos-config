@@ -13,6 +13,7 @@
       # git
       gs = "git status";
       ga = "git add *";
+      gc = "git commit -m $1";
       gp = "git push";
       gd = "git diff";
 
