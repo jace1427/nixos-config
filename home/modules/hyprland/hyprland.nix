@@ -17,7 +17,8 @@
       ];
 
       exec-once = [
-        "$terminal"
+        "foot"
+        "firefox"
         "mako"
         "waybar"
         "swwww"
