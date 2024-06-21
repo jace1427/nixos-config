@@ -1,4 +1,4 @@
-{
+{asdf
   description = "jspidell's NixOS config";
 
   inputs = {

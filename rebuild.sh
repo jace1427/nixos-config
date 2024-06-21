@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
-cd /home/jspidell/dir/nixos-config
-alejandra . &>/dev/null
-git diff -U0 .
-git add *
-echo "NixOs Rebuilding..."
-sudo nixos-rebuild switch --flake .#nixos --show-trace &>nixos-switch.log
-if !((cat nixos-switch.log | grep --color error) && (cat nixos-switch.log | grep --color error))
+nixdir = /home/jspidell/dir/nixos-config
+if !(ashlejandra $nixdir | grep Failed!)
 then
-gen=$(nixos-rebuild list-generations | grep current)
-git commit -am "$gen"
-git push
+	git diff -U0 $nixdir
+	git add $nixdir/*
+	echo "NixOs Rebuilding..."
+	sudo nixos-rebuild switch --flake $nixdir#nixos --show-trace &>$nixdir/nixos-switch.log
+	if !(cat $nixdir/nixos-switch.log | grep --color error)
+	then
+		gen=$(nixos-rebuild list-generations | grep current)
+		git commit -am "$gen"
+		git push
+	fi
 fi
+
