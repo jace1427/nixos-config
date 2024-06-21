@@ -83,6 +83,9 @@
     };
   };
 
+  stylix.image = ../../wallpapers/a_city_with_a_pyramid_over_it.png;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
