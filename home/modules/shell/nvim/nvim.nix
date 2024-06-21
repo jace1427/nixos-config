@@ -55,11 +55,6 @@ in {
           autocmd BufRead,BufNewFile *.tera setfiletype htmldjango
         augroup END
 
-        "Options when composing mutt mail
-        augroup mail_settings
-          autocmd FileType mail set noautoindent wrapmargin=0 textwidth=0 linebreak wrap formatoptions +=w
-        augroup END
-
         "Fix nvim size according to terminal
         "(https://github.com/neovim/neovim/issues/11330)
         augroup fix_size
