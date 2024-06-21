@@ -7,6 +7,7 @@
 }: {
   programs = {
     firefox.enable = true;
+    gamemode.enable = true;
     neovim.enable = true;
 
     hyprland = {

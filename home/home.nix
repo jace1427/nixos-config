@@ -24,7 +24,6 @@
 
   # Enable packages
   programs.home-manager.enable = true;
-  programs.gamemode.enable = true;
 
   home.packages = with pkgs; [
     steam

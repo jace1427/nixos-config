@@ -17,8 +17,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    nix-colors.url = "github:misterio77/nix-colors";
-
     stylix.url = "github:danth/stylix";
   };
 
