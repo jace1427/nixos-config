@@ -1,4 +1,4 @@
-# default.nix
+# configuration.nix
 {
   inputs,
   outputs,
@@ -8,10 +8,7 @@
   ...
 }: {
   imports = [
-    ./common/environment.nix
-    ./common/hardware.nix
-    ./common/programs.nix
-    ./common/services.nix
+    ./common/default.nix
 
     inputs.home-manager.nixosModules.home-manager
   ];
