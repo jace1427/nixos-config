@@ -9,7 +9,7 @@
     enableCompletion = true;
     historyControl = ["ignoreboth"];
 
-    shellAliases = {
+    shellAliases = rec {
       # git
       gs = "git status";
       ga = "git add *";

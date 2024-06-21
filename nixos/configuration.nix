@@ -83,12 +83,6 @@
     };
   };
 
-  stylix = {
-    enable = true;
-    image = ../wallpapers/city-01.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-  };
-
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs;};
     users = {
