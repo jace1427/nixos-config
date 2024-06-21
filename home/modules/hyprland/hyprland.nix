@@ -30,10 +30,10 @@
       ];
 
       general = {
-        gaps_in = 12;
-        gaps_out = 12;
+        gaps_in = 20;
+        gaps_out = 10;
 
-        border_size = 5;
+        border_size = 1;
         resize_on_border = true;
 
         # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
@@ -58,9 +58,8 @@
         # https://wiki.hyprland.org/Configuring/Variables/#blur
         blur = {
           enabled = true;
-          size = 3;
+          size = 5;
           passes = 1;
-
           vibrancy = 0.1696;
         };
       };
