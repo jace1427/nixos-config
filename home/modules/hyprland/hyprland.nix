@@ -30,8 +30,8 @@
       ];
 
       general = {
-        gaps_in = 20;
-        gaps_out = 10;
+        gaps_in = 15;
+        gaps_out = 20;
 
         border_size = 1;
         resize_on_border = true;
@@ -39,66 +39,34 @@
         # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         # "col.inactive_border" = "rgba(595959aa)";
 
-        # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
+        cursor_inactive_timeout = 4;
+
         allow_tearing = false;
 
         layout = "dwindle";
       };
 
-      decoration = {
-        rounding = 10;
-        active_opacity = 1.0;
-        # inactive_opacity = 0.9;
-
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        # "col.shadow" = "rgba(1a1a1aee)";
-
-        # https://wiki.hyprland.org/Configuring/Variables/#blur
-        blur = {
-          enabled = true;
-          size = 5;
-          passes = 1;
-          vibrancy = 0.1696;
-        };
+      binds = {
+        movefocus_cycles_fullscreen = false;
       };
 
-      # https://wiki.hyprland.org/Configuring/Variables/#animations
-      animations = {
-        enabled = true;
-
-        # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-
-        animation = [
-          "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default"
-        ];
-      };
-
-      # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
         pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # You probably want this
+        split_width_multiplier = 1.35;
       };
 
-      # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
       master = {
         new_status = "master";
       };
 
-      # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc = {
         force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo = false; # If true disables the random hyprland logo / anime girl background. :(
+        new_window_takes_over_fullscreen = 2;
+        disable_splash_rendering = true;
       };
 
-      # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
         kb_layout = "us";
         follow_mouse = 2;
@@ -106,14 +74,23 @@
         accel_profile = "flat";
       };
 
-      # https://wiki.hyprland.org/Configuring/Variables/#gestures
       gestures = {
         workspace_swipe = false;
       };
 
-      windowrulev2 = "suppressevent maximize, class:.*"; # You'll probably like this.
+      layerrule = [
+        "animation fade,waybar"
+        "blur,waybar"
+        "ignorezero,waybar"
 
-      misc.disable_splash_rendering = true;
+        "blur,notifications"
+        "ignorezero,notifications"
+
+        "blur,rofi"
+        "ignorezero,rofi"
+      ];
+
+      windowrulev2 = "suppressevent maximize, class:.*"; # You'll probably like this.
     };
   };
 }
