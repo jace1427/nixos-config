@@ -4,7 +4,7 @@
     decoration = {
       rounding = 5;
       active_opacity = 0.97;
-      inactive_opactity = 0.77;
+      inactive_opacity = 0.77;
 
       drop_shadow = true;
       shadow_range = 12;
@@ -18,7 +18,7 @@
         passes = 3;
         vibrancy = 0.1696;
         ignore_opacity = true;
-        popus = true;
+        popups = true;
       };
     };
 
