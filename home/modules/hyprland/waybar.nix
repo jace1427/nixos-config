@@ -9,7 +9,7 @@
     systemd.enable = true;
     settings = {
       mainBar = {
-        layer = "top";
+        layer = "bottom";
         position = "top";
         height = 30;
         output = [
