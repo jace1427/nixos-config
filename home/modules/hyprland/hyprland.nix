@@ -17,8 +17,6 @@
       ];
 
       exec-once = [
-        "kitty"
-        "firefox"
         "mako"
         "waybar"
         "swwww"
