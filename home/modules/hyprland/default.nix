@@ -5,5 +5,6 @@
     ./hyprland-decoration.nix
     ./waybar.nix
     ./rofi.nix
+    ./mako.nix
   ];
 }
