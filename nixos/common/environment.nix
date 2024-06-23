@@ -24,6 +24,8 @@
       swww
       mako
       rofi-wayland
+      cliphist
+      wl-clip-persist
     ];
 
     sessionVariables = {
