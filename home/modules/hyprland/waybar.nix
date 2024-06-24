@@ -44,12 +44,11 @@
 in {
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
     settings = {
       primary = {
         exculsive = false;
         passthrough = false;
-        position = "bottom";
+        position = "top";
         height = 30;
         margin = "6";
 
