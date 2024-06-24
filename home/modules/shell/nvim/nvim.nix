@@ -56,6 +56,34 @@ in {
         "Scroll up and down
         nmap <C-j> <C-e>
         nmap <C-k> <C-y>
+
+        "Buffers
+        nmap <space>b :buffers<CR>
+        nmap <C-l> :bnext<CR>
+        nmap <C-h> :bprev<CR>
+        nmap <C-q> :bdel<CR>
+
+        "Navigate
+        nmap <space>e :e<space>
+        nmap <space>e :e %:h<tab>
+        "CD to current dir
+        nmap <space>c :cd<space>
+        nmap <space>C :cd %:h<tab>
+
+        "Quickfix
+        nmap <space>q :cwindow<cr>
+        nmap [q :cprev<cr>
+        nmap ]q :cnext<cr>
+
+        "Grep (replace with ripgrep)
+        nmap <space>g :grep<space>
+        if executable('rg')
+            set grepprg=rg\ --vimgrep
+            set grepformat=%f:%l:%c:%m
+        endif
+
+        "Close other splits
+        nmap <space>o :only<cr>
       '';
 
     extraLuaConfig =
