@@ -210,5 +210,65 @@ in {
         };
       };
     };
+    style =
+      /*
+      css
+      */
+      ''
+        * {
+          font-size: 12pt;
+          padding: 0;
+          margin: 0 0.4em;
+        }
+
+        window#waybar {
+          padding: 0;
+          border-radius: 0.5em;
+        }
+
+        .modules-left {
+          margin-left: -0.65em;
+        }
+
+        .modules-right {
+          margin-right: -0.65em;
+        }
+
+        #workspaces button {
+          padding-left: 0.4em;
+          padding-right: 0.4em;
+          margin-top: 0.15em;
+          margin-bottom: 0.15em;
+        }
+
+        #clock {
+          padding-right: 1em;
+          padding-left: 1em;
+          border-radius: 0.5em;
+        }
+
+        #custom-menu {
+          padding-right: 1.5em;
+          padding-left: 1em;
+          margin-right: 0;
+          border-radius: 0.5em;
+        }
+
+        #custom-hostname {
+          padding-right: 1em;
+          padding-left: 1em;
+          margin-left: 0;
+          border-radius: 0.5em;
+        }
+
+        #custom-currentplayer {
+          padding-right: 0;
+        }
+
+        #custom-gpu, #cpu, #memory {
+          margin-left: 0.05em;
+          margin-right: 0.55em;
+        }
+      '';
   };
 }
