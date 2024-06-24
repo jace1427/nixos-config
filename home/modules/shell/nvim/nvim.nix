@@ -63,8 +63,7 @@ in {
         nmap <C-q> :bdel<CR>
 
         "Navigate
-        nmap <space>e :e<space>
-        nmap <space>e :e %:h<tab>
+        nmap <space>e :e %:h<tab><CR>
         "CD to current dir
         nmap <space>c :cd<space>
         nmap <space>C :cd %:h<tab>
@@ -112,6 +111,13 @@ in {
         add_sign("DiagnosticSignWarn", " ")
         add_sign("DiagnosticSignHint", "󰌶 ")
         add_sign("DiagnosticSignInfo", " ")
+
+        vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+          pattern = { "*" },
+          callback = function()
+            vim.api.nvim_exec('silent! normal! g`"zv', false)
+            end,
+        })
       '';
 
     plugins = with pkgs.vimPlugins; [
