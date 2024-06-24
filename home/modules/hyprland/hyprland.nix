@@ -88,8 +88,7 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*" # You'll probably like this.
-        "opacity 1.0 1.0,^(Firefox)$"
-        "noblur,^(Firefox)$"
+        "opacity 1.0 override 1.0 override,title:^(Firefox)(.*)$"
       ];
     };
   };
