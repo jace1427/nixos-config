@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.stylix = {
+  stylix = {
     targets.firefox = {
       enable = true;
       profileNames = ["Default"];
