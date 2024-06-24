@@ -86,7 +86,10 @@
         "ignorezero,rofi"
       ];
 
-      windowrulev2 = "suppressevent maximize, class:.*"; # You'll probably like this.
+      windowrulev2 = [
+        "suppressevent maximize, class:.*" # You'll probably like this.
+        "opacity 1.0 1.0,title:^(Firefox)(.*)$"
+      ];
     };
   };
 }
