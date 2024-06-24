@@ -171,17 +171,6 @@ in {
         '';
     }
     {
-      plugin = fidget-nvim;
-      type = "lua";
-      config =
-        /*
-        lua
-        */
-        ''
-          require('fidget').setup{}
-        '';
-    }
-    {
       plugin = oil-nvim;
       type = "lua";
       config =

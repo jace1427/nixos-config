@@ -34,6 +34,7 @@
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
       GTK_USE_PORTAL = "1";
+      MOZ_ENABLE_WAYLAND = 1;
     };
   };
 }

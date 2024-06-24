@@ -20,6 +20,10 @@
   home = {
     username = "jspidell";
     homeDirectory = "/home/jspidell";
+    sessionVariables = {
+      EDITOR = "nvim";
+      MOZ_ENABLE_WAYLAND = 1;
+    };
   };
 
   # Enable packages

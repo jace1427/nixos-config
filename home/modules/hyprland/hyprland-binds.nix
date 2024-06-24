@@ -20,7 +20,7 @@
       };
     in
       [
-        "SUPER, K, exec, kitty"
+        "SUPER, T, exec, kitty"
         "SUPER, Q, killactive,"
         "SUPER, D, exec, lf"
         "SUPER, F, exec, firefox"
