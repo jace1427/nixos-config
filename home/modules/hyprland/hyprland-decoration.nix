@@ -16,7 +16,7 @@
       blur = {
         enabled = true;
         size = 8;
-        passes = 3;
+        passes = 1;
         vibrancy = 0.1696;
         ignore_opacity = true;
         popups = true;
