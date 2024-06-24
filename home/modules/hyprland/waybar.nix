@@ -18,12 +18,12 @@
           "DP-3"
         ];
         modules-left = ["cpu" "memory" "disk"];
-        # modules-center = ["hyprland/window"];
-        modules-right = ["pusleaudio" "network" "clock"];
-        # "hyprland/window" = {
-        #  max-length = 200;
-        #  seperate-outputs = true;
-        # };
+        modules-center = ["hyprland/window"];
+        modules-right = ["pusleaudio" "clock"];
+        "hyprland/window" = {
+          max-length = 200;
+          seperate-outputs = true;
+        };
       };
     };
   };

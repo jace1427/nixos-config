@@ -19,7 +19,9 @@
       exec-once = [
         "mako"
         "waybar"
-        "swwww"
+        # "swwww"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
 
       env = [

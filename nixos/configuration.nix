@@ -48,8 +48,6 @@
 
   hardware = {
     pulseaudio.enable = false;
-    openrazer.enable = true;
-
     opengl = {
       enable = true;
       driSupport = true;

@@ -33,13 +33,6 @@ in {
 
         set smartcase
 
-        "Set fold level to highest in file
-        "so everything starts out unfolded at just the right level
-        augroup initial_fold
-          autocmd!
-          autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
-        augroup END
-
         "Tabs
         set tabstop=4 "4 char-wide tab
         set expandtab "Use spaces
@@ -49,12 +42,6 @@ in {
         augroup two_space_tab
           autocmd!
           autocmd FileType json,html,htmldjango,hamlet,nix,scss,typescript,php,haskell,terraform setlocal tabstop=2
-        augroup END
-
-        "Set tera to use htmldjango syntax
-        augroup tera_htmldjango
-          autocmd!
-          autocmd BufRead,BufNewFile *.tera setfiletype htmldjango
         augroup END
 
         "Fix nvim size according to terminal

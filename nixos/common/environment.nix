@@ -26,6 +26,7 @@
       rofi-wayland
       cliphist
       wl-clip-persist
+      wl-clipboard
     ];
 
     sessionVariables = {
