@@ -16,6 +16,8 @@
       gc = "git commit -m $1";
       gp = "git push";
       gd = "git diff";
+      gco = "git checkout $1";
+      gbd = "git branch -D $1";
 
       # aliases
       ls = "ls --color=auto -1lFA -I.git";
