@@ -1,6 +1,6 @@
-# NIXOS*CONFIG
+# NIXOS-CONFIG
 
-My NixOS configuration, built with flakes and home*manager (as a NixOS module). This is a major WIP and gets updated with (breaking) changes often.
+My NixOS configuration, built with flakes and home*manager (as a NixOS module). This is a major WIP, so no promises :)
 
 ## Structure
 
@@ -30,3 +30,4 @@ My NixOS configuration, built with flakes and home*manager (as a NixOS module). 
 
 * `wallpapers`
   [Sourced from here](https://github.com/dharmx/walls/tree/main)
+
