@@ -14,7 +14,7 @@
       # "col.shadow" = "rgba(1a1a1aee)";
 
       blur = {
-        enabled = false;
+        enabled = true;
         size = 8;
         passes = 3;
         vibrancy = 0.1696;
