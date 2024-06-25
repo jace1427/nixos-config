@@ -31,6 +31,7 @@
 
   home.packages = with pkgs; [
     steam
+    prismlauncher
     vkbasalt
     gamescope
     protonup-qt
