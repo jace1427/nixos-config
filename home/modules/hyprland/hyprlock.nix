@@ -22,7 +22,7 @@
         {
           size = "200, 50";
           position = "0, -80";
-          monitor = "DP-1";
+          monitor = "DP-3";
           dots_center = true;
           fade_on_empty = false;
           outline_thickness = 5;
