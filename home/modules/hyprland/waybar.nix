@@ -57,7 +57,7 @@ in {
           "DP-3"
         ];
 
-        modules-left = ["hyprland/workspaces" "hyprland/submap" "custom/currentplayer" "custom/player"];
+        modules-left = ["custom/currentplayer" "custom/player"];
 
         modules-center = ["hyprland/window"];
 
