@@ -50,7 +50,6 @@ in {
         passthrough = false;
         position = "top";
         height = 30;
-        margin = "6";
 
         output = [
           "DP-1"
@@ -58,28 +57,23 @@ in {
           "DP-3"
         ];
 
-        modules-left = ["custom/menu" "hyrland/workspaces" "hyprland/submap" "custom/currentplayer" "custom/player"];
+        modules-left = ["hyprland/workspaces" "hyprland/submap" "custom/currentplayer" "custom/player"];
 
-        modules-center = [
+        modules-center = ["hyprland/window"];
+
+        modules-right = [
           "cpu"
           "custom/gpu"
           "memory"
-          "clock"
           "pulseaudio"
-        ];
-
-        modules-right = [
-          "tray"
-          "custom/hostname"
+          "clock"
         ];
 
         clock = {
           interval = 1;
-          format = "{:%d/%m %H:%M:%S}";
-          format-alt = "{:%Y-%m-%d %H:%M:%S %z}";
-          on-click-left = "mode";
+          format = "{:%m/%d %H:%M}";
           tooltip-format = ''
-            <big>{:%Y %B}</big>
+            <big>{:%B %Y}</big>
             <tt><small>{calendar}</small></tt>'';
         };
 
@@ -102,9 +96,6 @@ in {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
           format-icons = {
-            headphone = "󰋋";
-            headset = "󰋎";
-            portable = "";
             default = [
               ""
               ""
@@ -121,32 +112,9 @@ in {
           };
         };
 
-        network = {
-          interval = 3;
-          format-wifi = "   {essid}";
-          format-ethernet = "󰈁 Connected";
-          format-disconnected = "";
-          tooltip-format = ''
-            {ifname}
-            {ipaddr}/{cidr}
-            Up: {bandwidthUpBits}
-            Down: {bandwidthDownBits}'';
-        };
-
-        "custom/menu" = {
-          interval = 1;
-          return-type = "json";
-          exec = mkScriptJson {
-            deps = [config.wayland.windowManager.hyprland.package];
-            text = "";
-            tooltip = ''$(grep /etc/os-release PRETTY_NAME | cut -d '"' -f2)'';
-            class = "$(if hyprctl activewindow -j | jq -e '.fullscree' &>/dev/null; then echo fullscreen; fi)";
-          };
-        };
-
-        "custom/hostname" = {
-          exec = mkScript {script = ''echo "$USER@$HOSTNAME"'';};
-          on-click = mkScript {script = "systemctl --user restart waybar";};
+        "hyprland/window" = {
+          "max-length" = 200;
+          "separate-outputs" = true;
         };
 
         "custom/currentplayer" = {
@@ -244,20 +212,6 @@ in {
         #clock {
           padding-right: 1em;
           padding-left: 1em;
-          border-radius: 0.5em;
-        }
-
-        #custom-menu {
-          padding-right: 1.5em;
-          padding-left: 1em;
-          margin-right: 0;
-          border-radius: 0.5em;
-        }
-
-        #custom-hostname {
-          padding-right: 1em;
-          padding-left: 1em;
-          margin-left: 0;
           border-radius: 0.5em;
         }
 
