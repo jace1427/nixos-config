@@ -30,7 +30,11 @@
     defaultUserShell = pkgs.bash;
     users.jspidell = {
       isNormalUser = true;
-      extraGroups = ["wheel" "audio" "networkmanager"];
+      extraGroups = [
+        "wheel"
+        "audio"
+        "networkmanager"
+      ];
     };
   };
 
@@ -80,7 +84,9 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = {
+      inherit inputs outputs;
+    };
     users = {
       jspidell = import ../home/home.nix;
     };

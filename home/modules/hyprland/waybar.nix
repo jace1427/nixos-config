@@ -5,18 +5,24 @@
   lib,
   ...
 }: let
-  commonDeps = with pkgs; [coreutils gnugrep systemd];
+  commonDeps = with pkgs; [
+    coreutils
+    gnugrep
+    systemd
+  ];
   # Function to simplify making waybar outputs
   mkScript = {
     name ? "script",
     deps ? [],
     script ? "",
   }:
-    lib.meta.getExe (pkgs.writeShellApplication {
-      inherit name;
-      text = script;
-      runtimeInputs = commonDeps ++ deps;
-    });
+    lib.meta.getExe (
+      pkgs.writeShellApplication {
+        inherit name;
+        text = script;
+        runtimeInputs = commonDeps ++ deps;
+      }
+    );
   # Specialized for JSON outputs
   mkScriptJson = {
     name ? "script",
@@ -57,7 +63,10 @@ in {
           "DP-3"
         ];
 
-        modules-left = ["custom/currentplayer" "custom/player"];
+        modules-left = [
+          "custom/currentplayer"
+          "custom/player"
+        ];
 
         modules-center = ["hyprland/window"];
 
@@ -179,9 +188,7 @@ in {
       };
     };
     style =
-      /*
-      css
-      */
+      # css
       ''
         * {
           font-size: 12pt;

@@ -35,7 +35,9 @@
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs user;};
+        specialArgs = {
+          inherit inputs outputs user;
+        };
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           stylix.nixosModules.stylix

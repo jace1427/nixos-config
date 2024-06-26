@@ -6,9 +6,7 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./modules/default.nix
-  ];
+  imports = [./modules/default.nix];
 
   nixpkgs = {
     config = {
