@@ -2,17 +2,16 @@
 {
   programs.neovim = {
     extraConfig = ''
+      nmap <space>b :buffers<CR>
+      nmap <C-l> :bnext<CR>
+      nmap <C-h> :bprev<CR>
+      <C-q> :bdel<CR>  augroup two_space_tab
+      <space>e :e %:h<tab><CR>
+      <space>q :cwindow<CR>
 
-                  nmap <space>b :buffers<CR>
-              nmap <C-l> :bnext<CR>
-              nmap <C-h> :bprev<CR>
-              nmap <C-q> :bdel<CR>  augroup two_space_tab
-              nmap <space>e :e %:h<tab><CR>
-      	nmap <space>q :cwindow<CR>
-
-              autocmd!
-      	autocmd FileType nix setlocal tabstop = 2
-            augroup END
+      autocmd!
+        autocmd FileType nix setlocal tabstop = 2
+      augroup END
     '';
 
     extraLuaConfig = ''
@@ -34,7 +33,6 @@
       vim.opt.inccommand = 'split'
       vim.opt.cursorline = true
       vim.opt.scrolloff = 10
-      vim.opt.wildcharm = <tab>
       vim.opt.tabstop = 4
       vim.opt.expandtab
       vim.opt.softtabstop = 0
