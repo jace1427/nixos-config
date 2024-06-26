@@ -1,9 +1,6 @@
 # git.nix
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   programs.git = {
     enable = true;
     userName = "Justin Spidell";

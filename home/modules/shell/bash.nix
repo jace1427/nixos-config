@@ -1,13 +1,10 @@
 # bash.nix
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    historyControl = ["ignoreboth"];
+    historyControl = [ "ignoreboth" ];
 
     shellAliases = rec {
       # git

@@ -1,5 +1,6 @@
 # hypridle.nix
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   services.hypridle = {
     enable = true;
     settings = {

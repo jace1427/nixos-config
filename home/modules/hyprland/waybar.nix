@@ -4,18 +4,20 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   commonDeps = with pkgs; [
     coreutils
     gnugrep
     systemd
   ];
   # Function to simplify making waybar outputs
-  mkScript = {
-    name ? "script",
-    deps ? [],
-    script ? "",
-  }:
+  mkScript =
+    {
+      name ? "script",
+      deps ? [ ],
+      script ? "",
+    }:
     lib.meta.getExe (
       pkgs.writeShellApplication {
         inherit name;
@@ -24,18 +26,19 @@
       }
     );
   # Specialized for JSON outputs
-  mkScriptJson = {
-    name ? "script",
-    deps ? [],
-    pre ? "",
-    text ? "",
-    tooltip ? "",
-    alt ? "",
-    class ? "",
-    percentage ? "",
-  }:
+  mkScriptJson =
+    {
+      name ? "script",
+      deps ? [ ],
+      pre ? "",
+      text ? "",
+      tooltip ? "",
+      alt ? "",
+      class ? "",
+      percentage ? "",
+    }:
     mkScript {
-      deps = [pkgs.jq] ++ deps;
+      deps = [ pkgs.jq ] ++ deps;
       script = ''
         ${pre}
         jq -cn \
@@ -47,7 +50,8 @@
           '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
       '';
     };
-in {
+in
+{
   programs.waybar = {
     enable = true;
     settings = {
@@ -68,7 +72,7 @@ in {
           "custom/player"
         ];
 
-        modules-center = ["hyprland/window"];
+        modules-center = [ "hyprland/window" ];
 
         modules-right = [
           "cpu"
@@ -92,7 +96,7 @@ in {
 
         "custom/gpu" = {
           interval = 5;
-          exec = mkScript {script = "cat /sys/class/drm/card0/device/gpu_busy_percent";};
+          exec = mkScript { script = "cat /sys/class/drm/card0/device/gpu_busy_percent"; };
           format = "󰒋  {}%";
         };
 
@@ -130,7 +134,7 @@ in {
           interval = 2;
           return-type = "json";
           exec = mkScriptJson {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             pre = ''
               player="$(playerctl status -f "{{playerName}}" 2>/dev/null || echo "No player active" | cut -d '.' -f1)"
               count="$(playerctl -l 2>/dev/null | wc -l)"
@@ -161,14 +165,15 @@ in {
 
         "custom/player" = {
           exec-if = mkScript {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             script = "playerctl status 2>/dev/null";
           };
-          exec = let
-            format = ''{"text": "{{title}} - {{artist}}", "alt": "{{status}}", "tooltip": "{{title}} - {{artist}} ({{album}})"}'';
-          in
+          exec =
+            let
+              format = ''{"text": "{{title}} - {{artist}}", "alt": "{{status}}", "tooltip": "{{title}} - {{artist}} ({{album}})"}'';
+            in
             mkScript {
-              deps = [pkgs.playerctl];
+              deps = [ pkgs.playerctl ];
               script = "playerctl metadata --format '${format}' 2>/dev/null";
             };
           return-type = "json";
@@ -181,7 +186,7 @@ in {
             "Stopped" = "󰓛";
           };
           on-click = mkScript {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             script = "playerctl play-pause";
           };
         };

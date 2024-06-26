@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd /home/jspidell/dir/nixos-config
-alejandra . &> alejandra.log
-if !(cat alejandra.log | grep -A 5 "Failed!")
+nixfmt . &> nixfmt.log
+if !(cat nixfmt.log | grep -A 5 "Failed!")
 then
 	git diff -U0 
 	git add * &> /dev/null

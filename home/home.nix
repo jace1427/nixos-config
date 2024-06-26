@@ -5,8 +5,9 @@
   config,
   pkgs,
   ...
-}: {
-  imports = [./modules/default.nix];
+}:
+{
+  imports = [ ./modules/default.nix ];
 
   nixpkgs = {
     config = {
@@ -34,7 +35,6 @@
     gamescope
     protonup-qt
     spotify
-    alejandra
     discord
     wowup-cf
     obsidian

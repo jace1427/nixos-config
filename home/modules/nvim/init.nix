@@ -1,5 +1,6 @@
 # init.nix
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.neovim = {
     enable = true;
     vimAlias = true;
@@ -10,15 +11,8 @@
       vim.g.mapleader = ' '
       vim.g.maplocalleader = ' '
       vim.g.have_nerd_font = true
-
-      require 'options'
-      require 'keymaps'
-      require 'lazy-bootstrap'
-      require 'lazy-plugins'
     '';
   };
 
-  imports = [
-    ./options.nix
-  ];
+  imports = [ ./options.nix ];
 }

@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./common/default.nix
 
@@ -57,7 +58,7 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [amdvlk];
+      extraPackages = with pkgs; [ amdvlk ];
     };
   };
 

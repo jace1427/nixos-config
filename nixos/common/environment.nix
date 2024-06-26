@@ -1,9 +1,6 @@
 # environment.nix
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   environment = {
     systemPackages = with pkgs; [
       wine
@@ -28,6 +25,7 @@
       cliphist
       wl-clip-persist
       wl-clipboard
+      nixfmt-rfc-style
     ];
 
     sessionVariables = {
