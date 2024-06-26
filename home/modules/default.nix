@@ -3,6 +3,6 @@
     ./shell/default.nix
     ./hyprland/default.nix
     ./stylix.nix
-    ./nvim/default.nix
+    ./nixvim/default.nix
   ];
 }

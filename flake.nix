@@ -18,6 +18,8 @@
     };
 
     stylix.url = "github:danth/stylix";
+
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs =
@@ -29,6 +31,7 @@
       nix-flatpak,
       stylix,
       hyprland,
+      nixvim,
       ...
     }@inputs:
     let
@@ -44,24 +47,23 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
+            nixvim.nixosModules.nixvim
 
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
+              home-manager.sharedModules = [ nixvim.homeManagerModules.nixvim ];
             }
+
+            nixos-hardware.nixosModules.common-cpu-amd
+            nixos-hardware.nixosModules.common-gpu-amd
+            nixos-hardware.nixosModules.common-pc-ssd
 
             ./nixos/configuration.nix
           ];
         };
-      };
-
-      nixosConfigurations.jspidell = nixpkgs.lib.nixosSystem {
-        modules = [
-          nixos-hardware.nixosModules.common-cpu-amd
-          nixos-hardware.nixosModules.common-ssd
-        ];
       };
     };
 }
