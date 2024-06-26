@@ -27,7 +27,7 @@
         "SUPER, R, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
-        "SUPER, L, exec, hyprlock"
+        "SUPERSHIFT, L, exec, hyprlock"
       ]
       ++
       # Change workspace
