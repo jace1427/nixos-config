@@ -6,7 +6,6 @@
       plugin = nvim-treesitter;
       type = "lua";
       config = ''
-
         require('nvim-treesitter.install').prefer_git = true
         require('nvim-treesitter.configs').setup{
           ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },

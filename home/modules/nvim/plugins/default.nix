@@ -2,16 +2,17 @@
 { pkgs, ... }:
 {
   imports = [
-    ./autopairs.nix
-    ./cmp.nix
-    ./conform.nix
-    ./gitsigns.nix
-    ./indent_line.nix
-    ./link.nix
-    ./lspconfig.nix
-    ./neo-tree.nix
-    ./telescope.nix
-    ./treesitter.nix
+    # reverse order for some reason
     ./which-key.nix
+    ./treesitter.nix
+    ./telescope.nix
+    ./neo-tree.nix
+    ./lspconfig.nix
+    ./link.nix
+    ./indent_line.nix
+    ./gitsigns.nix
+    ./conform.nix
+    ./cmp.nix
+    ./autopairs.nix
   ];
 }
