@@ -1,3 +1,4 @@
+# options.nix
 { pkgs, ... }:
 {
   programs.nixvim = {
@@ -6,6 +7,7 @@
       maplocalleader = " ";
       have_nerd_font = true;
     };
+
     opts = {
       relativenumber = true;
       mouse = "a";
@@ -29,6 +31,23 @@
       inccommand = "split";
       cursorline = true;
       scrolloff = 10;
+      hlsearch = true;
     };
+
+    autoGroups = {
+      highlight-on-yank = {
+        clear = true;
+      };
+    };
+
+    autoCmd = [
+      {
+        desc = "Highlight when yanking (copying) text";
+        group = "highlight-on-yank";
+        callback = {
+          __raw = "function() vim.highlight.on_yank() end";
+        };
+      }
+    ];
   };
 }
