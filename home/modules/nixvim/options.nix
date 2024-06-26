@@ -21,7 +21,11 @@
       splitright = true;
       splitbelow = true;
       list = true;
-      # listchars = 
+      listchars = {
+        tab = "» ";
+        trail = "·";
+        nbsp = "␣";
+      };
       inccommand = "split";
       cursorline = true;
       scrolloff = 10;
