@@ -26,7 +26,7 @@ My NixOS configuration, built with flakes and home*manager (as a NixOS module). 
   The main entry point of the configuration. Imports unstable and others, calls into `nixos/configuration.nix`, and `home/home.nix`
 
 * `rebuild.sh`
-  Checks configuration with alejandra, `nixos*rebuild switch`'s, and if successful, pushes to the github repo
+  Checks configuration with nixfmt, `nixos-rebuild switch`'s, and if successful, pushes to the github repo
 
 * `wallpapers`
   [Sourced from here](https://github.com/dharmx/walls/tree/main)
