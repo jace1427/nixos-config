@@ -7,6 +7,7 @@
     ./conform.nix
     ./gitsigns.nix
     ./lint.nix
+    ./neo-tree.nix
   ];
   programs.nixvim.plugins = {
     # detect tabstop automatically
