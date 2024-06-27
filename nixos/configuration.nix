@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./common/default.nix
 
@@ -30,7 +31,11 @@
     defaultUserShell = pkgs.bash;
     users.jspidell = {
       isNormalUser = true;
-      extraGroups = ["wheel" "audio" "networkmanager"];
+      extraGroups = [
+        "wheel"
+        "audio"
+        "networkmanager"
+      ];
     };
   };
 
@@ -51,9 +56,8 @@
     pulseaudio.enable = false;
     opengl = {
       enable = true;
-      driSupport = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [amdvlk];
+      extraPackages = with pkgs; [ amdvlk ];
     };
   };
 
@@ -80,7 +84,9 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = {
+      inherit inputs outputs;
+    };
     users = {
       jspidell = import ../home/home.nix;
     };

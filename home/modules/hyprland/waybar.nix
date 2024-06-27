@@ -4,32 +4,41 @@
   config,
   lib,
   ...
-}: let
-  commonDeps = with pkgs; [coreutils gnugrep systemd];
+}:
+let
+  commonDeps = with pkgs; [
+    coreutils
+    gnugrep
+    systemd
+  ];
   # Function to simplify making waybar outputs
-  mkScript = {
-    name ? "script",
-    deps ? [],
-    script ? "",
-  }:
-    lib.meta.getExe (pkgs.writeShellApplication {
-      inherit name;
-      text = script;
-      runtimeInputs = commonDeps ++ deps;
-    });
+  mkScript =
+    {
+      name ? "script",
+      deps ? [ ],
+      script ? "",
+    }:
+    lib.meta.getExe (
+      pkgs.writeShellApplication {
+        inherit name;
+        text = script;
+        runtimeInputs = commonDeps ++ deps;
+      }
+    );
   # Specialized for JSON outputs
-  mkScriptJson = {
-    name ? "script",
-    deps ? [],
-    pre ? "",
-    text ? "",
-    tooltip ? "",
-    alt ? "",
-    class ? "",
-    percentage ? "",
-  }:
+  mkScriptJson =
+    {
+      name ? "script",
+      deps ? [ ],
+      pre ? "",
+      text ? "",
+      tooltip ? "",
+      alt ? "",
+      class ? "",
+      percentage ? "",
+    }:
     mkScript {
-      deps = [pkgs.jq] ++ deps;
+      deps = [ pkgs.jq ] ++ deps;
       script = ''
         ${pre}
         jq -cn \
@@ -41,7 +50,8 @@
           '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
       '';
     };
-in {
+in
+{
   programs.waybar = {
     enable = true;
     settings = {
@@ -50,7 +60,6 @@ in {
         passthrough = false;
         position = "top";
         height = 30;
-        margin = "6";
 
         output = [
           "DP-1"
@@ -58,28 +67,26 @@ in {
           "DP-3"
         ];
 
-        modules-left = ["custom/menu" "hyrland/workspaces" "hyprland/submap" "custom/currentplayer" "custom/player"];
+        modules-left = [
+          "custom/currentplayer"
+          "custom/player"
+        ];
 
-        modules-center = [
+        modules-center = [ "hyprland/window" ];
+
+        modules-right = [
           "cpu"
           "custom/gpu"
           "memory"
-          "clock"
           "pulseaudio"
-        ];
-
-        modules-right = [
-          "tray"
-          "custom/hostname"
+          "clock"
         ];
 
         clock = {
           interval = 1;
-          format = "{:%d/%m %H:%M:%S}";
-          format-alt = "{:%Y-%m-%d %H:%M:%S %z}";
-          on-click-left = "mode";
+          format = "{:%a %m/%d %H:%M}";
           tooltip-format = ''
-            <big>{:%Y %B}</big>
+            <big>{:%B %Y}</big>
             <tt><small>{calendar}</small></tt>'';
         };
 
@@ -89,7 +96,7 @@ in {
 
         "custom/gpu" = {
           interval = 5;
-          exec = mkScript {script = "cat /sys/class/drm/card0/device/gpu_busy_percent";};
+          exec = mkScript { script = "cat /sys/class/drm/card0/device/gpu_busy_percent"; };
           format = "󰒋  {}%";
         };
 
@@ -102,9 +109,6 @@ in {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
           format-icons = {
-            headphone = "󰋋";
-            headset = "󰋎";
-            portable = "";
             default = [
               ""
               ""
@@ -121,39 +125,16 @@ in {
           };
         };
 
-        network = {
-          interval = 3;
-          format-wifi = "   {essid}";
-          format-ethernet = "󰈁 Connected";
-          format-disconnected = "";
-          tooltip-format = ''
-            {ifname}
-            {ipaddr}/{cidr}
-            Up: {bandwidthUpBits}
-            Down: {bandwidthDownBits}'';
-        };
-
-        "custom/menu" = {
-          interval = 1;
-          return-type = "json";
-          exec = mkScriptJson {
-            deps = [config.wayland.windowManager.hyprland.package];
-            text = "";
-            tooltip = ''$(grep /etc/os-release PRETTY_NAME | cut -d '"' -f2)'';
-            class = "$(if hyprctl activewindow -j | jq -e '.fullscree' &>/dev/null; then echo fullscreen; fi)";
-          };
-        };
-
-        "custom/hostname" = {
-          exec = mkScript {script = ''echo "$USER@$HOSTNAME"'';};
-          on-click = mkScript {script = "systemctl --user restart waybar";};
+        "hyprland/window" = {
+          "max-length" = 200;
+          "separate-outputs" = true;
         };
 
         "custom/currentplayer" = {
           interval = 2;
           return-type = "json";
           exec = mkScriptJson {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             pre = ''
               player="$(playerctl status -f "{{playerName}}" 2>/dev/null || echo "No player active" | cut -d '.' -f1)"
               count="$(playerctl -l 2>/dev/null | wc -l)"
@@ -184,14 +165,15 @@ in {
 
         "custom/player" = {
           exec-if = mkScript {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             script = "playerctl status 2>/dev/null";
           };
-          exec = let
-            format = ''{"text": "{{title}} - {{artist}}", "alt": "{{status}}", "tooltip": "{{title}} - {{artist}} ({{album}})"}'';
-          in
+          exec =
+            let
+              format = ''{"text": "{{title}} - {{artist}}", "alt": "{{status}}", "tooltip": "{{title}} - {{artist}} ({{album}})"}'';
+            in
             mkScript {
-              deps = [pkgs.playerctl];
+              deps = [ pkgs.playerctl ];
               script = "playerctl metadata --format '${format}' 2>/dev/null";
             };
           return-type = "json";
@@ -204,16 +186,14 @@ in {
             "Stopped" = "󰓛";
           };
           on-click = mkScript {
-            deps = [pkgs.playerctl];
+            deps = [ pkgs.playerctl ];
             script = "playerctl play-pause";
           };
         };
       };
     };
     style =
-      /*
-      css
-      */
+      # css
       ''
         * {
           font-size: 12pt;
@@ -244,20 +224,6 @@ in {
         #clock {
           padding-right: 1em;
           padding-left: 1em;
-          border-radius: 0.5em;
-        }
-
-        #custom-menu {
-          padding-right: 1.5em;
-          padding-left: 1em;
-          margin-right: 0;
-          border-radius: 0.5em;
-        }
-
-        #custom-hostname {
-          padding-right: 1em;
-          padding-left: 1em;
-          margin-left: 0;
           border-radius: 0.5em;
         }
 

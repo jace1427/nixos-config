@@ -1,8 +1,5 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   stylix = {
     enable = true;
     image = ../../wallpapers/city-01.jpg;
@@ -17,7 +14,7 @@
       };
 
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
         name = "FiraCode Nerd Font";
       };
 

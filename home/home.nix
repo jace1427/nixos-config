@@ -5,10 +5,9 @@
   config,
   pkgs,
   ...
-}: {
-  imports = [
-    ./modules/default.nix
-  ];
+}:
+{
+  imports = [ ./modules/default.nix ];
 
   nixpkgs = {
     config = {
@@ -31,11 +30,11 @@
 
   home.packages = with pkgs; [
     steam
+    prismlauncher
     vkbasalt
     gamescope
     protonup-qt
     spotify
-    alejandra
     discord
     wowup-cf
     obsidian
@@ -44,6 +43,8 @@
     zoom-us
     lf
     btop
+    vale
+    markdownlint-cli2
   ];
 
   # Nicely reload system units when changing configs

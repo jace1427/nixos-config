@@ -4,7 +4,8 @@
   config,
   inputs,
   ...
-}: {
+}:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -19,6 +20,7 @@
       exec-once = [
         "mako"
         "waybar"
+        "hypridle"
         # "swwww"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
@@ -88,7 +90,7 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*" # You'll probably like this.
-        "opacity 1.0 override 1.0 override 1.0 override,title:firefox"
+        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
       ];
     };
   };

@@ -1,18 +1,13 @@
 # services.nix
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   services = {
     openssh.enable = true;
     printing.enable = true;
 
     flatpak = {
       enable = true;
-      packages = [
-        "com.usebottles.bottles"
-      ];
+      packages = [ "com.usebottles.bottles" ];
       update.auto = {
         enable = true;
         onCalendar = "daily";
@@ -33,7 +28,7 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
-      videoDrivers = ["modesetting"];
+      videoDrivers = [ "modesetting" ];
     };
 
     libinput = {

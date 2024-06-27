@@ -4,7 +4,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   programs = {
     firefox.enable = true;
     gamemode.enable = true;

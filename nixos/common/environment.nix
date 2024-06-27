@@ -1,9 +1,6 @@
 # environment.nix
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   environment = {
     systemPackages = with pkgs; [
       wine
@@ -19,6 +16,7 @@
       libsForQt5.qt5.qtgraphicaleffects
       gcc
       rustup
+      python3
       dotnet-sdk_8
       libnotify
       swww
@@ -27,6 +25,7 @@
       cliphist
       wl-clip-persist
       wl-clipboard
+      nixfmt-rfc-style
     ];
 
     sessionVariables = {

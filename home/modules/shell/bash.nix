@@ -1,13 +1,10 @@
 # bash.nix
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    historyControl = ["ignoreboth"];
+    historyControl = [ "ignoreboth" ];
 
     shellAliases = rec {
       # git
@@ -16,6 +13,8 @@
       gc = "git commit -m $1";
       gp = "git push";
       gd = "git diff";
+      gco = "git checkout $1";
+      gbd = "git branch -D $1";
 
       # aliases
       ls = "ls --color=auto -1lFA -I.git";
