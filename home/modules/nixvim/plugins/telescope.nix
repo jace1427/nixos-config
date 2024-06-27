@@ -1,7 +1,7 @@
 # telescope.nix
 { pkgs, ... }:
 {
-  programs.nixvim.plugins.neo-tree = {
+  programs.nixvim.plugins.telescope = {
     enable = true;
   };
 }
