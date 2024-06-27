@@ -16,10 +16,10 @@
       "InsertLeave"
     ];
 
-    linters = {
-      nixfmt = {
-        cmd = "nixfmt";
-      };
-    };
+    #   linters = {
+    #     nixfmt = {
+    #       cmd = "nixfmt";
+    #     };
+    #   };
   };
 }
