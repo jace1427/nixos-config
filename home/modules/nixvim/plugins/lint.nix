@@ -6,7 +6,7 @@
 
     lintersByFt = {
       text = [ "vale" ];
-      nix = [ "nixfmt" ];
+      # nix = [ "nixfmt" ];
       markdown = [ "markdownlint-cli2" ];
     };
 
