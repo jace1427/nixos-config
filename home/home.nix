@@ -43,6 +43,8 @@
     zoom-us
     lf
     btop
+    vale
+    markdownlint-cli2
   ];
 
   # Nicely reload system units when changing configs
