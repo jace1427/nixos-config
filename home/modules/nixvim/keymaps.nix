@@ -34,6 +34,15 @@
         mode = "n";
         options.desc = "Open diagnostic [Q]uickfix list";
       }
+
+      # plugin keymaps (some plugin keymaps are in their plugin files)
+      {
+        action = "function() require('conform').format { async = true, lsp_fallback = true } end";
+        key = "<leader>f";
+        mode = "";
+        options.desc = "[F]ormat buffer";
+      }
+
     ];
   };
 }
