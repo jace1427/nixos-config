@@ -1,7 +1,0 @@
-./home/modules/nixvim/plugins/cmp.nix:39:1:
-   |
-39 | <empty line>
-   | ^
-unexpected end of input
-expecting expression
-

@@ -2,7 +2,9 @@
 { pkgs, ... }:
 {
   imports = [
-
+    ./autopairs.nix
+    ./cmp.nix
+    ./conform.nix
   ];
   programs.nixvim.plugins = {
     # detect tabstop automatically
