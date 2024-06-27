@@ -5,7 +5,7 @@
     enable = true;
     lintersByFt = {
       text = [ "vale" ];
-      nix = [ "nix-linter" ];
+      nix = [ "nixfmt-rfc-style" ];
       markdown = [ "markdownlint-cli2" ];
     };
     autoCmd.event = [
