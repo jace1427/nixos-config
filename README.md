@@ -6,15 +6,15 @@ My NixOS configuration, built with flakes and home*manager (as a NixOS module). 
 
 * `home`
   * `modules`
-    Contains modules for home*manager settings
+    Contains modules for home-manager settings
     * `hyprland`
-      Contains Hyprland home*manager settings
+      Contains Hyprland home-manager settings
     * `shell`
       Contains shell related settings
-      * `nvim`
-        Contains neovim home*manager settings
+    * `nixvim`
+      Contains nixvim home-manager settings
   * `home.nix`
-    Entry point for home*manager
+    Entry point for home-manager
 
 * `nixos`
   * `common`
@@ -30,4 +30,3 @@ My NixOS configuration, built with flakes and home*manager (as a NixOS module). 
 
 * `wallpapers`
   [Sourced from here](https://github.com/dharmx/walls/tree/main)
-
