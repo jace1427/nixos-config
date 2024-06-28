@@ -28,14 +28,29 @@
         mode = "n";
         options.desc = "Show diagnostic [E]rror messages";
       }
+
+      # QuickFix
       {
-        action = "vim.diagnostic.setloclist";
+        action = ":cwindow<CR>";
         key = "<leader>q";
-        mode = "n";
-        options.desc = "Open diagnostic [Q]uickfix list";
+        mode = "";
+        options.desc = "Open [Q]uickfix";
+      }
+      {
+        action = ":cnext<CR>";
+        key = "]q";
+        mode = "";
+        options.desc = "Next [Q]uickfix";
+      }
+      {
+        action = ":cprev<CR>";
+        key = "[q";
+        mode = "";
+        options.desc = "Previous [Q]uickfix";
       }
 
-      # plugin keymaps (some plugin keymaps are in their plugin files)
+      # conform keybind
+      # TODO doesn't work
       {
         action = "function() require('conform').format { async = true, lsp_fallback = true } end";
         key = "<leader>f";
@@ -63,10 +78,18 @@
         options.desc = "Go to previous Buffer";
       }
       {
-        action = ":bquit<CR>";
+        action = ":bdel<CR>";
         key = "<C-q>";
         mode = "";
         options.desc = "[Q]uit Buffer";
+      }
+
+      # Grep
+      {
+        action = ":grep<space>";
+        key = "<leader>g";
+        mode = "";
+        options.desc = "[G]rep";
       }
     ];
   };

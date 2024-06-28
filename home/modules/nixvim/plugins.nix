@@ -1,7 +1,19 @@
 # default.nix
 { pkgs, ... }:
 {
+  programs.neovim.plugins = with pkgs.vimPlugins; [
+    rust-vim
+    vim-markdown
+    vim-nix
+  ];
+
   programs.nixvim.plugins = {
+    # better quickfix
+    nvim-bqf.enable = true;
+
+    # better $/progress
+    fidget.enable = true;
+
     # detect tabstop automatically
     sleuth.enable = true;
 
@@ -22,6 +34,11 @@
     nvim-autopairs.enable = true;
 
     # completion
+    cmp-rg.enable = true;
+    cmp-nvim-lsp.enable = true;
+    cmp_luasnip.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
     cmp = {
       enable = true;
       autoEnableSources = true;

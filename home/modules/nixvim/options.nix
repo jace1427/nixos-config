@@ -44,6 +44,7 @@
       {
         desc = "Highlight when yanking (copying) text";
         group = "highlight-on-yank";
+        event = "TextYankPost";
         callback = {
           __raw = "function() vim.highlight.on_yank() end";
         };
