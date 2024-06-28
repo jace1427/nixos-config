@@ -87,7 +87,6 @@
 
       lintersByFt = {
         text = [ "vale" ];
-        nix = [ "nixfmt" ];
         markdown = [ "markdownlint-cli2" ];
       };
 
@@ -96,12 +95,6 @@
         "BufWritePost"
         "InsertLeave"
       ];
-
-      linters = {
-        nixfmt = {
-          cmd = "nixfmt";
-        };
-      };
     };
 
     neo-tree.enable = true;
