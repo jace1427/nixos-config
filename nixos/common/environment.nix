@@ -17,6 +17,7 @@
       gcc
       rustup
       python3
+      python311Packages.torch
       dotnet-sdk_8
       libnotify
       swww
