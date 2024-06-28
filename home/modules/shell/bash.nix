@@ -23,6 +23,7 @@
       nfu = "n; sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
+      r = "!!";
 
       # cd's
       ".." = "cd ..";
@@ -31,6 +32,7 @@
       n = "cd ~/dir/nixos-config";
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
+      repos = "cd ~/dir/repos/";
     };
   };
 }
