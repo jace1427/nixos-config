@@ -16,7 +16,7 @@
       libsForQt5.qt5.qtgraphicaleffects
       gcc
       rustup
-      python3
+      python311Full
       python311Packages.torch
       dotnet-sdk_8
       libnotify
