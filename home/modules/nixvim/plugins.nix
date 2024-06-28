@@ -106,7 +106,15 @@
 
     neo-tree.enable = true;
 
-    obsidian.enable = true;
+    obsidian = {
+      enable = true;
+      settings.workspaces = [
+        {
+          name = "vault";
+          path = "~/dir/vault";
+        }
+      ];
+    };
 
     telescope.enable = true;
 
