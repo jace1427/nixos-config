@@ -43,6 +43,31 @@
         options.desc = "[F]ormat buffer";
       }
 
+      # buffers
+      {
+        action = ":bufffers<CR>";
+        key = "<leader>b";
+        mode = "";
+        options.desc = "Open [B]uffer list";
+      }
+      {
+        action = ":bnext<CR>";
+        key = "<C-l>";
+        mode = "";
+        options.desc = "Go to next Buffer";
+      }
+      {
+        action = ":bprev<CR>";
+        key = "<C-h>";
+        mode = "";
+        options.desc = "Go to previous Buffer";
+      }
+      {
+        action = ":bquit<CR>";
+        key = "<C-q>";
+        mode = "";
+        options.desc = "[Q]uit Buffer";
+      }
     ];
   };
 }
