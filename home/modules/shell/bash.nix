@@ -23,7 +23,7 @@
       nfu = "n; sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
-      r = "!!";
+      r = "'BASH' -c '$(history -p !!)'";
 
       # cd's
       ".." = "cd ..";
