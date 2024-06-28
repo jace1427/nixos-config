@@ -1,7 +1,0 @@
-./home/modules/nixvim/plugins/treesitter.nix:6:2:
-  |
-6 | };
-  |  ^
-unexpected ';'
-expecting "or", '.', end of input, operator, or term
-

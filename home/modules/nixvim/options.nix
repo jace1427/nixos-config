@@ -10,7 +10,7 @@
 
     opts = {
       relativenumber = true;
-      mouse = "a";
+      mouse = "";
       showmode = false;
       clipboard = "unnamedplus";
       breakindent = true;
@@ -33,21 +33,21 @@
       scrolloff = 10;
       hlsearch = true;
     };
-    # TODO fix autoGroups
-    #autoGroups = {
-    #  highlight-on-yank = {
-    #    clear = true;
-    #  };
-    #};
 
-    #autoCmd = [
-    #  {
-    #    desc = "Highlight when yanking (copying) text";
-    #    group = "highlight-on-yank";
-    #    callback = {
-    #      __raw = "function() vim.highlight.on_yank() end";
-    #    };
-    #  }
-    #];
+    autoGroups = {
+      highlight-on-yank = {
+        clear = true;
+      };
+    };
+
+    autoCmd = [
+      {
+        desc = "Highlight when yanking (copying) text";
+        group = "highlight-on-yank";
+        callback = {
+          __raw = "function() vim.highlight.on_yank() end";
+        };
+      }
+    ];
   };
 }

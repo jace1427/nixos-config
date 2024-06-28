@@ -41,10 +41,10 @@
     godot_4
     blender
     zoom-us
-    lf
     btop
     vale
     markdownlint-cli2
+    # inputs.warcraftlogs-uploader.packages."${pkgs.system}".warcraftlogs-uploader
   ];
 
   # Nicely reload system units when changing configs
