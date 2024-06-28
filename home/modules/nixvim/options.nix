@@ -32,6 +32,7 @@
       cursorline = true;
       scrolloff = 10;
       hlsearch = true;
+      conceallevel = 1;
     };
 
     autoGroups = {
