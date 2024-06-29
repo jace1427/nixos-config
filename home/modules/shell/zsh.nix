@@ -1,4 +1,4 @@
-# bash.nix
+# zsh.nix
 { pkgs, config, ... }:
 {
   programs.thefuck.enable = true;

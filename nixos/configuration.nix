@@ -28,7 +28,7 @@
   };
 
   users = {
-    defaultUserShell = pkgs.bash;
+    defaultUserShell = pkgs.zsh;
     users.jspidell = {
       isNormalUser = true;
       extraGroups = [

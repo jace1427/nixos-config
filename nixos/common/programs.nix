@@ -10,6 +10,7 @@
     firefox.enable = true;
     gamemode.enable = true;
     neovim.enable = true;
+    zsh.enable = true;
 
     hyprland = {
       enable = true;
