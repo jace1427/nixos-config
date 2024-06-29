@@ -37,6 +37,7 @@
     protonup-qt
     spotify
     discord
+    vesktop
     wowup-cf
     obsidian
     godot_4

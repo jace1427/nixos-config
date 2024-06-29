@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/city-01.jpg;
+    image = ../../wallpapers/city-02.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/outrun-dark.yaml";
     targets.grub.useImage = true;
 
