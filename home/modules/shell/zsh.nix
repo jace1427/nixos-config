@@ -1,10 +1,22 @@
 # bash.nix
 { pkgs, config, ... }:
 {
-  programs.bash = {
+  programs.thefuck.enable = true;
+
+  programs.zsh = {
     enable = true;
+    autocd = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
-    historyControl = [ "ignoreboth" ];
+    syntaxHighlighting.enable = true;
+    history = {
+      ignoreDups = true;
+    };
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "eastwood";
+    };
 
     shellAliases = rec {
       # git
