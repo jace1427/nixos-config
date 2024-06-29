@@ -29,6 +29,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    firefox
     steam
     prismlauncher
     vkbasalt
