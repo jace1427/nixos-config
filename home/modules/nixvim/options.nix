@@ -50,6 +50,15 @@
           __raw = "function() vim.highlight.on_yank() end";
         };
       }
+
+      # nvim file with cursor at last edit
+      {
+        desc = "Open file with cursor at last edit";
+        event = "BufReadPost";
+        callback = {
+          __raw = "function() vim.api.nvim_exec('silent! normal! g`\"zc', false) end";
+        };
+      }
     ];
   };
 }
