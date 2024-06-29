@@ -3,6 +3,6 @@
     ./bash.nix
     ./git.nix
     ./kitty.nix
-    ./lf.nix
+    ./posh.nix
   ];
 }

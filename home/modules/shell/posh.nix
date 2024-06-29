@@ -1,7 +1,6 @@
-# lf.nix
 { pkgs, ... }:
 {
-  programs.lf = {
+  programs.oh-my-posh = {
     enable = true;
   };
 }
