@@ -95,9 +95,9 @@
       # Save
       {
         action = ":w<CR>";
-        key = "<leader>s";
+        key = "<leader>w";
         mode = "";
-        options.desc = "[S]ave";
+        options.desc = "[W]rite";
       }
       # Quit
       {

@@ -30,6 +30,7 @@
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
         "SUPERALT, L, exec, hyprlock"
+        "SUPERSHIFT, S, grim -g \"$(slurp)\""
       ]
       ++
         # Change workspace

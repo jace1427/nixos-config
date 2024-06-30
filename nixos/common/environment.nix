@@ -28,6 +28,9 @@
       wl-clip-persist
       wl-clipboard
       nixfmt-rfc-style
+      xwaylandvideobridge
+      grim
+      slurp
     ];
 
     sessionVariables = {
