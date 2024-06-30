@@ -60,7 +60,7 @@
 
       # buffers
       {
-        action = ":bufffers<CR>";
+        action = ":buffers<CR>";
         key = "<leader>b";
         mode = "";
         options.desc = "Open [B]uffer list";
@@ -86,10 +86,18 @@
 
       # Grep
       {
-        action = ":grep<space>";
+        action = ":vimgrep<space>";
         key = "<leader>g";
         mode = "";
         options.desc = "[G]rep";
+      }
+
+      # Save
+      {
+        action = ":w<CR>";
+        key = "<leader>s";
+        mode = "";
+        options.desc = "[S]ave";
       }
     ];
   };
