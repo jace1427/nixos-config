@@ -99,6 +99,39 @@
         mode = "";
         options.desc = "[S]ave";
       }
+      # Quit
+      {
+        action = ":q<CR>";
+        key = "<leader>q";
+        mode = "";
+        options.desc = "[Q]uit";
+      }
+
+      # Windows
+      {
+        action = "<C-W>h";
+        key = "<leader>h";
+        mode = "";
+        options.desc = "Move focus left";
+      }
+      {
+        action = "<C-W>j";
+        key = "<leader>j";
+        mode = "";
+        options.desc = "Move focus down";
+      }
+      {
+        action = "<C-W>k";
+        key = "<leader>k";
+        mode = "";
+        options.desc = "Move focus up";
+      }
+      {
+        action = "<C-W>l";
+        key = "<leader>l";
+        mode = "";
+        options.desc = "Move focus right";
+      }
     ];
   };
 }
