@@ -24,8 +24,8 @@
       [
         "SUPER, T, exec, kitty"
         "SUPER, Q, killactive,"
-        "SUPER, D, exec, lf"
         "SUPER, F, exec, firefox"
+        "SUPER, V, exec, Vesktop"
         "SUPER, R, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
