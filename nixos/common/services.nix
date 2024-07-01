@@ -66,6 +66,7 @@
         motd = ":)";
         white-list = true;
       };
+      dataDir = "/home/jspidell/minecraft/";
     };
   };
 }
