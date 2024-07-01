@@ -47,5 +47,10 @@
         support32Bit = true;
       };
     };
+
+    minecraft-server = {
+      enable = true;
+      eula = true;
+    };
   };
 }
