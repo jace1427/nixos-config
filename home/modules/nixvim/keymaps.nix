@@ -139,6 +139,12 @@
         mode = "";
         options.desc = "[R]etry last command";
       }
+      {
+        action = ":!";
+        key = "<leader>c";
+        mode = "";
+        options.desc = "Open [C]ommand prompt";
+      }
     ];
   };
 }
