@@ -134,7 +134,7 @@
       }
 
       {
-        action = ":!!";
+        action = ":!!<CR>";
         key = "<leader>r";
         mode = "";
         options.desc = "[R]etry last command";
