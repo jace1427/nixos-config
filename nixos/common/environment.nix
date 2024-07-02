@@ -19,6 +19,7 @@
       python311Packages.python
       python311Packages.torch
       python311Packages.torch-bin
+      python311Packages.python-docx
       dotnet-sdk_8
       libnotify
       swww
