@@ -132,6 +132,13 @@
         mode = "";
         options.desc = "Move focus right";
       }
+
+      {
+        action = ":!!";
+        key = "<leader>r";
+        mode = "";
+        options.desc = "[R]etry last command";
+      }
     ];
   };
 }
