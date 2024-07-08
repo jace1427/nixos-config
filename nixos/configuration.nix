@@ -28,7 +28,7 @@
   };
 
   users = {
-    defaultUserShell = pkgs.bash;
+    defaultUserShell = pkgs.zsh;
     users.jspidell = {
       isNormalUser = true;
       extraGroups = [
@@ -76,9 +76,9 @@
     autostart.enable = true;
     portal = {
       enable = true;
-      extraPortals = [
-        pkgs.xdg-desktop-portal
-        pkgs.xdg-desktop-portal-gtk
+      extraPortals = with pkgs; [
+        xdg-desktop-portal
+        xdg-desktop-portal-gtk
       ];
     };
   };

@@ -1,10 +1,22 @@
-# bash.nix
+# zsh.nix
 { pkgs, config, ... }:
 {
-  programs.bash = {
+  programs.thefuck.enable = true;
+
+  programs.zsh = {
     enable = true;
+    autocd = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
-    historyControl = [ "ignoreboth" ];
+    syntaxHighlighting.enable = true;
+    history = {
+      ignoreDups = true;
+    };
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "eastwood";
+    };
 
     shellAliases = rec {
       # git
@@ -23,6 +35,7 @@
       nfu = "n; sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
+      r = "$(fc -ln -1)";
 
       # cd's
       ".." = "cd ..";
@@ -31,6 +44,7 @@
       n = "cd ~/dir/nixos-config";
       t = "cd ~/dir/tools/";
       v = "cd ~/dir/vault/";
+      repos = "cd ~/dir/repos/";
     };
   };
 }

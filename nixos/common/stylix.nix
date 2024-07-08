@@ -2,8 +2,9 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/city-01.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+    image = ../../wallpapers/nord/a_video_game_screen_capture.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
+    targets.grub.useImage = true;
 
     fonts = {
       sizes = {
@@ -14,16 +15,11 @@
       };
 
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        package = pkgs.nerdfonts.override { fonts = [ "Terminus" ]; };
         name = "FiraCode Nerd Font";
       };
-
-      sansSerif = {
-        package = pkgs.fira;
-        name = "Fira Sans";
-      };
-
-      serif = config.stylix.fonts.sansSerif;
+      sansSerif = config.stylix.fonts.monospace;
+      serif = config.stylix.fonts.monospace;
     };
   };
 }

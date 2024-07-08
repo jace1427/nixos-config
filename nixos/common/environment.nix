@@ -16,7 +16,6 @@
       libsForQt5.qt5.qtgraphicaleffects
       gcc
       rustup
-      python3
       dotnet-sdk_8
       libnotify
       swww
@@ -26,6 +25,9 @@
       wl-clip-persist
       wl-clipboard
       nixfmt-rfc-style
+      xwaylandvideobridge
+      grim
+      slurp
     ];
 
     sessionVariables = {
@@ -35,5 +37,7 @@
       GTK_USE_PORTAL = "1";
       MOZ_ENABLE_WAYLAND = 1;
     };
+
+    pathsToLink = [ "/share/zsh/" ];
   };
 }

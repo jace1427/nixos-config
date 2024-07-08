@@ -12,6 +12,6 @@
   imports = [
     ./options.nix
     ./keymaps.nix
-    ./plugins/default.nix
+    ./plugins.nix
   ];
 }

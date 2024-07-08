@@ -20,6 +20,8 @@
     stylix.url = "github:danth/stylix";
 
     nixvim.url = "github:nix-community/nixvim";
+
+    # warcraftlogs-uploader.url = "git+https://github.com/RPGLogs/Uploaders-warcraftlogs";
   };
 
   outputs =
@@ -32,6 +34,7 @@
       stylix,
       hyprland,
       nixvim,
+      # warcraftlogs-uploader,
       ...
     }@inputs:
     let

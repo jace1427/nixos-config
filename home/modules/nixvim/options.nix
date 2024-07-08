@@ -10,7 +10,7 @@
 
     opts = {
       relativenumber = true;
-      mouse = "a";
+      mouse = "";
       showmode = false;
       clipboard = "unnamedplus";
       breakindent = true;
@@ -32,22 +32,33 @@
       cursorline = true;
       scrolloff = 10;
       hlsearch = true;
+      conceallevel = 1;
     };
-    # TODO fix autoGroups
-    #autoGroups = {
-    #  highlight-on-yank = {
-    #    clear = true;
-    #  };
-    #};
 
-    #autoCmd = [
-    #  {
-    #    desc = "Highlight when yanking (copying) text";
-    #    group = "highlight-on-yank";
-    #    callback = {
-    #      __raw = "function() vim.highlight.on_yank() end";
-    #    };
-    #  }
-    #];
+    autoGroups = {
+      highlight-on-yank = {
+        clear = true;
+      };
+    };
+
+    autoCmd = [
+      {
+        desc = "Highlight when yanking (copying) text";
+        group = "highlight-on-yank";
+        event = "TextYankPost";
+        callback = {
+          __raw = "function() vim.highlight.on_yank() end";
+        };
+      }
+
+      # nvim file with cursor at last edit
+      {
+        desc = "Open file with cursor at last edit";
+        event = "BufReadPost";
+        callback = {
+          __raw = "function() vim.api.nvim_exec('silent! normal! g`\"zc', false) end";
+        };
+      }
+    ];
   };
 }

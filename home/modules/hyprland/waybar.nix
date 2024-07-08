@@ -84,7 +84,7 @@ in
 
         clock = {
           interval = 1;
-          format = "{:%a %m/%d %H:%M}";
+          format = "{:%a %m/%d %I:%M}";
           tooltip-format = ''
             <big>{:%B %Y}</big>
             <tt><small>{calendar}</small></tt>'';
@@ -203,7 +203,6 @@ in
 
         window#waybar {
           padding: 0;
-          border-radius: 0.5em;
         }
 
         .modules-left {

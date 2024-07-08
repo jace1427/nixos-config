@@ -24,12 +24,13 @@
       [
         "SUPER, T, exec, kitty"
         "SUPER, Q, killactive,"
-        "SUPER, D, exec, lf"
         "SUPER, F, exec, firefox"
-        "SUPER, R, exec, rofi -show drun -show-icons"
+        "SUPER, V, exec, vesktop"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
         "SUPERALT, L, exec, hyprlock"
+        "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
+        "SUPERSHIFT, F, fullscreen, 1"
       ]
       ++
         # Change workspace
@@ -43,6 +44,8 @@
       ++
         # Swap windows
         (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},movewindow,${direction}") directions);
+
+    bindr = [ "SUPERALT, Alt_L, exec, rofi -show drun -show-icons" ];
 
     # Move/resize windows with SUPER + LMB/RMB and dragging
     bindm = [

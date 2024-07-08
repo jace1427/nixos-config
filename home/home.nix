@@ -29,22 +29,23 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    firefox
     steam
     prismlauncher
     vkbasalt
     gamescope
     protonup-qt
     spotify
-    discord
+    vesktop
     wowup-cf
     obsidian
     godot_4
     blender
     zoom-us
-    lf
     btop
     vale
     markdownlint-cli2
+    # inputs.warcraftlogs-uploader.packages."${pkgs.system}".warcraftlogs-uploader
   ];
 
   # Nicely reload system units when changing configs
