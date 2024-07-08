@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/nord/a_video_game_screen_capture.jpg;
+    image = ../../wallpapers/nord/a_city_skyline_with_a_tall_tower.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     targets.grub.useImage = true;
 
