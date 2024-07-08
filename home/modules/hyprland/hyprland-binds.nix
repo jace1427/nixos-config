@@ -26,7 +26,6 @@
         "SUPER, Q, killactive,"
         "SUPER, F, exec, firefox"
         "SUPER, V, exec, vesktop"
-        "SUPER, R, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
         "SUPERALT, L, exec, hyprlock"
@@ -45,6 +44,8 @@
       ++
         # Swap windows
         (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},movewindow,${direction}") directions);
+
+    bindr = [ "SUPER, exec, rofi -show drun -show-icons" ];
 
     # Move/resize windows with SUPER + LMB/RMB and dragging
     bindm = [
