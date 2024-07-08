@@ -37,15 +37,15 @@
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
       r = "$(fc -ln -1)";
       dr = "dotnet run";
-      vi = "nvim .";
+      v = "nvim .";
 
       # cd's
       ".." = "cd ..";
       "..." = "cd ../..";
-      d = "cd ~/dir/";
-      n = "cd ~/dir/nixos-config";
-      t = "cd ~/dir/tools/";
-      v = "cd ~/dir/vault/";
+      dir = "cd ~/dir/";
+      nixos = "cd ~/dir/nixos-config";
+      tools = "cd ~/dir/tools/";
+      vault = "cd ~/dir/vault/";
       repos = "cd ~/dir/repos/";
     };
   };
