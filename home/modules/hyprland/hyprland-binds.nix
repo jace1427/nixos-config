@@ -31,6 +31,7 @@
         "SUPERALT, L, exec, hyprlock"
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
+        "SUPER, Space, exec rofi -show drun -show-icons"
       ]
       ++
         # Change workspace
