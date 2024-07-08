@@ -36,6 +36,8 @@
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
       r = "$(fc -ln -1)";
+      dr = "dotnet run";
+      vi = "nvim .";
 
       # cd's
       ".." = "cd ..";
