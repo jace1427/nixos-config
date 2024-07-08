@@ -2,8 +2,8 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/city-02.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-terminal-dark.yaml";
+    image = ../../wallpapers/nord/a_video_game_screen_capture.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     targets.grub.useImage = true;
 
     fonts = {
