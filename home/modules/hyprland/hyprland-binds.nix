@@ -46,8 +46,6 @@
         # Swap windows
         (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},movewindow,${direction}") directions);
 
-    bindr = [ "SUPERALT, Alt_L, exec, rofi -show drun -show-icons" ];
-
     # Move/resize windows with SUPER + LMB/RMB and dragging
     bindm = [
       "SUPER, mouse:272, movewindow"
