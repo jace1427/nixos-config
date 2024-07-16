@@ -15,7 +15,8 @@
         "DP-3,preferred,0x0,auto"
         "DP-1,preferred,1920x0,auto"
         "DP-2,preferred,-1920x0,auto"
-        "HDMI-A-1,3840x2160@120.00Hz,0x0,auto"
+        # "HDMI-A-1,3840x2160@120.00Hz,0x0,auto"
+        "HDMI-A-1,1920x1080,0x0,2"
       ];
 
       exec-once = [
