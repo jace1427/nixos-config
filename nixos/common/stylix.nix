@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/nord/a_large_mountain_with_a_body_of_water.jpg;
+    image = ../../wallpapers/nord/a_graveyard_with_a_castle_and_trees.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     targets.grub.useImage = true;
 
