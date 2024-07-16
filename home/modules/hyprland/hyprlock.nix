@@ -29,6 +29,16 @@
           outline_thickness = 5;
           shadow_passes = 2;
         }
+
+        {
+          size = "200, 50";
+          position = "0, -80";
+          monitor = "HDMI-A-1";
+          dots_center = true;
+          fade_on_empty = false;
+          outline_thickness = 5;
+          shadow_passes = 2;
+        }
       ];
     };
   };

@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/nord/a_city_skyline_with_a_tall_tower.jpg;
+    image = ../../wallpapers/nord/a_large_mountain_with_a_body_of_water.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     targets.grub.useImage = true;
 
