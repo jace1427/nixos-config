@@ -30,6 +30,7 @@
 
   home.packages = with pkgs; [
     firefox
+    input-remapper
     steam
     prismlauncher
     vkbasalt
@@ -45,7 +46,6 @@
     btop
     vale
     markdownlint-cli2
-    # inputs.warcraftlogs-uploader.packages."${pkgs.system}".warcraftlogs-uploader
   ];
 
   # Nicely reload system units when changing configs
