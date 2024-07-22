@@ -4,6 +4,11 @@
   services = {
     openssh.enable = true;
     printing.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns = true;
+      openFirewall = true;
+    };
 
     flatpak = {
       enable = true;
