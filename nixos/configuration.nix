@@ -48,15 +48,6 @@
     efi.canTouchEfiVariables = true;
   };
 
-  networking = {
-    hostName = "nixos";
-    wireless.networks.SpiBrou = {
-      psk = "nomoresunflowers!!!";
-    };
-  };
-
-  time.timeZone = "America/Los_Angeles";
-
   hardware = {
     pulseaudio.enable = false;
     opengl = {
