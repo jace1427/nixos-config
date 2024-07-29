@@ -8,6 +8,8 @@
   ];
 
   programs.nixvim.plugins = {
+    vimtex.enable = true;
+
     # better quickfix
     nvim-bqf.enable = true;
 
