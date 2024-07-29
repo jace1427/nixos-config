@@ -1,5 +1,5 @@
 # hyprlock.nix
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.hyprlock = {
     enable = true;
@@ -13,7 +13,6 @@
 
       background = [
         {
-          path = "/home/jspidell/dir/nixos-config/wallpapers/city-01.jpg";
           blur_passes = 1;
           blur_size = 5;
         }
