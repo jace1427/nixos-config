@@ -46,6 +46,8 @@
     btop
     vale
     markdownlint-cli2
+    xdragon
+    pistol
   ];
 
   # Nicely reload system units when changing configs
