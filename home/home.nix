@@ -32,7 +32,6 @@
 
   home.packages = with pkgs; [
     firefox
-    input-remapper
     steam
     prismlauncher
     vkbasalt

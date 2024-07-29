@@ -19,8 +19,6 @@
       };
     };
 
-    input-remapper.enable = true;
-
     displayManager = {
       sddm = {
         enable = true;
