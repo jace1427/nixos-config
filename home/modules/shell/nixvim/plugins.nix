@@ -41,6 +41,7 @@
     cmp_luasnip.enable = true;
     cmp-buffer.enable = true;
     cmp-path.enable = true;
+    cmp-latex-symbols.enable = true;
     cmp = {
       enable = true;
       autoEnableSources = true;

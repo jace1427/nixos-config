@@ -49,6 +49,7 @@
     markdownlint-cli2
     xdragon
     pistol
+    texlivePackages.supertabular
   ];
 
   # Nicely reload system units when changing configs
