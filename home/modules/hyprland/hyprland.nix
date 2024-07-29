@@ -75,7 +75,7 @@
 
       general = {
         gaps_in = 25;
-        gaps_out = 20;
+        gaps_out = 25;
 
         border_size = 1;
         resize_on_border = true;
@@ -131,6 +131,7 @@
       windowrulev2 = [
         "suppressevent maximize, class:.*" # You'll probably like this.
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
+        "opactiy 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
       ];
     };
   };
