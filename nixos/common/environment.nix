@@ -28,6 +28,7 @@
       xwaylandvideobridge
       grim
       slurp
+      unzip
     ];
 
     sessionVariables = {
