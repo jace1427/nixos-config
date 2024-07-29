@@ -47,8 +47,8 @@
             name = "Global Modmap";
             remap = {
               "CapsLock" = "Esc";
-              "BTN_SIDE" = "LeftCtrl";
-              "BTN_EXTRA" = "LeftShift";
+              "BTN_SIDE" = "LeftShift";
+              "BTN_EXTRA" = "LeftCtrl";
             };
           }
         ];
