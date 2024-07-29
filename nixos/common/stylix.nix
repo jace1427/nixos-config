@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/eva/a_drawing_of_a_machine.jpg;
+    image = ../../wallpapers/a_street_with_buildings_and_signs.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/outrun-dark.yaml";
     targets.grub.useImage = true;
 
