@@ -28,6 +28,8 @@
   # Enable packages
   programs.home-manager.enable = true;
 
+  stylix.targets.rofi.enable = false;
+
   home.packages = with pkgs; [
     firefox
     input-remapper

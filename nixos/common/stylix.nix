@@ -2,8 +2,8 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/a_street_with_buildings_and_signs.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/brogrammer.yaml";
+    image = ../../wallpapers/solarized/a_red_sun_over_mountains.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
     targets.grub.useImage = true;
 
     fonts = {

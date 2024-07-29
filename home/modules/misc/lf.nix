@@ -18,6 +18,7 @@
       m = "mkdir";
       "<enter>" = "open";
       ee = "editor-open";
+      do = "dragon-out";
     };
 
     commands = {
@@ -29,6 +30,7 @@
           mkdir $DIR
       }}
       ''
+      dragon-out = ''%${pkgs.xdragon}/bin/xdragon -a -x "$fx"'';
     };
 
     extraConfig =
