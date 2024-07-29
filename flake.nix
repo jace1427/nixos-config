@@ -22,6 +22,8 @@
     nixvim.url = "github:nix-community/nixvim";
 
     # warcraftlogs-uploader.url = "git+https://github.com/RPGLogs/Uploaders-warcraftlogs";
+
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs =
@@ -34,6 +36,7 @@
       stylix,
       hyprland,
       nixvim,
+      xremap-flake,
       # warcraftlogs-uploader,
       ...
     }@inputs:
@@ -51,6 +54,7 @@
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
             nixvim.nixosModules.nixvim
+            xremap-flake.nixosModules.default
 
             home-manager.nixosModules.home-manager
             {

@@ -6,7 +6,7 @@
     printing.enable = true;
     avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
     };
 
@@ -34,6 +34,25 @@
       enable = true;
       xkb.layout = "us";
       videoDrivers = [ "modesetting" ];
+    };
+
+    xremap = {
+      withWlroots = true;
+      userName = "jspidell";
+      mouse = true;
+
+      config = {
+        modmap = [
+          {
+            name = "Global Modmap";
+            remap = {
+              "CapsLock" = "Esc";
+              "BTN_SIDE" = "LeftCtrl";
+              "BTN_EXTRA" = "LeftShift";
+            };
+          }
+        ];
+      };
     };
 
     libinput = {

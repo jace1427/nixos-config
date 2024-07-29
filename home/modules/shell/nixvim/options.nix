@@ -10,6 +10,7 @@
 
     opts = {
       relativenumber = true;
+      number = true;
       mouse = "";
       showmode = false;
       clipboard = "unnamedplus";

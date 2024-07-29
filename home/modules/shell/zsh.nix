@@ -38,6 +38,7 @@
       r = "$(fc -ln -1)";
       dr = "dotnet run";
       v = "nvim .";
+      nsp = "nix-shell -p $@";
 
       # cd's
       ".." = "cd ..";
