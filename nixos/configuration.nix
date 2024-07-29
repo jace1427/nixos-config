@@ -48,6 +48,9 @@
     efi.canTouchEfiVariables = true;
   };
 
+  time.timeZone = "America/Los_Angeles";
+  networking.hostName = "nixos";
+
   hardware = {
     pulseaudio.enable = false;
     opengl = {
