@@ -34,7 +34,7 @@
       re = "~/dir/nixos-config/rebuild.sh";
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
-      wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null/";
+      wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
       r = "$(fc -ln -1)";
       dr = "dotnet run";
       v = "nvim .";
