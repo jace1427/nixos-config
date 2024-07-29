@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/a_street_with_buildings_and_signs.png;
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/outrun-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/brogrammer.yaml";
     targets.grub.useImage = true;
 
     fonts = {
