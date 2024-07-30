@@ -56,7 +56,7 @@ in
     enable = true;
     settings = {
       primary = {
-        exculsive = false;
+        exclusive = false;
         passthrough = false;
         position = "top";
         height = 30;
@@ -111,7 +111,7 @@ in
           interval = 5;
         };
 
-        tempature = {
+        temperature = {
           critical-threshold = 80;
           format = "{temperatureC}°C {icon}";
           format-icons = [
@@ -225,7 +225,7 @@ in
 
         window#waybar {
           border-bottom: 3px solid;
-          color = #ffffff;
+          color: #ffffff;
           transition-property: background-color;
           transition-duration: .5s;
         }
