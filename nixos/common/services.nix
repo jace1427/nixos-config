@@ -24,6 +24,7 @@
         enable = true;
         wayland.enable = true;
         enableHidpi = true;
+        theme = "background=/home/jspidell/dir/nixos-config/wallpapers/solarized/a_red_sun_over_mountains.jpg";
       };
       defaultSession = "hyprland";
     };
@@ -63,7 +64,6 @@
       enable = true;
       pulse.enable = true;
       jack.enable = true;
-      # wireplumber.enable = true;
       alsa = {
         enable = true;
         support32Bit = true;

@@ -2,7 +2,6 @@
 { lib, ... }:
 {
   wayland.windowManager.hyprland.settings = {
-    # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     bind =
       let
         workspaces = [
@@ -26,12 +25,13 @@
         "SUPER, Q, killactive,"
         "SUPER, F, exec, firefox"
         "SUPER, V, exec, vesktop"
+        "SUPER, D, exec, lf"
+        "SUPER, Space, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
         "SUPERALT, L, exec, hyprlock"
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
-        "SUPER, Space, exec, rofi -show drun -show-icons"
       ]
       ++
         # Change workspace

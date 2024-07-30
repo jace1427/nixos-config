@@ -18,7 +18,6 @@
       rustup
       dotnet-sdk_8
       libnotify
-      swww
       mako
       rofi-wayland
       cliphist

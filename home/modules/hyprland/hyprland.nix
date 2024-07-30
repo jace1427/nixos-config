@@ -37,9 +37,9 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 0.85;
-        inactive_opacity = 0.85;
-        fullscreen_opacity = 0.85;
+        active_opacity = 0.80;
+        inactive_opacity = 0.80;
+        fullscreen_opacity = 1;
 
         drop_shadow = true;
         shadow_range = 12;

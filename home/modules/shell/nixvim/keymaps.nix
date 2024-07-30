@@ -49,15 +49,6 @@
         options.desc = "Previous [Q]uickfix";
       }
 
-      # conform keybind
-      # TODO doesn't work
-      {
-        action = "function() require('conform').format { async = true, lsp_fallback = true } end";
-        key = "<leader>f";
-        mode = "";
-        options.desc = "[F]ormat buffer";
-      }
-
       # buffers
       {
         action = ":buffers<CR>";
@@ -82,14 +73,6 @@
         key = "<C-q>";
         mode = "";
         options.desc = "[Q]uit Buffer";
-      }
-
-      # Grep
-      {
-        action = ":vimgrep<space>";
-        key = "<leader>g";
-        mode = "";
-        options.desc = "[G]rep";
       }
 
       # Save
@@ -150,6 +133,20 @@
         key = "<leader>c";
         mode = "";
         options.desc = "Open [C]ommand prompt";
+      }
+
+      # Telescope
+      {
+        action = "Telescope find_files<CR>";
+        key = "<leader>f";
+        mode = "";
+        options.desc = "[F]ind files";
+      }
+      {
+        action = "Telescope live_grep<CR>";
+        key = "<leader>g";
+        mode = "";
+        options.desc = "Live [G]rep";
       }
     ];
   };

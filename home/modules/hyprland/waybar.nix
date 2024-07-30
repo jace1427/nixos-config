@@ -58,8 +58,9 @@ in
       primary = {
         exculsive = false;
         passthrough = false;
-        position = "top";
+        position = "bottom";
         height = 30;
+        spacing = 5;
 
         output = [
           "DP-1"
@@ -69,8 +70,9 @@ in
         ];
 
         modules-left = [
-          "custom/currentplayer"
-          "custom/player"
+          "hyprland/workspaces"
+          "hyprland/submap"
+          "custom/media"
         ];
 
         modules-center = [ "hyprland/window" ];
@@ -79,8 +81,11 @@ in
           "cpu"
           "custom/gpu"
           "memory"
+          "temperature"
           "pulseaudio"
+          "network"
           "clock"
+          "tray"
         ];
 
         clock = {
@@ -97,13 +102,23 @@ in
 
         "custom/gpu" = {
           interval = 5;
-          exec = mkScript { script = "cat /sys/class/drm/card0/device/gpu_busy_percent"; };
+          exec = mkScript { script = "cat /sys/class/drm/card1/device/gpu_busy_percent"; };
           format = "󰒋  {}%";
         };
 
         memory = {
           format = "  {}%";
           interval = 5;
+        };
+
+        tempature = {
+          critical-threshold = 80;
+          format = "{temperatureC}°C {icon}";
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
         };
 
         pulseaudio = {
@@ -118,12 +133,13 @@ in
           };
         };
 
-        idle_inhibitor = {
-          format = "{icon}";
-          format-icons = {
-            activated = "󰒳";
-            deactivated = "󰒲";
-          };
+        "network" = {
+          format-wifi = "{essid} ({signalStrength}%) ";
+          format-ethernet = "{ipaddr}/{cidr} ";
+          tooltip-format = "{ifname} via {gwaddr} ";
+          format-linked = "{ifname} (No IP) ";
+          format-disconnected = "Disconnected ⚠";
+          format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
 
         "hyprland/window" = {
@@ -191,6 +207,10 @@ in
             script = "playerctl play-pause";
           };
         };
+
+        tray = {
+          spacing = 10;
+        };
       };
     };
     style =
@@ -198,42 +218,65 @@ in
       ''
         * {
           font-size: 12pt;
-          padding: 0;
+          padding: 1;
           margin: 0 0.4em;
+          font-family: Terminus;
         }
 
         window#waybar {
-          padding: 0;
+          border-bottom: 3px solid;
+          color = #ffffff;
+          transition-property: background-color;
+          transition-duration: .5s;
         }
 
-        .modules-left {
-          margin-left: -0.65em;
+        button {
+          box-shadow: inset 0 -3px transparent;
+          border: none;
+          border-radius: 0;
         }
 
-        .modules-right {
-          margin-right: -0.65em;
+        button:hover {
+          background: inherit;
+          box-shadow: inset 0 -3px #ffffff;
         }
 
         #workspaces button {
-          padding-left: 0.4em;
-          padding-right: 0.4em;
-          margin-top: 0.15em;
-          margin-bottom: 0.15em;
+          padding: 0 5px;
+          background-color: transparent;
+          color = #ffffff;
         }
 
-        #clock {
-          padding-right: 1em;
-          padding-left: 1em;
-          border-radius: 0.5em;
+        #workspaces button:hover {
+          background: rgba(0, 0, 0, 0.2);
         }
 
-        #custom-currentplayer {
-          padding-right: 0;
+        #workspaces button.focused {
+          background-color: #64727D;
+          box-shadow: inset 0 -3px #ffffff;
         }
 
-        #custom-gpu, #cpu, #memory {
-          margin-left: 0.05em;
-          margin-right: 0.55em;
+        #workspaces button.urgent {
+          background-color: #eb4d4b;
+        }
+
+        #clock,
+        #cpu,
+        #custom-gpu,
+        #memory,
+        #temperature,
+        #network,
+        #pulseaudio,
+        #tray,
+        #custom-currentplayer
+        {
+          padding-right: 0 10px;
+          color: #ffffff;
+        }
+
+        #window,
+        #workspaces {
+          margin: 0 4px;
         }
       '';
   };
