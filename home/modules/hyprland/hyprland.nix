@@ -15,6 +15,8 @@
         "DP-3,preferred,0x0,auto"
         "DP-1,preferred,1920x0,auto"
         "DP-2,preferred,-1920x0,auto"
+        # "HDMI-A-1,3840x2160@120.00Hz,0x0,auto"
+        "HDMI-A-1,3840x2160@120.00Hz,0x0,2"
       ];
 
       exec-once = [
@@ -47,8 +49,8 @@
 
         blur = {
           enabled = true;
-          size = 1;
-          passes = 4;
+          size = 9;
+          passes = 3;
           vibrancy = 0.1696;
           ignore_opacity = true;
           popups = true;
@@ -73,7 +75,7 @@
 
       general = {
         gaps_in = 25;
-        gaps_out = 20;
+        gaps_out = 25;
 
         border_size = 1;
         resize_on_border = true;
@@ -129,6 +131,8 @@
       windowrulev2 = [
         "suppressevent maximize, class:.*" # You'll probably like this.
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
+        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
+        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
       ];
     };
   };

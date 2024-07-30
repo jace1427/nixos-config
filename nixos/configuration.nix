@@ -48,20 +48,17 @@
     efi.canTouchEfiVariables = true;
   };
 
-  networking.hostName = "nixos";
-
   time.timeZone = "America/Los_Angeles";
+  networking.hostName = "nixos";
 
   hardware = {
     pulseaudio.enable = false;
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [ amdvlk ];
     };
   };
-
-  sound.enable = true;
 
   security = {
     rtkit.enable = true; # TODO

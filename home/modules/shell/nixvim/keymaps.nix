@@ -101,6 +101,12 @@
       }
       # Quit
       {
+        action = ":qa<CR>";
+        key = "<leader>qq";
+        mode = "";
+        options.desc = "[Q]uit all";
+      }
+      {
         action = ":q<CR>";
         key = "<leader>q";
         mode = "";

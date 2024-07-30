@@ -8,6 +8,8 @@
   ];
 
   programs.nixvim.plugins = {
+    vimtex.enable = true;
+
     # better quickfix
     nvim-bqf.enable = true;
 
@@ -39,6 +41,7 @@
     cmp_luasnip.enable = true;
     cmp-buffer.enable = true;
     cmp-path.enable = true;
+    cmp-latex-symbols.enable = true;
     cmp = {
       enable = true;
       autoEnableSources = true;

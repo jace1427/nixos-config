@@ -4,6 +4,11 @@
   services = {
     openssh.enable = true;
     printing.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
 
     flatpak = {
       enable = true;
@@ -13,8 +18,6 @@
         onCalendar = "daily";
       };
     };
-
-    input-remapper.enable = true;
 
     displayManager = {
       sddm = {
@@ -29,6 +32,25 @@
       enable = true;
       xkb.layout = "us";
       videoDrivers = [ "modesetting" ];
+    };
+
+    xremap = {
+      withWlroots = true;
+      userName = "jspidell";
+      mouse = true;
+
+      config = {
+        modmap = [
+          {
+            name = "Global Modmap";
+            remap = {
+              "CapsLock" = "Esc";
+              "BTN_SIDE" = "LeftShift";
+              "BTN_EXTRA" = "LeftCtrl";
+            };
+          }
+        ];
+      };
     };
 
     libinput = {

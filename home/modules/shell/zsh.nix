@@ -32,18 +32,21 @@
       ls = "ls --color=auto -1lFA -I.git";
       vnix = "nvim ~/dir/nixos-config";
       re = "~/dir/nixos-config/rebuild.sh";
-      nfu = "n; sudo nix flake update";
+      nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
-      wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net";
+      wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
       r = "$(fc -ln -1)";
+      dr = "dotnet run";
+      v = "nvim .";
+      nsp = "nix-shell -p $@";
 
       # cd's
       ".." = "cd ..";
       "..." = "cd ../..";
-      d = "cd ~/dir/";
-      n = "cd ~/dir/nixos-config";
-      t = "cd ~/dir/tools/";
-      v = "cd ~/dir/vault/";
+      dir = "cd ~/dir/";
+      nixos = "cd ~/dir/nixos-config";
+      tools = "cd ~/dir/tools/";
+      vault = "cd ~/dir/vault/";
       repos = "cd ~/dir/repos/";
     };
   };

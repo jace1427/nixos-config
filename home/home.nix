@@ -28,6 +28,8 @@
   # Enable packages
   programs.home-manager.enable = true;
 
+  stylix.targets.rofi.enable = false;
+
   home.packages = with pkgs; [
     firefox
     steam
@@ -45,7 +47,9 @@
     btop
     vale
     markdownlint-cli2
-    # inputs.warcraftlogs-uploader.packages."${pkgs.system}".warcraftlogs-uploader
+    xdragon
+    pistol
+    texlivePackages.supertabular
   ];
 
   # Nicely reload system units when changing configs

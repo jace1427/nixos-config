@@ -1,9 +1,14 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  wallpaper,
+  ...
+}:
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/nord/a_video_game_screen_capture.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
+    image = ../../wallpapers/solarized/a_red_sun_over_mountains.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
     targets.grub.useImage = true;
 
     fonts = {
@@ -16,7 +21,7 @@
 
       monospace = {
         package = pkgs.nerdfonts.override { fonts = [ "Terminus" ]; };
-        name = "FiraCode Nerd Font";
+        name = "Terminus";
       };
       sansSerif = config.stylix.fonts.monospace;
       serif = config.stylix.fonts.monospace;

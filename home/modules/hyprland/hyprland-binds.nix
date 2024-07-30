@@ -31,6 +31,7 @@
         "SUPERALT, L, exec, hyprlock"
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
+        "SUPER, Space, exec, rofi -show drun -show-icons"
       ]
       ++
         # Change workspace
@@ -44,8 +45,6 @@
       ++
         # Swap windows
         (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},movewindow,${direction}") directions);
-
-    bindr = [ "SUPERALT, Alt_L, exec, rofi -show drun -show-icons" ];
 
     # Move/resize windows with SUPER + LMB/RMB and dragging
     bindm = [
