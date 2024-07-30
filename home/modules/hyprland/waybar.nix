@@ -60,7 +60,6 @@ in
         passthrough = false;
         position = "top";
         height = 30;
-        spacing = 5;
 
         output = [
           "DP-1"
