@@ -270,7 +270,7 @@ in
         #tray,
         #custom-currentplayer
         {
-          padding-right: 0 10px;
+          padding: 0 10px;
           color: #ffffff;
         }
 
