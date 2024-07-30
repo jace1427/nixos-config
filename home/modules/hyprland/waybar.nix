@@ -244,7 +244,7 @@ in
         #workspaces button {
           padding: 0 5px;
           background-color: transparent;
-          color = #ffffff;
+          color: #ffffff;
         }
 
         #workspaces button:hover {
