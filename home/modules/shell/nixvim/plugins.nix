@@ -68,7 +68,14 @@
     conform-nvim = {
       enable = true;
       notifyOnError = true;
-      formatOnSave = "function(args) require('conform').format({ bufnr = args.buf }) end";
+      formatOnSave = ''
+        function(bufnr)
+          return {
+            timeout_ms = 500,
+            lsp_fallback = true
+          }
+        end
+      '';
       formattersByFt = {
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];

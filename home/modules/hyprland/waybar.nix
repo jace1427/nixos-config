@@ -58,7 +58,7 @@ in
       primary = {
         exculsive = false;
         passthrough = false;
-        position = "bottom";
+        position = "top";
         height = 30;
         spacing = 5;
 
