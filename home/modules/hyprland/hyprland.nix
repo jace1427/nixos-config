@@ -37,8 +37,8 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 0.80;
-        inactive_opacity = 0.80;
+        active_opacity = 0.8;
+        inactive_opacity = 0.8;
         fullscreen_opacity = 1;
 
         drop_shadow = true;
