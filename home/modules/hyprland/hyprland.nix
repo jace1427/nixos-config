@@ -132,6 +132,7 @@
         "suppressevent maximize, class:.*" # You'll probably like this.
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
+        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
       ];
     };
   };
