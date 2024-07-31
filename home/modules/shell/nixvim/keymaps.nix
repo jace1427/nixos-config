@@ -4,7 +4,7 @@
   programs.nixvim = {
     keymaps = [
       {
-        action = "<NOP>";
+        action = "<leader>";
         key = "<Space>";
         mode = "n";
       }
@@ -143,16 +143,24 @@
 
       # Telescope
       {
-        action = "Telescope find_files<CR>";
+        action = ":Telescope find_files<CR>";
         key = "<leader>f";
-        mode = "";
+        mode = "n";
         options.desc = "[F]ind files";
       }
       {
-        action = "Telescope live_grep<CR>";
+        action = ":Telescope live_grep<CR>";
         key = "<leader>g";
-        mode = "";
+        mode = "n";
         options.desc = "Live [G]rep";
+      }
+
+      # WhichKey
+      {
+        action = ":WhichKey<CR>";
+        key = "?";
+        mode = "n";
+        options.desc = "Search WhichKey";
       }
     ];
   };

@@ -132,7 +132,6 @@
       closeIfLastWindow = true;
       openFilesInLastWindow = true;
       filesystem = {
-
         filteredItems = {
           hideDotfiles = false;
           hideGitignored = false;
