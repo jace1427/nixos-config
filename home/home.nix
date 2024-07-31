@@ -54,6 +54,7 @@
     black
     rustfmt
     codespell
+    texlive.combined.scheme-full
   ];
 
   # Nicely reload system units when changing configs

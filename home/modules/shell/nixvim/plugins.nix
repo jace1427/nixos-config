@@ -12,10 +12,7 @@ in
 
   programs.nixvim.plugins = {
     # Latex on vim
-    vimtex = {
-      enable = true;
-      texlivePackage = tex;
-    };
+    vimtex.enable = true;
 
     # better quickfix
     nvim-bqf.enable = true;
