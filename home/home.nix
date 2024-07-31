@@ -49,7 +49,12 @@
     markdownlint-cli2
     xdragon
     pistol
-    texlivePackages.supertabular
+    ripgrep
+    isort
+    black
+    rustfmt
+    codespell
+    texlive.combined.scheme-full
   ];
 
   # Nicely reload system units when changing configs

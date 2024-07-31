@@ -4,6 +4,12 @@
   programs.nixvim = {
     keymaps = [
       {
+        action = "<leader>";
+        key = "<Space>";
+        mode = "n";
+      }
+
+      {
         action = "<cmd>nohlsearch<CR>";
         key = "<Esc>";
         mode = "n";
@@ -49,21 +55,12 @@
         options.desc = "Previous [Q]uickfix";
       }
 
-      # conform keybind
-      # TODO doesn't work
-      {
-        action = "function() require('conform').format { async = true, lsp_fallback = true } end";
-        key = "<leader>f";
-        mode = "";
-        options.desc = "[F]ormat buffer";
-      }
-
       # buffers
       {
         action = ":buffers<CR>";
         key = "<leader>b";
         mode = "";
-        options.desc = "Open [B]uffer list";
+        options.desc = "Open [B]buffer list";
       }
       {
         action = ":bnext<CR>";
@@ -82,14 +79,6 @@
         key = "<C-q>";
         mode = "";
         options.desc = "[Q]uit Buffer";
-      }
-
-      # Grep
-      {
-        action = ":vimgrep<space>";
-        key = "<leader>g";
-        mode = "";
-        options.desc = "[G]rep";
       }
 
       # Save
@@ -150,6 +139,28 @@
         key = "<leader>c";
         mode = "";
         options.desc = "Open [C]ommand prompt";
+      }
+
+      # Telescope
+      {
+        action = ":Telescope find_files<CR>";
+        key = "<leader>f";
+        mode = "n";
+        options.desc = "[F]ind files";
+      }
+      {
+        action = ":Telescope live_grep<CR>";
+        key = "<leader>g";
+        mode = "n";
+        options.desc = "Live [G]rep";
+      }
+
+      # WhichKey
+      {
+        action = ":WhichKey<CR>";
+        key = "?";
+        mode = "n";
+        options.desc = "Search WhichKey";
       }
     ];
   };

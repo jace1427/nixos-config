@@ -1,5 +1,8 @@
 # default.nix
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  tex = (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-medium supertabular; });
+in
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
     rust-vim
@@ -8,6 +11,7 @@
   ];
 
   programs.nixvim.plugins = {
+    # Latex on vim
     vimtex.enable = true;
 
     # better quickfix
@@ -23,8 +27,7 @@
     comment.enable = true;
 
     # indentation guides even on blank lines
-    # TODO broken?
-    # indent_blankline.enable = true;
+    indent-blankline.enable = true;
 
     # nix syntax highlighting
     nix.enable = true;
@@ -49,12 +52,7 @@
         mapping = {
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-p>" = "cmp.mapping.select_prev_item()";
-          "<C-b>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<C-y>" = "cmp.mapping.confirm { select = true }";
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-l>" = "cmp.mapping(function() if luasnip.expand_or_locally_jumpable() then luasnip.expand_or_jump() end end, { 'i', 's' })";
-          "<C-h>" = "cmp.mapping(function() if luasnip.locally_jumpable(-1) then luasnip.jump(-1) end end, { 'i', 's' })";
         };
 
         snippet = {
@@ -72,10 +70,24 @@
 
     conform-nvim = {
       enable = true;
-      formatOnSave = "";
+      notifyOnError = true;
+      formatOnSave = ''
+        function(bufnr)
+          return {
+            timeout_ms = 500,
+            lsp_fallback = true
+          }
+        end
+      '';
       formattersByFt = {
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
+        python = [
+          "isort"
+          "black"
+        ];
+        rust = [ "rustfmt" ];
+        markdown = [ "markdownlint-cli2" ];
       };
     };
 
@@ -117,7 +129,18 @@
       ];
     };
 
-    neo-tree.enable = true;
+    neo-tree = {
+      enable = true;
+      closeIfLastWindow = true;
+      openFilesInLastWindow = true;
+      filesystem = {
+        filteredItems = {
+          hideDotfiles = false;
+          hideGitignored = false;
+          visible = true;
+        };
+      };
+    };
 
     obsidian = {
       enable = true;

@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  wallpaper,
-  ...
-}:
+{ pkgs, config, ... }:
 {
   stylix = {
     enable = true;

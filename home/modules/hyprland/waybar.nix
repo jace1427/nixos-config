@@ -56,10 +56,10 @@ in
     enable = true;
     settings = {
       primary = {
-        exculsive = false;
         passthrough = false;
         position = "top";
         height = 30;
+        exclusive = true;
 
         output = [
           "DP-1"
@@ -69,17 +69,20 @@ in
         ];
 
         modules-left = [
-          "custom/currentplayer"
-          "custom/player"
+          "hyprland/workspaces"
+          "hyprland/window"
         ];
 
-        modules-center = [ "hyprland/window" ];
-
-        modules-right = [
+        modules-center = [
           "cpu"
           "custom/gpu"
           "memory"
+          "temperature"
+        ];
+
+        modules-right = [
           "pulseaudio"
+          "network"
           "clock"
         ];
 
@@ -97,13 +100,23 @@ in
 
         "custom/gpu" = {
           interval = 5;
-          exec = mkScript { script = "cat /sys/class/drm/card0/device/gpu_busy_percent"; };
+          exec = mkScript { script = "cat /sys/class/drm/card1/device/gpu_busy_percent"; };
           format = "󰒋  {}%";
         };
 
         memory = {
           format = "  {}%";
           interval = 5;
+        };
+
+        temperature = {
+          critical-threshold = 80;
+          format = "{temperatureC}°C {icon}";
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
         };
 
         pulseaudio = {
@@ -118,12 +131,13 @@ in
           };
         };
 
-        idle_inhibitor = {
-          format = "{icon}";
-          format-icons = {
-            activated = "󰒳";
-            deactivated = "󰒲";
-          };
+        "network" = {
+          format-wifi = "{essid} ({signalStrength}%) ";
+          format-ethernet = "{ipaddr}/{cidr} ";
+          tooltip-format = "{ifname} via {gwaddr} ";
+          format-linked = "{ifname} (No IP) ";
+          format-disconnected = "Disconnected ⚠";
+          format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
 
         "hyprland/window" = {
@@ -198,42 +212,46 @@ in
       ''
         * {
           font-size: 12pt;
-          padding: 0;
+          padding: 1;
           margin: 0 0.4em;
+          font-family: Terminus;
         }
 
         window#waybar {
-          padding: 0;
+          border-bottom: 3px solid;
         }
 
-        .modules-left {
-          margin-left: -0.65em;
+        button {
+          box-shadow: inset 0 -3px transparent;
+          border: none;
+          border-radius: 0;
         }
 
-        .modules-right {
-          margin-right: -0.65em;
+        button:hover {
+          background: inherit;
         }
 
         #workspaces button {
-          padding-left: 0.4em;
-          padding-right: 0.4em;
-          margin-top: 0.15em;
-          margin-bottom: 0.15em;
+          padding: 0 5px;
+          background-color: transparent;
         }
 
-        #clock {
-          padding-right: 1em;
-          padding-left: 1em;
-          border-radius: 0.5em;
+        #clock,
+        #cpu,
+        #custom-gpu,
+        #memory,
+        #temperature,
+        #network,
+        #pulseaudio,
+        #tray,
+        #custom-currentplayer
+        {
+          padding: 0 10px;
         }
 
-        #custom-currentplayer {
-          padding-right: 0;
-        }
-
-        #custom-gpu, #cpu, #memory {
-          margin-left: 0.05em;
-          margin-right: 0.55em;
+        #window,
+        #workspaces {
+          margin: 0 4px;
         }
       '';
   };

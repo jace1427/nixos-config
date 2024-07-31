@@ -13,6 +13,7 @@
 
       background = [
         {
+          path = "/home/jspidell/nixos/wallpapers/solarized/a_red_sun_over_mountains.jpg";
           blur_passes = 1;
           blur_size = 5;
         }

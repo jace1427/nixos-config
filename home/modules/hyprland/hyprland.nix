@@ -37,9 +37,9 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 0.85;
-        inactive_opacity = 0.85;
-        fullscreen_opacity = 0.85;
+        active_opacity = 0.8;
+        inactive_opacity = 0.8;
+        fullscreen_opacity = 1;
 
         drop_shadow = true;
         shadow_range = 12;
@@ -133,6 +133,12 @@
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
+      ];
+
+      workspace = [
+        "1,monitor:DP-2"
+        "2,monitor:DP-3"
+        "3,monitor:DP-1"
       ];
     };
   };

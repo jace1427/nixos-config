@@ -34,6 +34,7 @@
       scrolloff = 10;
       hlsearch = true;
       conceallevel = 1;
+      grepprg = "rg --vimgrep";
     };
 
     autoGroups = {
