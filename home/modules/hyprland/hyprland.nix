@@ -134,6 +134,12 @@
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
       ];
+
+      workspace = [
+        "1,monitor:DP-2"
+        "2,monitor:DP-3"
+        "3,monitor:DP-1"
+      ];
     };
   };
 }

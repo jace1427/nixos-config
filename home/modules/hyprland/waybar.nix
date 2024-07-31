@@ -56,10 +56,10 @@ in
     enable = true;
     settings = {
       primary = {
-        exclusive = false;
         passthrough = false;
         position = "top";
         height = 30;
+        exclusive = true;
 
         output = [
           "DP-1"
@@ -70,21 +70,20 @@ in
 
         modules-left = [
           "hyprland/workspaces"
-          "hyprland/submap"
-          "custom/media"
+          "hyprland/window"
         ];
 
-        modules-center = [ "hyprland/window" ];
-
-        modules-right = [
+        modules-center = [
           "cpu"
           "custom/gpu"
           "memory"
           "temperature"
+        ];
+
+        modules-right = [
           "pulseaudio"
           "network"
           "clock"
-          "tray"
         ];
 
         clock = {
@@ -206,10 +205,6 @@ in
             script = "playerctl play-pause";
           };
         };
-
-        tray = {
-          spacing = 10;
-        };
       };
     };
     style =
@@ -224,7 +219,6 @@ in
 
         window#waybar {
           border-bottom: 3px solid;
-          color: #ffffff;
           transition-property: background-color;
           transition-duration: .5s;
         }
@@ -237,13 +231,11 @@ in
 
         button:hover {
           background: inherit;
-          box-shadow: inset 0 -3px #ffffff;
         }
 
         #workspaces button {
           padding: 0 5px;
           background-color: transparent;
-          color: #ffffff;
         }
 
         #workspaces button:hover {
@@ -252,11 +244,6 @@ in
 
         #workspaces button.focused {
           background-color: #64727D;
-          box-shadow: inset 0 -3px #ffffff;
-        }
-
-        #workspaces button.urgent {
-          background-color: #eb4d4b;
         }
 
         #clock,
@@ -270,7 +257,6 @@ in
         #custom-currentplayer
         {
           padding: 0 10px;
-          color: #ffffff;
         }
 
         #window,
