@@ -4,6 +4,12 @@
   programs.nixvim = {
     keymaps = [
       {
+        action = "<NOP>";
+        key = "<Space>";
+        mode = "n";
+      }
+
+      {
         action = "<cmd>nohlsearch<CR>";
         key = "<Esc>";
         mode = "n";
@@ -54,7 +60,7 @@
         action = ":buffers<CR>";
         key = "<leader>b";
         mode = "";
-        options.desc = "Open [B]uffer list";
+        options.desc = "Open [B]buffer list";
       }
       {
         action = ":bnext<CR>";
