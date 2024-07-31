@@ -1,6 +1,1 @@
-{
-  imports = [
-    ./latex.nix
-    ./lf.nix
-  ];
-}
+{ imports = [ ./lf.nix ]; }

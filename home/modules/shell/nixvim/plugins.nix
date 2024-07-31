@@ -1,5 +1,8 @@
 # default.nix
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  tex = (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-medium supertabular; });
+in
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
     rust-vim
@@ -9,7 +12,10 @@
 
   programs.nixvim.plugins = {
     # Latex on vim
-    vimtex.enable = true;
+    vimtex = {
+      enable = true;
+      texlivePackage = tex;
+    };
 
     # better quickfix
     nvim-bqf.enable = true;
@@ -84,7 +90,6 @@
           "black"
         ];
         rust = [ "rustfmt" ];
-        "*" = [ "codespell" ];
         markdown = [ "markdownlint-cli2" ];
       };
     };
