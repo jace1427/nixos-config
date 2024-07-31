@@ -219,8 +219,6 @@ in
 
         window#waybar {
           border-bottom: 3px solid;
-          transition-property: background-color;
-          transition-duration: .5s;
         }
 
         button {
@@ -236,14 +234,6 @@ in
         #workspaces button {
           padding: 0 5px;
           background-color: transparent;
-        }
-
-        #workspaces button:hover {
-          background: rgba(0, 0, 0, 0.2);
-        }
-
-        #workspaces button.focused {
-          background-color: #64727D;
         }
 
         #clock,
