@@ -29,6 +29,7 @@
         "SUPER, F, exec, firefox"
         "SUPER, V, exec, vesktop"
         "SUPER, D, exec, lf"
+        "SUPER, O, exec, obsidian"
         "SUPER, Space, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
