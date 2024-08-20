@@ -8,6 +8,7 @@ in
     rust-vim
     vim-markdown
     vim-nix
+    vim-svelte
   ];
 
   programs.nixvim.plugins = {
