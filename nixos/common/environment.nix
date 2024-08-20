@@ -28,6 +28,7 @@
       grim
       slurp
       unzip
+      nodejs_22
     ];
 
     sessionVariables = {
