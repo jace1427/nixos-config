@@ -18,12 +18,13 @@
       theme = "eastwood";
     };
 
-    profileExtra = ''
+    initExtra = ''
       function chpwd() {
         emulate -L zsh
         ls --color=auto -1lFA -I.git
       }
     '';
+
     shellAliases = rec {
       # git
       gs = "git status";
