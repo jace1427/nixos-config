@@ -23,7 +23,7 @@
       EDITOR = "nvim";
       MOZ_ENABLE_WAYLAND = 1;
     };
-    sessionPath = [ "$HOME/.npm-global/" ];
+    sessionPath = [ "$HOME/.npm-global/bin" ];
   };
 
   # Enable packages
