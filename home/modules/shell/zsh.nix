@@ -38,7 +38,7 @@
       dr = "dotnet run";
       v = "nvim .";
       vn = "cd ~/dir/nixos-config/; nvim .";
-      cl = "cd $@; ls";
+      cl = "cd $@ && ls";
       nsp = "nix-shell -p $@";
 
       # cd's
