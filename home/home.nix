@@ -29,7 +29,10 @@
   # Enable packages
   programs.home-manager.enable = true;
 
-  stylix.targets.rofi.enable = false;
+  stylix.targets = {
+    rofi.enable = false;
+    vscode.enable = false;
+  };
 
   home.packages = with pkgs; [
     firefox
@@ -56,7 +59,6 @@
     rustfmt
     codespell
     texlive.combined.scheme-full
-    vscode
   ];
 
   # Nicely reload system units when changing configs
