@@ -41,10 +41,11 @@
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
+      killwow = "flatpak kill com.userbottles.bottles";
       r = "$(fc -ln -1)";
       dr = "dotnet run";
-      v = "nvim .";
-      vn = "cd ~/dir/nixos-config/; nvim .";
+      v = "code .";
+      vn = "cd ~/dir/nixos-config/; code .";
       nsp = "nix-shell -p $@";
 
       # cd's

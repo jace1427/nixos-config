@@ -30,6 +30,7 @@
         "SUPER, D, exec, vesktop"
         "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
         "SUPER, O, exec, obsidian"
+        "SUPER, C, exec, vscode"
         "SUPER, Space, exec, rofi -show drun -show-icons"
         "SUPERSHIFT, Q, exit,"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
