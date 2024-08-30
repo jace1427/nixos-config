@@ -59,6 +59,7 @@
     rustfmt
     codespell
     texlive.combined.scheme-full
+    vscode
   ];
 
   # Nicely reload system units when changing configs
