@@ -15,18 +15,18 @@
       brettm12345.nixfmt-vscode
     ];
 
-    userSettings = {
-      # "editor.fontFamily" = "'Terminus'";
-      # "terminal.integrated.fontFamily" = "'Terminus'";
-      "workbench.colorTheme" = "Solarized Dark";
-      "workbench.sideBar.location" = "right";
-      "editor.renderWhitespace" = "boundary";
-      "editor.wordWrap" = "on";
-      "editor.minimap.renderCharacters" = false;
-      # "vim.handleKeys" = [ { <C-w> = false; } ];
-      # "vim.handleKeys" = {
-      # "<C-w>" = false;
-      # };
-    };
+    # userSettings = {
+    # "editor.fontFamily" = "'Terminus'";
+    # "terminal.integrated.fontFamily" = "'Terminus'";
+    # "workbench.colorTheme" = "Solarized Dark";
+    # "workbench.sideBar.location" = "right";
+    # "editor.renderWhitespace" = "boundary";
+    # "editor.wordWrap" = "on";
+    # "editor.minimap.renderCharacters" = false;
+    # "vim.handleKeys" = [ { <C-w> = false; } ];
+    # "vim.handleKeys" = {
+    # "<C-w>" = false;
+    # };
+    # };
   };
 }
