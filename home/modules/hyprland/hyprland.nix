@@ -15,7 +15,6 @@
         "DP-3,preferred,0x0,auto"
         "DP-1,preferred,1920x0,auto"
         "DP-2,preferred,-1920x0,auto"
-        # "HDMI-A-1,3840x2160@120.00Hz,0x0,auto"
         "HDMI-A-1,3840x2160@120.00Hz,0x0,2"
       ];
 
@@ -137,8 +136,11 @@
 
       workspace = [
         "1,monitor:DP-2"
-        "2,monitor:DP-3"
-        "3,monitor:DP-1"
+        "2,monitor:DP-2"
+        "3,monitor:DP-3"
+        "4,monitor:DP-3"
+        "5,monitor:DP-1"
+        "6,monitor:DP-1"
       ];
     };
   };
