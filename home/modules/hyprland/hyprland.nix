@@ -135,12 +135,12 @@
       ];
 
       workspace = [
-        "1,monitor:DP-2"
-        "2,monitor:DP-2"
-        "3,monitor:DP-3"
-        "4,monitor:DP-3"
-        "5,monitor:DP-1"
-        "6,monitor:DP-1"
+        "1, monitor:DP-2, default:true, persistent:true, defaultName:1"
+        "2, monitor:DP-2, persistent:true, defaultName:1"
+        "3, monitor:DP-3, default:true, persistent:true, defaultName:1"
+        "4, monitor:DP-3, persistent:true, defaultName:1"
+        "5, monitor:DP-1, default:true, persistent:true, defaultName:1"
+        "6, monitor:DP-1, persistent:true, defaultName:1"
       ];
     };
   };
