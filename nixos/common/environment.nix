@@ -29,6 +29,7 @@
       slurp
       unzip
       nodejs_22
+      gimp
     ];
 
     sessionVariables = {
