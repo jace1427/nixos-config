@@ -56,10 +56,13 @@ in
     enable = true;
     settings = {
       primary = {
-        passthrough = false;
-        position = "top";
-        height = 30;
+        layer = "bottom";
+        position = "bottom";
+        mod = "dock";
         exclusive = true;
+        margin-bottom = -1;
+        passthrough = false;
+        height = 41;
 
         output = [
           "DP-1"
@@ -69,33 +72,50 @@ in
         ];
 
         modules-left = [
+          "custom/os_button"
           "hyprland/workspaces"
-          "hyprland/window"
+          "wlr/taskbar"
         ];
 
-        modules-center = [
+        modules-center = [ ];
+
+        modules-right = [
           "cpu"
           "custom/gpu"
           "memory"
+          "disk"
           "temperature"
-        ];
-
-        modules-right = [
+          "tray"
           "pulseaudio"
-          "network"
           "clock"
         ];
 
+        disk = {
+          interval = 30;
+          format = "󰋊 {percentage_used}%";
+          path = "/";
+          tooltip = true;
+          unit = "GB";
+          tooltip-format = "Available {free} of {total}";
+        };
+
         clock = {
           interval = 1;
-          format = "{:%a %m/%d %I:%M}";
+          format = "{:%R\n %m/%d/%Y}";
           tooltip-format = ''
-            <big>{:%B %Y}</big>
-            <tt><small>{calendar}</small></tt>'';
+            <tt><small>{calendar}</small></tt>
+          '';
+          calendar = {
+            mode = "year";
+            mode-mon-col = 3;
+            weeks-pos = "right";
+          };
         };
 
         cpu = {
+          interval = 5;
           format = "  {usage}%";
+          max-length = 10;
         };
 
         "custom/gpu" = {
@@ -105,18 +125,33 @@ in
         };
 
         memory = {
-          format = "  {}%";
-          interval = 5;
+          interval = 10;
+          format = "  {percentage}%";
+          max-length = 10;
+          tooltip = true;
+          tooltip-format = "RAM - {used:0.1f}GiB used";
+        };
+
+        "wlr/taskbar" = {
+          format = "{icon} {title:.17}";
+          icon-size = 28;
+          spacing = 3;
+          on-click-middle = "close";
+          tooltip-format = "{title}";
+          ignore-list = [ ];
+          on-click = "activate";
+        };
+
+        tray = {
+          icon-size = 18;
+          spacing = 3;
         };
 
         temperature = {
           critical-threshold = 80;
-          format = "{temperatureC}°C {icon}";
-          format-icons = [
-            ""
-            ""
-            ""
-          ];
+          format = "({temperatureC}°C)";
+          format-critical = "({temperatureC}°C)";
+          tooltip = false;
         };
 
         pulseaudio = {
@@ -131,128 +166,152 @@ in
           };
         };
 
-        "network" = {
-          format-wifi = "{essid} ({signalStrength}%) ";
-          format-ethernet = "{ipaddr}/{cidr} ";
-          tooltip-format = "{ifname} via {gwaddr} ";
-          format-linked = "{ifname} (No IP) ";
-          format-disconnected = "Disconnected ⚠";
-          format-alt = "{ifname}: {ipaddr}/{cidr}";
-        };
-
         "hyprland/window" = {
           "max-length" = 200;
           "separate-outputs" = true;
         };
 
-        "custom/currentplayer" = {
-          interval = 2;
-          return-type = "json";
-          exec = mkScriptJson {
-            deps = [ pkgs.playerctl ];
-            pre = ''
-              player="$(playerctl status -f "{{playerName}}" 2>/dev/null || echo "No player active" | cut -d '.' -f1)"
-              count="$(playerctl -l 2>/dev/null | wc -l)"
-              if ((count > 1)); then
-                more=" +$((count - 1))"
-              else
-                more=""
-              fi
-            '';
-            alt = "$player";
-            tooltip = "$player ($count available)";
-            text = "$more";
-          };
-          format = "{icon}{}";
-          format-icons = {
-            "No player active" = " ";
-            "Celluloid" = "󰎁 ";
-            "spotify" = "󰓇 ";
-            "ncspot" = "󰓇 ";
-            "qutebrowser" = "󰖟 ";
-            "firefox" = " ";
-            "discord" = " 󰙯 ";
-            "sublimemusic" = " ";
-            "kdeconnect" = "󰄡 ";
-            "chromium" = " ";
-          };
+        "hyprland/workspaces" = {
+          "icon-size" = 32;
+          "spacing" = 15;
+          "on-scroll-up" = "hyprctl dispatch workspace r+1";
+          "on-scroll-down" = "hyprctl dispatch workspace r-1";
         };
 
-        "custom/player" = {
-          exec-if = mkScript {
-            deps = [ pkgs.playerctl ];
-            script = "playerctl status 2>/dev/null";
-          };
-          exec =
-            let
-              format = ''{"text": "{{title}} - {{artist}}", "alt": "{{status}}", "tooltip": "{{title}} - {{artist}} ({{album}})"}'';
-            in
-            mkScript {
-              deps = [ pkgs.playerctl ];
-              script = "playerctl metadata --format '${format}' 2>/dev/null";
-            };
-          return-type = "json";
-          interval = 2;
-          max-length = 30;
-          format = "{icon} {}";
-          format-icons = {
-            "Playing" = "󰐊";
-            "Paused" = "󰏤 ";
-            "Stopped" = "󰓛";
-          };
-          on-click = mkScript {
-            deps = [ pkgs.playerctl ];
-            script = "playerctl play-pause";
-          };
+        "custom/os_button" = {
+          "format" = "";
+          "on-click" = "wofi --show drun";
+          "tooltip" = false;
         };
+
+        style =
+          # css
+          ''
+            * {
+              font-family: Terminus;
+              text-shadow: none;
+              box-shadow: none;
+              border: none;
+              border-radius: 0;
+              font-weight: 600;
+              font-size: 12.7px;
+            }
+
+            window#waybar {
+              border-top: 1px solid @border_main;
+            }
+
+            tooltip {
+              border-radius: 5px;
+              border-width: 1px;
+              border-style: solid;
+            }
+
+            #custom-os_button {
+              fontsize: 24px;
+              padding-left: 12px;
+              padding-right: 20px;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #workspaces {
+              margin-r8ight: 1.5px;
+              margin-left: 1.5px;
+            }
+
+            #workspaces button {
+              padding: 3px;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #workspaces button.active {
+              border-bottom: 3px solid white;
+            }
+
+            #workspaces button.urgent {
+              border-bottom: 3px dashed solid red;
+            }
+
+            #taskbar {
+            }
+
+            #taskbar button {
+              min-width: 130px;
+              border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+              margin-left: 2px;
+              margin-right: 2px;
+              padding-left: 8px;
+              padding-right: 8px;
+              color: white;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #taskbar button.active {
+              border-bottom: 3px solid white;
+            }
+
+            #taskbar button:hover {
+              border-bottom: 3px solid white;
+            }
+
+            #cpu, #disk, #memory {
+              padding:3px;
+            }
+
+            #temperature {
+              font-size: 0px;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #temperature.critical {
+              padding-right: 3px;
+              font-size: initial;
+              border-bottom: 3px dashed;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #window {
+              border-radius: 10px;
+              margin-left: 20px;
+              margin-right: 20px;
+            }
+
+            #tray{
+              margin-left: 5px;
+              margin-right: 5px;
+            }
+            #tray > .passive {
+              border-bottom: none;
+            }
+            #tray > .active {
+              border-bottom: 3px solid white;
+            }
+            #tray > .needs-attention {
+              border-bottom: 3px;
+            }
+            #tray > widget {
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #pulseaudio {
+              font-family: "Terminus";
+              padding-left: 3px;
+              padding-right: 3px;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            #network {
+              padding-left: 3px;
+              padding-right: 3px;
+            }
+
+            #clock {
+              padding-right: 5px;
+              padding-left: 5px;
+              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+          '';
       };
     };
-    style =
-      # css
-      ''
-        * {
-          font-size: 12pt;
-          padding: 1;
-          margin: 0 0.4em;
-          font-family: Terminus;
-        }
-
-        window#waybar {
-          border-bottom: 3px solid;
-        }
-
-        button {
-          box-shadow: inset 0 -3px transparent;
-          border: none;
-          border-radius: 0;
-        }
-
-        button:hover {
-          background: inherit;
-        }
-
-        #workspaces button {
-          padding: 0 5px;
-          background-color: transparent;
-        }
-
-        #clock,
-        #cpu,
-        #custom-gpu,
-        #memory,
-        #temperature,
-        #network,
-        #pulseaudio,
-        #tray,
-        #custom-currentplayer
-        {
-          padding: 0 10px;
-        }
-
-        #window,
-        #workspaces {
-          margin: 0 4px;
-        }
-      '';
   };
 }
