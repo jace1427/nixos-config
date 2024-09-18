@@ -22,7 +22,6 @@
         "mako"
         "waybar"
         "hypridle"
-        # "swwww"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
@@ -44,7 +43,6 @@
         shadow_range = 12;
         shadow_render_power = 3;
         shadow_offset = "3 3";
-        # "col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = true;
@@ -78,9 +76,6 @@
 
         border_size = 1;
         resize_on_border = true;
-
-        # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        # "col.inactive_border" = "rgba(595959aa)";
 
         allow_tearing = false;
 

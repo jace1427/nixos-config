@@ -52,7 +52,6 @@
     vale
     markdownlint-cli2
     xdragon
-    pistol
     ripgrep
     isort
     black

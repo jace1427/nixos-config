@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/solarized/a_planet_in_space_with_clouds.jpg;
+    image = ../../wallpapers/cold/a_snowy_mountain_with_clouds_above.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
     targets.grub.useImage = true;
 
