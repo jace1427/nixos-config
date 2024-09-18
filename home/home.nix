@@ -23,12 +23,16 @@
       EDITOR = "nvim";
       MOZ_ENABLE_WAYLAND = 1;
     };
+    sessionPath = [ "$HOME/.npm-global/bin" ];
   };
 
   # Enable packages
   programs.home-manager.enable = true;
 
-  stylix.targets.rofi.enable = false;
+  stylix.targets = {
+    rofi.enable = false;
+    vscode.enable = false;
+  };
 
   home.packages = with pkgs; [
     firefox
@@ -48,13 +52,13 @@
     vale
     markdownlint-cli2
     xdragon
-    pistol
     ripgrep
     isort
     black
     rustfmt
     codespell
     texlive.combined.scheme-full
+    vscode
   ];
 
   # Nicely reload system units when changing configs

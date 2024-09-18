@@ -1,1 +1,1 @@
-{ imports = [ ./lf.nix ]; }
+{ imports = [ ]; }

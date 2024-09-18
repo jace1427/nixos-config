@@ -8,6 +8,7 @@ in
     rust-vim
     vim-markdown
     vim-nix
+    vim-svelte
   ];
 
   programs.nixvim.plugins = {
@@ -45,6 +46,7 @@ in
     cmp-buffer.enable = true;
     cmp-path.enable = true;
     cmp-latex-symbols.enable = true;
+    cmp-treesitter.enable = true;
     cmp = {
       enable = true;
       autoEnableSources = true;
@@ -154,7 +156,14 @@ in
 
     telescope.enable = true;
 
-    treesitter.enable = true;
+    treesitter = {
+      enable = true;
+      settings = {
+        auto_install = true;
+        ensure_installed = "all";
+        highlight.enable = true;
+      };
+    };
 
     which-key.enable = true;
   };

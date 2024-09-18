@@ -18,6 +18,13 @@
       theme = "eastwood";
     };
 
+    initExtra = ''
+      function chpwd() {
+        emulate -L zsh
+        ls --color=auto -1lFA -I.git
+      }
+    '';
+
     shellAliases = rec {
       # git
       gs = "git status";
@@ -34,9 +41,11 @@
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
+      killwow = "flatpak kill com.usebottles.bottles";
       r = "$(fc -ln -1)";
       dr = "dotnet run";
-      v = "nvim .";
+      v = "code .";
+      vn = "cd ~/dir/nixos-config/; code .";
       nsp = "nix-shell -p $@";
 
       # cd's

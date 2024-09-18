@@ -15,7 +15,6 @@
         "DP-3,preferred,0x0,auto"
         "DP-1,preferred,1920x0,auto"
         "DP-2,preferred,-1920x0,auto"
-        # "HDMI-A-1,3840x2160@120.00Hz,0x0,auto"
         "HDMI-A-1,3840x2160@120.00Hz,0x0,2"
       ];
 
@@ -23,7 +22,6 @@
         "mako"
         "waybar"
         "hypridle"
-        # "swwww"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
@@ -45,7 +43,6 @@
         shadow_range = 12;
         shadow_render_power = 3;
         shadow_offset = "3 3";
-        # "col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = true;
@@ -61,7 +58,7 @@
       animations = {
         enabled = true;
 
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        bezier = "myBezier, 0.165, 0.84, 0.44, 1";
 
         animation = [
           "windows, 1, 7, myBezier"
@@ -79,9 +76,6 @@
 
         border_size = 1;
         resize_on_border = true;
-
-        # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        # "col.inactive_border" = "rgba(595959aa)";
 
         allow_tearing = false;
 
@@ -136,9 +130,12 @@
       ];
 
       workspace = [
-        "1,monitor:DP-2"
-        "2,monitor:DP-3"
-        "3,monitor:DP-1"
+        "1, monitor:DP-2, default:true, persistent:true, defaultName:1"
+        "2, monitor:DP-2, persistent:true, defaultName:2"
+        "3, monitor:DP-3, default:true, persistent:true, defaultName:3"
+        "4, monitor:DP-3, persistent:true, defaultName:4"
+        "5, monitor:DP-1, default:true, persistent:true, defaultName:5"
+        "6, monitor:DP-1, persistent:true, defaultName:6"
       ];
     };
   };
