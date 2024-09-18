@@ -101,7 +101,7 @@ in
 
         clock = {
           interval = 1;
-          format = "{:%R\n %m/%d/%Y}";
+          format = "{:%A\n %m/%d/%Y}";
           tooltip-format = ''
             <tt><small>{calendar}</small></tt>
           '';
