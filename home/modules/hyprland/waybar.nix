@@ -58,7 +58,7 @@ in
       primary = {
         layer = "bottom";
         position = "bottom";
-        mod = "dock";
+        mode = "dock";
         exclusive = true;
         margin-bottom = -1;
         passthrough = false;

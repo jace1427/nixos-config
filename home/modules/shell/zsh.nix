@@ -31,21 +31,20 @@
       ga = "git add *";
       gc = "git commit -m $1";
       gp = "git push";
+      gpu = "git pull";
       gd = "git diff";
       gco = "git checkout $1";
       gbd = "git branch -D $1";
 
       # aliases
       ls = "ls --color=auto -1lFA -I.git";
-      re = "~/dir/nixos-config/rebuild.sh";
+      re = "./rebuild.sh";
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
       killwow = "flatpak kill com.usebottles.bottles";
       r = "$(fc -ln -1)";
-      dr = "dotnet run";
       v = "code .";
-      vn = "cd ~/dir/nixos-config/; code .";
       nsp = "nix-shell -p $@";
 
       # cd's
