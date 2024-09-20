@@ -59,6 +59,7 @@
     codespell
     texlive.combined.scheme-full
     vscode
+    jq
   ];
 
   # Nicely reload system units when changing configs
