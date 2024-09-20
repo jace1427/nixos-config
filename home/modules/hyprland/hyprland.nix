@@ -140,6 +140,7 @@
 
       binds = {
         allow_workspace_cycles = true;
+        workspace_back_and_forth = true;
       };
     };
   };
