@@ -137,11 +137,6 @@
         "5, monitor:DP-1, default:true, persistent:true, defaultName:5"
         "6, monitor:DP-1, persistent:true, defaultName:6"
       ];
-
-      binds = {
-        allow_workspace_cycles = true;
-        workspace_back_and_forth = true;
-      };
     };
   };
 }

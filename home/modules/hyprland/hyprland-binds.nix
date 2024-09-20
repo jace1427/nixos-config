@@ -1,5 +1,10 @@
 # hyprland-binds.nix
-{ lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   wayland.windowManager.hyprland.settings = {
     bind =
@@ -22,6 +27,35 @@
           k = up;
           j = down;
         };
+        switch = pkgs.writeShellScriptBin "switch" ''
+          id=$(hyprctl activeworkspace -j | jq '.id')
+
+          if [ $1 -eq 1 ]; then
+              if [ $id -eq 1 ]; then
+                  hyprctl dispatch workspace 2
+              elif [ $id -eq 2 ]; then
+                  hyprctl dispatch workspace 1
+              else
+                  hyprctl dispatch focusmonitor DP-2
+              fi
+          elif [ $1 -eq 2 ]; then
+              if [ $id -eq 3 ]; then
+                  hyprctl dispatch workspace 4
+              elif [ $id -eq 4 ]; then
+                  hyprctl dispatch workspace 3
+              else
+                  hyprctl dispatch focusmonitor DP-3
+              fi
+          else
+              if [ $id -eq 5 ]; then
+                  hyprctl dispatch workspace 6
+              elif [ $id -eq 6 ]; then
+                  hyprctl dispatch workspace 5
+              else
+                  hyprctl dispatch focusmonitor DP-1
+              fi
+          fi
+        '';
       in
       [
         "SUPER, T, exec, kitty"
@@ -37,10 +71,13 @@
         "SUPERALT, L, exec, hyprlock"
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
+        "SUPER, 1, exec, ${switch} 1"
+        "SUPER, 2, exec, ${switch} 2"
+        "SUPER, 3, exec, ${switch} 3"
       ]
       ++
         # Change workspace
-        (map (n: "SUPER,${n},workspace,name:${n}") workspaces)
+        (map (n: "SUPERALT,${n},workspace,name:${n}") workspaces)
       ++
         # Move focus
         (lib.mapAttrsToList (key: direction: "SUPER,${key},movefocus,${direction}") directions)
