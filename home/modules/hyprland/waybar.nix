@@ -25,31 +25,6 @@ let
         runtimeInputs = commonDeps ++ deps;
       }
     );
-  # Specialized for JSON outputs
-  mkScriptJson =
-    {
-      name ? "script",
-      deps ? [ ],
-      pre ? "",
-      text ? "",
-      tooltip ? "",
-      alt ? "",
-      class ? "",
-      percentage ? "",
-    }:
-    mkScript {
-      deps = [ pkgs.jq ] ++ deps;
-      script = ''
-        ${pre}
-        jq -cn \
-          --arg text "${text}" \
-          --arg tooltip "${tooltip}" \
-          --arg alt "${alt}" \
-          --arg class "${class}" \
-          --arg percentage "${percentage}" \
-          '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
-      '';
-    };
 in
 {
   programs.waybar = {
@@ -85,7 +60,6 @@ in
           "memory"
           "disk"
           "temperature"
-          "tray"
           "pulseaudio"
           "clock"
         ];
@@ -101,14 +75,13 @@ in
 
         clock = {
           interval = 1;
-          format = "{:%A\n %m/%d/%Y}";
+          format = "{:%I:%M %p %A %m/%d/%Y}";
           tooltip-format = ''
             <tt><small>{calendar}</small></tt>
           '';
           calendar = {
             mode = "year";
             mode-mon-col = 3;
-            weeks-pos = "right";
           };
         };
 
@@ -133,18 +106,12 @@ in
         };
 
         "wlr/taskbar" = {
-          format = "{icon} {title:.17}";
+          format = "{icon} {name:.20}";
           icon-size = 28;
           spacing = 3;
           on-click-middle = "close";
           tooltip-format = "{title}";
-          ignore-list = [ ];
           on-click = "activate";
-        };
-
-        tray = {
-          icon-size = 18;
-          spacing = 3;
         };
 
         temperature = {
@@ -274,23 +241,6 @@ in
               border-radius: 10px;
               margin-left: 20px;
               margin-right: 20px;
-            }
-
-            #tray{
-              margin-left: 5px;
-              margin-right: 5px;
-            }
-            #tray > .passive {
-              border-bottom: none;
-            }
-            #tray > .active {
-              border-bottom: 3px solid white;
-            }
-            #tray > .needs-attention {
-              border-bottom: 3px;
-            }
-            #tray > widget {
-              transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
 
             #pulseaudio {

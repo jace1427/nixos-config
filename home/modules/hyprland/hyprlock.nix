@@ -13,7 +13,7 @@
 
       background = [
         {
-          path = /home/jspidell/dir/nixos/wallpaper/cold/a_snowy_mountain_with_clouds_above.jpg;
+          path = "/home/jspidell/dir/nixos/wallpaper/cold/a_snowy_mountain_with_clouds_above.jpg";
           blur_passes = 1;
           blur_size = 5;
         }

@@ -45,7 +45,7 @@
       killwow = "flatpak kill com.usebottles.bottles";
       r = "$(fc -ln -1)";
       v = "code .";
-      nsp = "nix-shell -p $@";
+      nsp = "nix-shell -p $@ --command 'zsh'";
 
       # cd's
       ".." = "cd ..";

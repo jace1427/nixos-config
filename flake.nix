@@ -19,11 +19,7 @@
 
     stylix.url = "github:danth/stylix";
 
-    nixvim.url = "github:nix-community/nixvim";
-
     xremap-flake.url = "github:xremap/nix-flake";
-
-    # warcraftlogs-uploader.url = "git+https://github.com/RPGLogs/Uploaders-warcraftlogs"; TODO
   };
 
   outputs =
@@ -35,7 +31,6 @@
       nix-flatpak,
       stylix,
       hyprland,
-      nixvim,
       xremap-flake,
       ...
     }@inputs:
@@ -52,7 +47,6 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
-            nixvim.nixosModules.nixvim
             xremap-flake.nixosModules.default
 
             home-manager.nixosModules.home-manager
@@ -60,7 +54,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.sharedModules = [ nixvim.homeManagerModules.nixvim ];
             }
 
             nixos-hardware.nixosModules.common-cpu-amd
