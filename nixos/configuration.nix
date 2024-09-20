@@ -47,8 +47,6 @@
     efi.canTouchEfiVariables = true;
   };
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "Terminus" ]; }) ];
-
   time.timeZone = "America/Los_Angeles";
   networking.hostName = "nixos";
 

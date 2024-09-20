@@ -56,5 +56,10 @@
       "SUPER, mouse:272, movewindow"
       "SUPER, mouse:273, resizewindow"
     ];
+
+    bindl = [
+      "SUPER, 1, switch:on:[1or2], workspace, name:1"
+      "SUPER, 1, switch:off:[1or2], workspace, name:2"
+    ];
   };
 }
