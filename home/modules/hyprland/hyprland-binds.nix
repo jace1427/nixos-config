@@ -71,9 +71,9 @@
         "SUPERALT, L, exec, hyprlock"
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
-        "SUPER, 1, exec, ${switch} 1"
-        "SUPER, 2, exec, ${switch} 2"
-        "SUPER, 3, exec, ${switch} 3"
+        "SUPER, 1, execr, ${switch} 1"
+        "SUPER, 2, execr, ${switch} 2"
+        "SUPER, 3, execr, ${switch} 3"
       ]
       ++
         # Change workspace
