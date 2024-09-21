@@ -55,6 +55,7 @@
       tools = "cd ~/dir/tools/";
       vault = "cd ~/dir/vault/";
       repos = "cd ~/dir/repos/";
+      misc = "cd ~/dir/misc/";
     };
   };
 }
