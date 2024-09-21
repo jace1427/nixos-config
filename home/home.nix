@@ -60,6 +60,7 @@
     texlive.combined.scheme-full
     vscode
     jq
+    appimage-run
   ];
 
   # Nicely reload system units when changing configs
