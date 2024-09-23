@@ -11,6 +11,7 @@
     gamemode.enable = true;
     neovim.enable = true;
     zsh.enable = true;
+    tmux.enable = true;
 
     hyprland = {
       enable = true;
