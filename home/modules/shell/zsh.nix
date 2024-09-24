@@ -46,6 +46,7 @@
       r = "$(fc -ln -1)";
       v = "code .";
       nsp = "nix-shell -p $@ --command 'zsh'";
+      wl = "appimage-run ~/dir/misc/warcraftlogs-v8.13.18.AppImage";
 
       # cd's
       ".." = "cd ..";
