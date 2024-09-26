@@ -30,6 +30,7 @@
       unzip
       nodejs_22
       gimp
+      ungoogled-chromium
     ];
 
     sessionVariables = {
