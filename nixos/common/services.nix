@@ -27,7 +27,6 @@
       enable = true;
       xkb.layout = "us";
       videoDrivers = [ "modesetting" ];
-      displayManager.defaultSession = "hyprland";
     };
 
     xremap = {
