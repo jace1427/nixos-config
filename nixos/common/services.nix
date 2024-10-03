@@ -19,20 +19,13 @@
       };
     };
 
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        enableHidpi = true;
-        theme = "background=/home/jspidell/dir/nixos-config/wallpapers/solarized/a_red_sun_over_mountains.jpg";
-      };
-      defaultSession = "hyprland";
-    };
+    getty.autologinUser = "jspidell";
 
     xserver = {
       enable = true;
       xkb.layout = "us";
       videoDrivers = [ "modesetting" ];
+      displayManager.defaultSession = "hyprland";
     };
 
     xremap = {
