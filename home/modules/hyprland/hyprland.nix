@@ -24,6 +24,9 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "[workspace 1 silent] firefox"
+        "[workspace 5 silent] kitty"
+        "[workspace 6 silent] Vesktop"
       ];
 
       env = [
