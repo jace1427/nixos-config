@@ -21,6 +21,8 @@
 
     getty.autologinUser = "jspidell";
 
+    displayManager.defaultSession = "hyprland";
+
     xserver = {
       enable = true;
       xkb.layout = "us";
