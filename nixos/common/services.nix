@@ -21,12 +21,13 @@
 
     getty.autologinUser = "jspidell";
 
-    displayManager.defaultSession = "hyprland";
+    displayManager.defaultSession = "none+hyprland";
 
     xserver = {
       enable = true;
       xkb.layout = "us";
       videoDrivers = [ "modesetting" ];
+      displayManager.lightdm.enable = false;
     };
 
     xremap = {
