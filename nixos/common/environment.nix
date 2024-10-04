@@ -32,6 +32,7 @@
       gimp
       ungoogled-chromium
       reaper
+      qjackctl
     ];
 
     sessionVariables = {
