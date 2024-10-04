@@ -31,6 +31,7 @@
       nodejs_22
       gimp
       ungoogled-chromium
+      reaper
     ];
 
     sessionVariables = {
