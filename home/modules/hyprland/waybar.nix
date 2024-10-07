@@ -112,6 +112,7 @@ in
           on-click-middle = "close";
           tooltip-format = "{title}";
           on-click = "activate";
+          all-outputs = false;
         };
 
         temperature = {
@@ -176,8 +177,8 @@ in
 
             #custom-os_button {
               fontsize: 24px;
-              padding-left: 12px;
-              padding-right: 20px;
+              padding-left: 50px;
+              padding-right: 50px;
               transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
 
@@ -248,11 +249,6 @@ in
               padding-left: 3px;
               padding-right: 3px;
               transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-            }
-
-            #network {
-              padding-left: 3px;
-              padding-right: 3px;
             }
 
             #clock {

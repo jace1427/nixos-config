@@ -20,7 +20,7 @@
     username = "jspidell";
     homeDirectory = "/home/jspidell";
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "code";
       MOZ_ENABLE_WAYLAND = 1;
     };
     sessionPath = [ "$HOME/.npm-global/bin" ];
@@ -38,9 +38,7 @@
     firefox
     steam
     prismlauncher
-    vkbasalt
     gamescope
-    protonup-qt
     spotify
     vesktop
     wowup-cf
@@ -48,19 +46,13 @@
     godot_4
     blender
     zoom-us
-    btop
-    vale
-    markdownlint-cli2
-    xdragon
-    ripgrep
-    isort
-    black
-    rustfmt
-    codespell
-    texlive.combined.scheme-full
     vscode
     jq
     appimage-run
+    gimp
+    ungoogled-chromium
+    reaper
+    lmms
   ];
 
   # Nicely reload system units when changing configs

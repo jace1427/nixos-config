@@ -3,17 +3,19 @@
 {
   environment = {
     systemPackages = with pkgs; [
+      # system
       wine
       winetricks
       wineWowPackages.staging
       wineWowPackages.waylandFull
+      libsForQt5.qt5.qtquickcontrols2
+      libsForQt5.qt5.qtgraphicaleffects
       git
       gh
       kitty
       bash
       vim
-      libsForQt5.qt5.qtquickcontrols2
-      libsForQt5.qt5.qtgraphicaleffects
+      vscode
       gcc
       rustup
       dotnet-sdk_8
@@ -32,7 +34,7 @@
       gimp
       ungoogled-chromium
       reaper
-      qjackctl
+      lmms
     ];
 
     sessionVariables = {

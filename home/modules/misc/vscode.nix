@@ -1,4 +1,4 @@
-# This shit is so broken, no clue why....
+# This shit is so broken, no clue why.... TODO
 { pkgs, config, ... }:
 {
   programs.vscode = {

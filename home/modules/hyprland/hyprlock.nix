@@ -19,6 +19,12 @@
         }
       ];
 
+      image = [
+        {
+          path = "/home/jspidell/dir/nixos/wallpaper/cold/a_snowy_mountain_with_clouds_above.jpg";
+        }
+      ];
+
       input-field = [
         {
           size = "200, 50";
