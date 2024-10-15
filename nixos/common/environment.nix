@@ -10,31 +10,26 @@
       wineWowPackages.waylandFull
       libsForQt5.qt5.qtquickcontrols2
       libsForQt5.qt5.qtgraphicaleffects
+      xwaylandvideobridge
       git
       gh
       kitty
       bash
+      gcc
+      dotnet-sdk_8
+      nodejs_22
+      rustup
       vim
       vscode
-      gcc
-      rustup
-      dotnet-sdk_8
       libnotify
       mako
       rofi-wayland
       cliphist
       wl-clip-persist
       wl-clipboard
-      nixfmt-rfc-style
-      xwaylandvideobridge
       grim
       slurp
       unzip
-      nodejs_22
-      gimp
-      ungoogled-chromium
-      reaper
-      lmms
     ];
 
     sessionVariables = {

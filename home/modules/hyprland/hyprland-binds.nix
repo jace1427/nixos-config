@@ -76,6 +76,8 @@
         "SUPER, 1, exec, ${switch} 1"
         "SUPER, 2, exec, ${switch} 2"
         "SUPER, 3, exec, ${switch} 3"
+        "SUPERALT, up, exec, wpctl set-volumne -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+        "SUPERALT, down, exec, wpctl set-volumne -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
       ]
       ++
         # Change workspace
