@@ -30,6 +30,7 @@
       grim
       slurp
       unzip
+      nixfmt-rfc-style
     ];
 
     sessionVariables = {
