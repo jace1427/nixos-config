@@ -76,8 +76,8 @@
         "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
         "SUPERSHIFT, F, fullscreen, 1"
         "SUPERALT, L, exec, hyprlock"
-        "SUPERALT, up, exec, wpctl set-volumne -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-        "SUPERALT, down, exec, wpctl set-volumne -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
+        "SUPERALT, up, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+        "SUPERALT, down, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
       ]
       ++
         # Change workspace
