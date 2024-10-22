@@ -73,7 +73,7 @@
         "SUPER, 3, exec, ${switch} 3"
         "SUPER, F1, exec, ~/.config/hypr/gamemode.sh"
         "SUPERSHIFT, Q, exit,"
-        "SUPERSHIFT, S, exec, grim -g \"$(slurp)\""
+        "SUPERSHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
         "SUPERSHIFT, F, fullscreen, 1"
         "SUPERALT, L, exec, hyprlock"
         "SUPERALT, up, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
