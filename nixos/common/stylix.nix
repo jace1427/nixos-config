@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../wallpapers/cold/a_snowy_mountain_with_clouds_above.jpg;
+    image = ../../wallpapers/manga/beserk_rock.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/spacemacs.yaml";
     targets.grub.useImage = true;
 
