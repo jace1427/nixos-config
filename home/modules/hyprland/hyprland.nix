@@ -39,15 +39,15 @@
         inactive_opacity = 0.7;
         fullscreen_opacity = 1;
 
-        drop_shadow = true;
-        shadow_range = 12;
-        shadow_render_power = 3;
-        shadow_offset = "3 3";
+        # drop_shadow = true;
+        # shadow_range = 12;
+        # shadow_render_power = 3;
+        # shadow_offset = "3 3";
 
         blur = {
           enabled = true;
           size = 9;
-          passes = 2;
+          passes = 3;
           vibrancy = 0.1696;
           ignore_opacity = true;
           popups = true;

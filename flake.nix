@@ -22,6 +22,8 @@
     stylix.url = "github:danth/stylix";
 
     xremap-flake.url = "github:xremap/nix-flake";
+
+    swww.url = "github:LGFae/swww";
   };
 
   outputs =
@@ -34,6 +36,7 @@
       stylix,
       hyprland,
       xremap-flake,
+      swww,
       ...
     }@inputs:
     let
