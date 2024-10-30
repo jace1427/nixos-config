@@ -35,8 +35,8 @@
 
       decoration = {
         rounding = 10;
-        active_opacity = 0.8;
-        inactive_opacity = 0.8;
+        active_opacity = 0.7;
+        inactive_opacity = 0.7;
         fullscreen_opacity = 1;
 
         drop_shadow = true;
@@ -46,7 +46,7 @@
 
         blur = {
           enabled = true;
-          size = 5;
+          size = 9;
           passes = 2;
           vibrancy = 0.1696;
           ignore_opacity = true;
