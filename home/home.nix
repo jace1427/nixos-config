@@ -53,6 +53,7 @@
     ungoogled-chromium
     reaper
     lmms
+    swww
   ];
 
   # Nicely reload system units when changing configs
