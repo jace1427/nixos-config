@@ -7,5 +7,6 @@
     ./waybar.nix
     ./rofi.nix
     ./mako.nix
+    ./swww.nix
   ];
 }

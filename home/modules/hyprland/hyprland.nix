@@ -24,6 +24,7 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "sleep 5; bash ${config.xdg.dataFile."change_wallpaper.sh".source} &"
       ];
 
       env = [
@@ -38,11 +39,6 @@
         active_opacity = 0.7;
         inactive_opacity = 0.7;
         fullscreen_opacity = 1;
-
-        # drop_shadow = true;
-        # shadow_range = 12;
-        # shadow_render_power = 3;
-        # shadow_offset = "3 3";
 
         blur = {
           enabled = true;
@@ -93,10 +89,11 @@
       };
 
       misc = {
-        force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo = false; # If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
         new_window_takes_over_fullscreen = 2;
         disable_splash_rendering = true;
+        enable_swallow = true;
       };
 
       input = {
@@ -127,6 +124,17 @@
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
+        "float,class:^(file_progress)$"
+        "float,class:^(confirm)$"
+        "float,class:^(dialog)$"
+        "float,class:^(download)$"
+        "float,class:^(notification)$"
+        "float,class:^(error)$"
+        "float,class:^(confirmreset)$"
+        "float,title:^(Open File)$"
+        "float,title:^(branchdialog)$"
+        "float,title:^(Confirm to replace files)$"
+        "float,title:^(File Operation Progress)$"
       ];
 
       workspace = [
