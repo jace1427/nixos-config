@@ -13,11 +13,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # hyprland-plugins = {
+    #   url = "github:hyprwm/hyprland-plugins";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
 
     stylix.url = "github:danth/stylix";
 
@@ -25,7 +25,7 @@
 
     swww.url = "github:LGFae/swww";
 
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs =
@@ -36,10 +36,10 @@
       home-manager,
       nix-flatpak,
       stylix,
-      hyprland,
+      # hyprland,
       xremap-flake,
       swww,
-      hyprpanel,
+      # hyprpanel,
       ...
     }@inputs:
     let
@@ -56,7 +56,7 @@
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
             xremap-flake.nixosModules.default
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            # { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
 
             home-manager.nixosModules.home-manager
             {

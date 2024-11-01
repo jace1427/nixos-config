@@ -54,7 +54,7 @@
     reaper
     lmms
     swww
-    hyprpanel
+    # hyprpanel
   ];
 
   # Nicely reload system units when changing configs
