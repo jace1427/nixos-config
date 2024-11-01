@@ -31,6 +31,7 @@
       slurp
       unzip
       nixfmt-rfc-style
+      lz4
     ];
 
     sessionVariables = {
