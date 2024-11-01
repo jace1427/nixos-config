@@ -18,7 +18,7 @@
         else
           (swww-daemon 1>/dev/null 2>/dev/null &) || true
         fi
-        sleep 10
+        sleep 1800
       done
     '';
   };
