@@ -6,7 +6,7 @@
     text = ''
       set -e
       while true; do
-        BG=`find ${../../../wallpapers/manga} -name "*.jpg" -o -name "*.png" | shuf -n1`
+        BG=`find ${../../../wallpapers} -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" | shuf -n1`
         if pgrep swww-daemon >/dev/null; then
           swww img "$BG" \
             --transition-fps 60 \
@@ -18,7 +18,7 @@
         else
           (swww-daemon 1>/dev/null 2>/dev/null &) || true
         fi
-        sleep 1800
+        sleep 10
       done
     '';
   };

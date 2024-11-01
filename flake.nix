@@ -24,6 +24,8 @@
     xremap-flake.url = "github:xremap/nix-flake";
 
     swww.url = "github:LGFae/swww";
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs =
@@ -37,6 +39,7 @@
       hyprland,
       xremap-flake,
       swww,
+      hyprpanel,
       ...
     }@inputs:
     let
@@ -53,6 +56,7 @@
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
             xremap-flake.nixosModules.default
+            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
 
             home-manager.nixosModules.home-manager
             {

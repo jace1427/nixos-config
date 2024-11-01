@@ -79,18 +79,14 @@
         "SUPERALT, L, exec, hyprlock"
         "SUPERALT, up, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
         "SUPERALT, down, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
-        "SUPERSHIFT, left, movewindow, l"
-        "SUPERSHIFT, right, movewindow, r"
-        "SUPERSHIFT, up, movewindow, u"
-        "SUPERSHIFT, down, movewindow, d"
         "SUPERCTRL, left, resizeactive, -80 0"
         "SUPERCTRL, right, resizeactive, 80 0"
         "SUPERCTRL, up, resizeactive, 0 -80"
         "SUPERCTRL, down, resizeactive, 0 80"
-        "SUPERALT, left, moveactive,  -80 0"
-        "SUPERALT, right, moveactive, 80 0"
-        "SUPERALT, up, moveactive, 0 -80"
-        "SUPERALT, down, moveactive, 0 80"
+        "SUPERCTRL, h, resizeactive, -80 0"
+        "SUPERCTRL, l, resizeactive, 80 0"
+        "SUPERCTRL, k, resizeactive, 0 -80"
+        "SUPERCTRL, j, resizeactive, 0 80"
       ]
       ++
         # Change workspace
