@@ -35,7 +35,7 @@
       cursor.inactive_timeout = 4;
 
       decoration = {
-        rounding = 10;
+        rounding = 2;
         active_opacity = 0.7;
         inactive_opacity = 0.7;
         fullscreen_opacity = 1;
@@ -124,6 +124,7 @@
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(YouTube)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(World of Warcraft)(.*)"
         "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(Minecraft)(.*)"
+        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)(chess)(.*)"
         "float,class:^(file_progress)$"
         "float,class:^(confirm)$"
         "float,class:^(dialog)$"
