@@ -19,6 +19,7 @@
     neovim.enable = true;
     zsh.enable = true;
     tmux.enable = true;
+    thunar.enable = true;
 
     hyprland = {
       enable = true;

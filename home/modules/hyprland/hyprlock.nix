@@ -6,22 +6,18 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 300;
+        grace = 5;
         hide_cursor = true;
         no_fade_in = false;
+        ignore_empty_input = true;
       };
 
       background = [
         {
-          path = "/home/jspidell/dir/nixos/wallpaper/cold/a_snowy_mountain_with_clouds_above.jpg";
+          monitor = "";
+          path = "/home/jspidell/dir/nixos-config/wallpapers/solarized/a_large_body_of_water_with_clouds_in_the_sky.jpg";
           blur_passes = 1;
           blur_size = 5;
-        }
-      ];
-
-      image = [
-        {
-          path = "/home/jspidell/dir/nixos/wallpaper/cold/a_snowy_mountain_with_clouds_above.jpg";
         }
       ];
 

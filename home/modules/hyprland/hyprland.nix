@@ -42,11 +42,10 @@
 
         blur = {
           enabled = true;
-          size = 9;
-          passes = 3;
-          vibrancy = 0.1696;
-          ignore_opacity = true;
-          popups = true;
+          size = 8;
+          passes = 1;
+          ignore_opacity = false;
+          popups = false;
           xray = true;
         };
       };
@@ -67,11 +66,12 @@
       };
 
       general = {
-        gaps_in = 25;
+        gaps_in = 15;
         gaps_out = 25;
 
         border_size = 1;
         resize_on_border = true;
+        extend_border_grab_area = 20;
 
         allow_tearing = false;
 
@@ -79,8 +79,8 @@
       };
 
       dwindle = {
-        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # You probably want this
+        pseudotile = true;
+        preserve_split = true;
         split_width_multiplier = 1.35;
       };
 
@@ -136,6 +136,9 @@
         "float,title:^(branchdialog)$"
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
+        "float, class:(kitty), title:(kitty)"
+        "center, class:(kitty), title:(kitty)"
+        "size 600 500, class:(kitty), title:(kitty)"
       ];
 
       workspace = [
