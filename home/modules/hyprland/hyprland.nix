@@ -45,7 +45,7 @@
           size = 8;
           passes = 2;
           ignore_opacity = true;
-          popups = false;
+          popups = true;
           xray = true;
         };
       };
