@@ -35,7 +35,7 @@
       cursor.inactive_timeout = 4;
 
       decoration = {
-        rounding = 2;
+        rounding = 1;
         active_opacity = 0.7;
         inactive_opacity = 0.7;
         fullscreen_opacity = 1;
@@ -44,7 +44,7 @@
           enabled = true;
           size = 8;
           passes = 2;
-          ignore_opacity = false;
+          ignore_opacity = true;
           popups = false;
           xray = true;
         };
@@ -66,7 +66,7 @@
       };
 
       general = {
-        gaps_in = 15;
+        gaps_in = 10;
         gaps_out = 25;
 
         border_size = 1;
