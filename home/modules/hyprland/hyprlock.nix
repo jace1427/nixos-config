@@ -15,7 +15,7 @@
       background = [
         {
           monitor = "";
-          path = "/home/jspidell/dir/nixos-config/wallpapers/solarized/a_large_body_of_water_with_clouds_in_the_sky.jpg";
+          path = "/home/jspidell/dir/nixos-config/wallpapers/manga/beserk_rock.jpg";
           blur_passes = 1;
           blur_size = 5;
         }

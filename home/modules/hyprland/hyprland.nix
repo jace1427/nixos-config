@@ -43,7 +43,7 @@
         blur = {
           enabled = true;
           size = 8;
-          passes = 1;
+          passes = 2;
           ignore_opacity = false;
           popups = false;
           xray = true;
@@ -136,9 +136,9 @@
         "float,title:^(branchdialog)$"
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
-        "float, class:(kitty), title:(kitty)"
-        "center, class:(kitty), title:(kitty)"
-        "size 600 500, class:(kitty), title:(kitty)"
+        # "float, class:(kitty), title:(kitty)"
+        # "center, class:(kitty), title:(kitty)"
+        # "size 600 500, class:(kitty), title:(kitty)"
       ];
 
       workspace = [
