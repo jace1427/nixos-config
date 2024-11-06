@@ -42,8 +42,9 @@
 
         blur = {
           enabled = true;
-          size = 8;
-          passes = 2;
+          size = 12;
+          passes = 3;
+          noise = 0.1;
           ignore_opacity = true;
           popups = true;
           xray = true;
