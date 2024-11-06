@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/manga/beserk_rock.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-terminal-dark.yaml";
     targets.grub.useImage = true;
 
     fonts = {
