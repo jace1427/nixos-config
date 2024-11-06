@@ -45,6 +45,7 @@
           size = 12;
           passes = 3;
           noise = 0.1;
+          vibrancy_darkness = 0.5;
           ignore_opacity = true;
           popups = true;
           xray = true;
