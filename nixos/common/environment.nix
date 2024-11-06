@@ -32,6 +32,7 @@
       unzip
       nixfmt-rfc-style
       lz4
+      alsa-utils
     ];
 
     sessionVariables = {
