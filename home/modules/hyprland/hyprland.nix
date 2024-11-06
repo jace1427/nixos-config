@@ -45,12 +45,12 @@
           size = 9;
           passes = 3;
           noise = 0.1;
-          contrast = 0.0;
-          brightness = 0.0;
-          vibrancy = 0.0;
+          contrast = 0.1;
+          brightness = 0.1;
+          vibrancy = 0.1;
           vibrancy_darkness = 1.0;
           ignore_opacity = true;
-          popups = true;
+          popups = false;
           xray = true;
           popups_ignorealpha = 0.0;
         };
