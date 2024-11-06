@@ -42,9 +42,10 @@
 
         blur = {
           enabled = true;
-          size = 12;
+          size = 9;
           passes = 3;
           noise = 0.1;
+          vibrancy = 0.0;
           vibrancy_darkness = 0.5;
           ignore_opacity = true;
           popups = true;
