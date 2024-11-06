@@ -44,8 +44,8 @@
           enabled = true;
           size = 9;
           passes = 3;
-          noise = 0.1;
-          contrast = 0.1;
+          noise = 0.8;
+          contrast = 0.8;
           brightness = 0.1;
           vibrancy = 0.1;
           vibrancy_darkness = 1.0;
