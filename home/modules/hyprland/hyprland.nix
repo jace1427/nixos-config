@@ -24,7 +24,7 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "sleep 5; bash ${config.xdg.dataFile."change_wallpaper.sh".source} &"
+        "swww"
       ];
 
       env = [
@@ -143,7 +143,7 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
         # "float, class:(kitty), title:(kitty)"
-        "pseudo, class:(kitty), title:(kitty)"
+        # "center, class:(kitty), title:(kitty)"
         # "size 600 500, class:(kitty), title:(kitty)"
       ];
 
