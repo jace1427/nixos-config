@@ -24,7 +24,8 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "swww"
+        "swww-daemon & sleep 0.1 & swww img /home/jspidell/dir/nixos-config/wallpapers/manga/beserk_rock.jpg"
+        # /home/jspidell/.steam/steam/steamapps/workshop/content/431960/1450504828
       ];
 
       env = [

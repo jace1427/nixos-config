@@ -54,7 +54,7 @@
     reaper
     lmms
     swww
-    # hyprpanel
+    # hyprpanel TODO
     tealdeer
   ];
 

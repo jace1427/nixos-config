@@ -21,7 +21,7 @@
     initExtra = ''
       function chpwd() {
         emulate -L zsh
-        ls --color=auto -1lFA -I.git
+        ls --color=auto -1FA -I.git
       }
     '';
 
@@ -37,8 +37,9 @@
       gbd = "git branch -D $1";
 
       # aliases
-      # ls = "ls --color=auto -1lFA -I.git";
+      ls = "ls --color=auto -1FA -I.git";
       re = "./rebuild.sh";
+      te = "/home/jspidell/dir/nixos-config/test.sh";
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";
       wow = "flatpak run --command=bottles-cli com.usebottles.bottles run -b Battle.net -p Battle.net &> /dev/null";
