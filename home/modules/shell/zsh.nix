@@ -37,7 +37,7 @@
       gbd = "git branch -D $1";
 
       # aliases
-      ls = "ls --color=auto -1lFA -I.git";
+      # ls = "ls --color=auto -1lFA -I.git";
       re = "./rebuild.sh";
       nfu = "sudo nix flake update";
       uv = "~/dir/vault/update_vault.sh";

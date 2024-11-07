@@ -143,7 +143,7 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
         # "float, class:(kitty), title:(kitty)"
-        # "center, class:(kitty), title:(kitty)"
+        "pseudo, class:(kitty), title:(kitty)"
         # "size 600 500, class:(kitty), title:(kitty)"
       ];
 
