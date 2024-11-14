@@ -36,15 +36,15 @@
 
       decoration = {
         rounding = 1;
-        active_opacity = 0.7;
-        inactive_opacity = 0.7;
+        # active_opacity = 0.8;
+        # inactive_opacity = 0.8;
         fullscreen_opacity = 1;
         dim_inactive = false;
 
-        # shadow = {
-        #   range = 6;
-        #   render_power = 2;
-        # };
+        shadow = {
+          range = 6;
+          render_power = 2;
+        };
 
         blur = {
           enabled = true;
@@ -149,7 +149,7 @@
         "float,title:^(File Operation Progress)$"
         # "float, class:(kitty), title:(kitty)"
         # "center, class:(kitty), title:(kitty)"
-        # "size 600 500, class:(kitty), title:(kitty)"
+        "size 20% 100%, class:(kitty), title:(kitty)"
       ];
 
       workspace = [
