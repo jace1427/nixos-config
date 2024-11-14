@@ -13,11 +13,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     stylix.url = "github:danth/stylix";
 
@@ -36,7 +36,7 @@
       home-manager,
       nix-flatpak,
       stylix,
-      # hyprland,
+      hyprland,
       xremap-flake,
       swww,
       # hyprpanel,

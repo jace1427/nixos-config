@@ -32,6 +32,7 @@
   stylix.targets = {
     rofi.enable = false;
     vscode.enable = false;
+    hyprlock.enable = false;
   };
 
   home.packages = with pkgs; [

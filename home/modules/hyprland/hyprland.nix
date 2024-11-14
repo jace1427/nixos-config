@@ -8,7 +8,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
     settings = {
       monitor = [
@@ -54,9 +54,9 @@
           contrast = 0.9;
           brightness = 0.8;
           popups = true;
-          ignore_opacity = true;
-          xray = true;
-          popups_ignorealpha = 0.0;
+          # ignore_opacity = true;
+          # xray = true;
+          # popups_ignorealpha = 0.0;
         };
       };
 
