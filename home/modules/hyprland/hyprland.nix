@@ -41,10 +41,10 @@
         fullscreen_opacity = 1;
         dim_inactive = false;
 
-        shadow = {
-          range = 6;
-          render_power = 2;
-        };
+        # shadow = {
+        #   range = 6;
+        #   render_power = 2;
+        # };
 
         blur = {
           enabled = true;
