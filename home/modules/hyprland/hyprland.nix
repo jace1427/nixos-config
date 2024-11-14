@@ -24,8 +24,7 @@
         "hypridle"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "swww-daemon & sleep 0.1 & swww img /home/jspidell/dir/nixos-config/wallpapers/manga/beserk_rock.jpg"
-        # /home/jspidell/.steam/steam/steamapps/workshop/content/431960/1450504828
+        "swww-daemon; sleep 5; swww img /home/jspidell/dir/nixos-config/wallpapers/manga/beserk_rock.jpg"
       ];
 
       env = [
@@ -40,18 +39,22 @@
         active_opacity = 0.7;
         inactive_opacity = 0.7;
         fullscreen_opacity = 1;
+        dim_inactive = false;
+
+        shadow = {
+          range = 6;
+          render_power = 2;
+        };
 
         blur = {
           enabled = true;
-          size = 9;
+          size = 8;
           passes = 3;
-          noise = 0.8;
-          contrast = 0.8;
-          brightness = 0.1;
-          vibrancy = 0.1;
-          vibrancy_darkness = 1.0;
+          noise = 1.0e-2;
+          contrast = 0.9;
+          brightness = 0.8;
+          popups = true;
           ignore_opacity = true;
-          popups = false;
           xray = true;
           popups_ignorealpha = 0.0;
         };
@@ -60,10 +63,11 @@
       animations = {
         enabled = true;
 
-        bezier = "myBezier, 0.165, 0.84, 0.44, 1";
+        # bezier = "myBezier, 0.165, 0.84, 0.44, 1";
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
         animation = [
-          "windows, 1, 7, myBezier"
+          "windows, 1, 5, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
           "border, 1, 10, default"
           "borderangle, 1, 8, default"
@@ -73,8 +77,8 @@
       };
 
       general = {
-        gaps_in = 10;
-        gaps_out = 25;
+        gaps_in = 5;
+        gaps_out = 20;
 
         border_size = 1;
         resize_on_border = true;
